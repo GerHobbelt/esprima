@@ -81,6 +81,14 @@ parsers = [
     }
 },
 {
+    name: 'Cherow',
+    link: 'https://github.com/cherow/cherow',
+    parse: function (code) {
+        var syntax = window.cherow.parseScript(code, { ranges: true, locations: true });
+        return syntax.body.length;
+    }
+},
+{
     name: 'Shift',
     link: 'https://github.com/shapesecurity/shift-parser-js',
     parse: function (code) {
