@@ -1,5 +1,5 @@
 {
-  "name": "esprima",
+  "name": "@gerhobbelt/esprima",
   "description": "ECMAScript parsing infrastructure for multipurpose analysis",
   "homepage": "http://esprima.org",
   "main": "dist/esprima.js",
@@ -107,6 +107,7 @@
     "appveyor": "npm run compile && npm run all-tests && npm run browser-tests",
     "droneio": "npm run compile && npm run all-tests && npm run saucelabs",
     "generate-regex": "node tools/generate-identifier-regex.js",
-    "generate-xhtml-entities": "node tools/generate-xhtml-entities.js"
+    "generate-xhtml-entities": "node tools/generate-xhtml-entities.js",
+    "pub": "npm publish --access public"
   }
 }
