@@ -73,8 +73,8 @@
   "scripts": {
     "check-version": "node test/check-version.js",
     "tslint": "tslint src/*.ts",
-    "code-style": "tsfmt --verify src/*.ts && tsfmt --verify test/*.js",
-    "format-code": "tsfmt -r src/*.ts && tsfmt -r test/*.js",
+    "code-style": "bash -c 'node_modules/.bin/tsfmt --verify src/*.ts test/*.js'",
+    "format-code": "bash -c 'node_modules/.bin/tsfmt -r src/*.ts test/*.js'",
     "complexity": "node test/check-complexity.js",
     "static-analysis": "npm run check-version && npm run tslint && npm run code-style && npm run complexity",
     "hostile-env-tests": "node test/hostile-environment-tests.js",
