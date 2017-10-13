@@ -100,7 +100,7 @@
     "benchmark-parser": "node -expose_gc test/benchmark-parser.js",
     "benchmark-tokenizer": "node --expose_gc test/benchmark-tokenizer.js",
     "benchmark": "npm run benchmark-parser && npm run benchmark-tokenizer",
-    "codecov" : "istanbul report cobertura && codecov < ./coverage/cobertura-coverage.xml",
+    "codecov": "istanbul report cobertura && codecov < ./coverage/cobertura-coverage.xml",
     "downstream": "node test/downstream.js",
     "travis": "npm test",
     "circleci": "npm test && npm run codecov && npm run downstream",
