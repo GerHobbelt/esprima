@@ -380,11 +380,17 @@ export class Parser {
         };
     }
 
-    startNode(token): Marker {
+    startNode(token, lastLineStart = 0): Marker {
+        let column = token.start - token.lineStart;
+        let line = token.lineNumber;
+        if (column < 0) {
+            column += lastLineStart;
+            line--;
+        }
         return {
             index: token.start,
-            line: token.lineNumber,
-            column: token.start - token.lineStart
+            line: line,
+            column: column
         };
     }
 
@@ -760,7 +766,7 @@ export class Parser {
         const node = this.createNode();
 
         const previousAllowYield = this.context.allowYield;
-        this.context.allowYield = false;
+        this.context.allowYield = true;
         const params = this.parseFormalParameters();
         const method = this.parsePropertyMethod(params);
         this.context.allowYield = previousAllowYield;
@@ -844,7 +850,7 @@ export class Parser {
             this.nextToken();
             computed = this.match('[');
             isAsync = !this.hasLineTerminator && (id === 'async') &&
-                !this.match(':') && !this.match('(') && !this.match('*');
+                !this.match(':') && !this.match('(') && !this.match('*') && !this.match(',');
             key = isAsync ? this.parseObjectPropertyKey() : this.finalize(node, new Node.Identifier(id));
         } else if (this.match('*')) {
             this.nextToken();
@@ -1524,12 +1530,16 @@ export class Parser {
             // Final reduce to clean-up the stack.
             let i = stack.length - 1;
             expr = stack[i];
-            markers.pop();
+
+            let lastMarker = markers.pop();
             while (i > 1) {
-                const node = this.startNode(markers.pop());
+                const marker = markers.pop();
+                const lastLineStart = lastMarker && lastMarker.lineStart;
+                const node = this.startNode(marker, lastLineStart);
                 const operator = stack[i - 1];
                 expr = this.finalize(node, new Node.BinaryExpression(operator, stack[i - 2], expr));
                 i -= 2;
+                lastMarker = marker;
             }
         }
 
@@ -3097,7 +3107,7 @@ export class Parser {
 
         const isGenerator = false;
         const previousAllowYield = this.context.allowYield;
-        this.context.allowYield = false;
+        this.context.allowYield = !isGenerator;
         const formalParameters = this.parseFormalParameters();
         if (formalParameters.params.length > 0) {
             this.tolerateError(Messages.BadGetterArity);
@@ -3113,7 +3123,7 @@ export class Parser {
 
         const isGenerator = false;
         const previousAllowYield = this.context.allowYield;
-        this.context.allowYield = false;
+        this.context.allowYield = !isGenerator;
         const formalParameters = this.parseFormalParameters();
         if (formalParameters.params.length !== 1) {
             this.tolerateError(Messages.BadSetterArity);
