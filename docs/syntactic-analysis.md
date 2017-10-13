@@ -29,7 +29,7 @@ The description of various parsing configuration is summarized in the following 
 <tr><td>range</td> <td>Boolean</td> <td>false</td> <td>Annotate each node with its index-based location</td></tr>
 <tr><td>loc</td> <td>Boolean</td> <td>false</td> <td>Annotate each node with its column and row-based location</td></tr>
 <tr><td>tolerant</td> <td>Boolean</td> <td>false</td> <td>Tolerate a few cases of syntax errors</td></tr>
-<tr><td>token</td> <td>Boolean</td> <td>false</td> <td>Collect every token</td></tr>
+<tr><td>tokens</td> <td>Boolean</td> <td>false</td> <td>Collect every token</td></tr>
 <tr><td>comments</td> <td>Boolean</td> <td>false</td> <td>Collect every line and block comment</td></tr>
 </table>
 
