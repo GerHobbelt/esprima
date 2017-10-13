@@ -12,11 +12,11 @@ var get = function(what) {
 
 var generateES6Regex = function() { // ES 6
     // https://mathiasbynens.be/notes/javascript-identifiers-es6
-    var identifierStart = regenerate(get('properties/ID_Start'))
+    var identifierStart = regenerate(get('Binary_Property/ID_Start'))
         .add('$', '_')
         .removeRange(0x0, 0x7F); // remove ASCII symbols (Esprima-specific)
-    var identifierPart = regenerate(get('properties/ID_Continue'))
-        .add(get('properties/Other_ID_Start'))
+    var identifierPart = regenerate(get('Binary_Property/ID_Continue'))
+        .add(get('Binary_Property/Other_ID_Start'))
         .add('\u200C', '\u200D')
         .add('$', '_')
         .removeRange(0x0, 0x7F); // remove ASCII symbols (Esprima-specific)
