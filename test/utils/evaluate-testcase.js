@@ -130,7 +130,7 @@
             }
         }
 
-        if (options.loc) {
+        if (options.loc && syntax.loc) {
             options.source = syntax.loc.source;
         }
 
