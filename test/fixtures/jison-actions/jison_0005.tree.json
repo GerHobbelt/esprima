@@ -87,8 +87,8 @@
                                     "type": "Identifier",
                                     "name": "yylloc",
                                     "range": [
-                                        16,
-                                        22
+                                        15,
+                                        21
                                     ],
                                     "loc": {
                                         "start": {
@@ -106,8 +106,8 @@
                                     "type": "Identifier",
                                     "name": "yylloc",
                                     "range": [
-                                        16,
-                                        22
+                                        15,
+                                        21
                                     ],
                                     "loc": {
                                         "start": {
@@ -124,8 +124,8 @@
                                 "method": false,
                                 "shorthand": true,
                                 "range": [
-                                    16,
-                                    22
+                                    15,
+                                    21
                                 ],
                                 "loc": {
                                     "start": {
@@ -144,8 +144,8 @@
                                     "type": "Identifier",
                                     "name": "tokens",
                                     "range": [
-                                        26,
-                                        32
+                                        24,
+                                        30
                                     ],
                                     "loc": {
                                         "start": {
@@ -166,8 +166,8 @@
                                             "type": "Identifier",
                                             "name": "#1",
                                             "range": [
-                                                35,
-                                                37
+                                                33,
+                                                35
                                             ],
                                             "loc": {
                                                 "start": {
@@ -184,8 +184,8 @@
                                             "type": "Identifier",
                                             "name": "#2",
                                             "range": [
-                                                39,
-                                                41
+                                                37,
+                                                39
                                             ],
                                             "loc": {
                                                 "start": {
@@ -200,8 +200,8 @@
                                         }
                                     ],
                                     "range": [
-                                        34,
-                                        42
+                                        32,
+                                        40
                                     ],
                                     "loc": {
                                         "start": {
@@ -218,8 +218,8 @@
                                 "method": false,
                                 "shorthand": false,
                                 "range": [
-                                    26,
-                                    42
+                                    24,
+                                    40
                                 ],
                                 "loc": {
                                     "start": {
@@ -235,7 +235,7 @@
                         ],
                         "range": [
                             12,
-                            46
+                            43
                         ],
                         "loc": {
                             "start": {
@@ -251,7 +251,7 @@
                 ],
                 "range": [
                     0,
-                    47
+                    44
                 ],
                 "loc": {
                     "start": {
@@ -266,7 +266,7 @@
             },
             "range": [
                 0,
-                47
+                44
             ],
             "loc": {
                 "start": {
@@ -283,7 +283,7 @@
     "sourceType": "script",
     "range": [
         0,
-        47
+        44
     ],
     "loc": {
         "start": {
@@ -426,8 +426,8 @@
             "type": "Identifier",
             "value": "yylloc",
             "range": [
-                16,
-                22
+                15,
+                21
             ],
             "loc": {
                 "start": {
@@ -444,8 +444,8 @@
             "type": "Punctuator",
             "value": ",",
             "range": [
-                22,
-                23
+                21,
+                22
             ],
             "loc": {
                 "start": {
@@ -462,8 +462,8 @@
             "type": "Identifier",
             "value": "tokens",
             "range": [
-                26,
-                32
+                24,
+                30
             ],
             "loc": {
                 "start": {
@@ -480,8 +480,8 @@
             "type": "Punctuator",
             "value": ":",
             "range": [
-                32,
-                33
+                30,
+                31
             ],
             "loc": {
                 "start": {
@@ -498,8 +498,8 @@
             "type": "Punctuator",
             "value": "[",
             "range": [
-                34,
-                35
+                32,
+                33
             ],
             "loc": {
                 "start": {
@@ -516,8 +516,8 @@
             "type": "Identifier",
             "value": "#1",
             "range": [
-                35,
-                37
+                33,
+                35
             ],
             "loc": {
                 "start": {
@@ -534,8 +534,8 @@
             "type": "Punctuator",
             "value": ",",
             "range": [
-                37,
-                38
+                35,
+                36
             ],
             "loc": {
                 "start": {
@@ -552,8 +552,8 @@
             "type": "Identifier",
             "value": "#2",
             "range": [
-                39,
-                41
+                37,
+                39
             ],
             "loc": {
                 "start": {
@@ -570,8 +570,8 @@
             "type": "Punctuator",
             "value": "]",
             "range": [
-                41,
-                42
+                39,
+                40
             ],
             "loc": {
                 "start": {
@@ -588,8 +588,8 @@
             "type": "Punctuator",
             "value": ",",
             "range": [
-                42,
-                43
+                40,
+                41
             ],
             "loc": {
                 "start": {
@@ -606,8 +606,8 @@
             "type": "Punctuator",
             "value": "}",
             "range": [
-                45,
-                46
+                42,
+                43
             ],
             "loc": {
                 "start": {
@@ -624,8 +624,8 @@
             "type": "Punctuator",
             "value": ")",
             "range": [
-                46,
-                47
+                43,
+                44
             ],
             "loc": {
                 "start": {

@@ -117,8 +117,8 @@
                     "type": "Identifier",
                     "name": "yyerror",
                     "range": [
-                        24,
-                        31
+                        23,
+                        30
                     ],
                     "loc": {
                         "start": {
@@ -140,8 +140,8 @@
                             "value": "B0rk @ ",
                             "raw": "\"B0rk @ \"",
                             "range": [
-                                32,
-                                41
+                                31,
+                                40
                             ],
                             "loc": {
                                 "start": {
@@ -158,8 +158,8 @@
                             "type": "Identifier",
                             "name": "#STMT",
                             "range": [
-                                44,
-                                49
+                                43,
+                                48
                             ],
                             "loc": {
                                 "start": {
@@ -173,8 +173,8 @@
                             }
                         },
                         "range": [
-                            32,
-                            49
+                            31,
+                            48
                         ],
                         "loc": {
                             "start": {
@@ -189,8 +189,8 @@
                     }
                 ],
                 "range": [
-                    24,
-                    50
+                    23,
+                    49
                 ],
                 "loc": {
                     "start": {
@@ -204,8 +204,8 @@
                 }
             },
             "range": [
-                24,
-                50
+                23,
+                49
             ],
             "loc": {
                 "start": {
@@ -222,7 +222,7 @@
     "sourceType": "script",
     "range": [
         0,
-        50
+        49
     ],
     "loc": {
         "start": {
@@ -365,8 +365,8 @@
             "type": "Identifier",
             "value": "yyerror",
             "range": [
-                24,
-                31
+                23,
+                30
             ],
             "loc": {
                 "start": {
@@ -383,8 +383,8 @@
             "type": "Punctuator",
             "value": "(",
             "range": [
-                31,
-                32
+                30,
+                31
             ],
             "loc": {
                 "start": {
@@ -401,8 +401,8 @@
             "type": "String",
             "value": "\"B0rk @ \"",
             "range": [
-                32,
-                41
+                31,
+                40
             ],
             "loc": {
                 "start": {
@@ -419,8 +419,8 @@
             "type": "Punctuator",
             "value": "+",
             "range": [
-                42,
-                43
+                41,
+                42
             ],
             "loc": {
                 "start": {
@@ -437,8 +437,8 @@
             "type": "Identifier",
             "value": "#STMT",
             "range": [
-                44,
-                49
+                43,
+                48
             ],
             "loc": {
                 "start": {
@@ -455,8 +455,8 @@
             "type": "Punctuator",
             "value": ")",
             "range": [
-                49,
-                50
+                48,
+                49
             ],
             "loc": {
                 "start": {
