@@ -78,12 +78,12 @@ total = Object.keys(cases).length;
 Object.keys(cases).forEach(function (key) {
     testCase = cases[key];
 
-    if (!regenTestCases 
-      && (testCase.hasOwnProperty('tree')
-        || testCase.hasOwnProperty('tokens')
-        || testCase.hasOwnProperty('failure')
-        || testCase.hasOwnProperty('result')
-      )
+    if (!regenTestCases
+        && (testCase.hasOwnProperty('tree')
+            || testCase.hasOwnProperty('tokens')
+            || testCase.hasOwnProperty('failure')
+            || testCase.hasOwnProperty('result')
+        )
     ) {
         try {
             evaluateTestCase(testCase);
