@@ -38,7 +38,8 @@ var esprima = require('../'),
     context = { source: '', result: null },
     tick = new Date(),
     testCase,
-    header;
+    header,
+    regenTestCases = false;
 
 function generateTestCase(testCase) {
     var options, tree, filePath, fileName;
@@ -52,11 +53,12 @@ function generateTestCase(testCase) {
             tokens: true,
             sourceType: testCase.key.match(/\.module$/) ? 'module' : 'script'
         };
-        tree = esprima.parse(testCase.case, options);
+        var code = testCase.case || testCase.source || "";
+        tree = esprima.parse(code, options);
         tree = JSON.stringify(tree, null, 4);
     } catch (e) {
         if (typeof e.index === 'undefined') {
-            console.error("Failed to generate test result.");
+            console.error("Failed to generate test result.", testCase);
             throw e;
         }
         tree = errorToObject(e);
@@ -76,11 +78,13 @@ total = Object.keys(cases).length;
 Object.keys(cases).forEach(function (key) {
     testCase = cases[key];
 
-    if (testCase.hasOwnProperty('tree')
+    if (!regenTestCases 
+      && (testCase.hasOwnProperty('tree')
         || testCase.hasOwnProperty('tokens')
         || testCase.hasOwnProperty('failure')
-        || testCase.hasOwnProperty('result')) {
-
+        || testCase.hasOwnProperty('result')
+      )
+    ) {
         try {
             evaluateTestCase(testCase);
         } catch (e) {
@@ -91,7 +95,6 @@ Object.keys(cases).forEach(function (key) {
             e.source = testCase.case || testCase.key;
             failures.push(e);
         }
-
     } else {
         console.error('Incomplete test case:' + testCase.key + '. Generating test result...');
         generateTestCase(testCase);
