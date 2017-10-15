@@ -1,0 +1,84 @@
+{
+    "type": "Program",
+    "body": [
+        {
+            "type": "ExpressionStatement",
+            "expression": {
+                "type": "Literal",
+                "value": {},
+                "raw": "/42/",
+                "regex": {
+                    "pattern": "42",
+                    "flags": ""
+                },
+                "range": [
+                    19,
+                    23
+                ],
+                "loc": {
+                    "start": {
+                        "line": 1,
+                        "column": 19
+                    },
+                    "end": {
+                        "line": 1,
+                        "column": 23
+                    }
+                }
+            },
+            "range": [
+                19,
+                23
+            ],
+            "loc": {
+                "start": {
+                    "line": 1,
+                    "column": 19
+                },
+                "end": {
+                    "line": 1,
+                    "column": 23
+                }
+            }
+        }
+    ],
+    "sourceType": "script",
+    "range": [
+        19,
+        23
+    ],
+    "loc": {
+        "start": {
+            "line": 1,
+            "column": 19
+        },
+        "end": {
+            "line": 1,
+            "column": 23
+        }
+    },
+    "tokens": [
+        {
+            "type": "RegularExpression",
+            "value": "/42/",
+            "range": [
+                19,
+                23
+            ],
+            "loc": {
+                "start": {
+                    "line": 1,
+                    "column": 19
+                },
+                "end": {
+                    "line": 1,
+                    "column": 23
+                }
+            },
+            "regex": {
+                "pattern": "42",
+                "flags": ""
+            }
+        }
+    ]
+}

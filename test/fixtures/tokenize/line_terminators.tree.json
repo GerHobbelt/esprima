@@ -1,0 +1,20 @@
+{
+    "type": "Program",
+    "body": [],
+    "sourceType": "script",
+    "range": [
+        4,
+        4
+    ],
+    "loc": {
+        "start": {
+            "line": 5,
+            "column": 0
+        },
+        "end": {
+            "line": 5,
+            "column": 0
+        }
+    },
+    "tokens": []
+}
