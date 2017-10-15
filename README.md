@@ -1,14 +1,14 @@
-[![NPM version](https://img.shields.io/npm/v/esprima.svg)](https://www.npmjs.com/package/esprima)
-[![npm download](https://img.shields.io/npm/dm/esprima.svg)](https://www.npmjs.com/package/esprima)
-[![Build Status](https://img.shields.io/travis/jquery/esprima/master.svg)](https://travis-ci.org/jquery/esprima)
-[![Coverage Status](https://img.shields.io/codecov/c/github/jquery/esprima/master.svg)](https://codecov.io/github/jquery/esprima)
+[![NPM version](https://img.shields.io/npm/v/esprima.svg)](https://www.npmjs.com/package/@gerhobbelt/esprima)
+[![npm download](https://img.shields.io/npm/dm/esprima.svg)](https://www.npmjs.com/package/@gerhobbelt/esprima)
+[![Build Status](https://img.shields.io/travis/GerHobbelt/esprima/master.svg)](https://travis-ci.org/GerHobbelt/esprima)
+[![Coverage Status](https://img.shields.io/codecov/c/github/GerHobbelt/esprima/master.svg)](https://codecov.io/github/GerHobbelt/esprima)
 
 **Esprima** ([esprima.org](http://esprima.org), BSD license) is a high performance,
 standard-compliant [ECMAScript](http://www.ecma-international.org/publications/standards/Ecma-262.htm)
 parser written in ECMAScript (also popularly known as
 [JavaScript](https://en.wikipedia.org/wiki/JavaScript)).
 Esprima is created and maintained by [Ariya Hidayat](https://twitter.com/ariyahidayat),
-with the help of [many contributors](https://github.com/jquery/esprima/contributors).
+with the help of [many contributors](https://github.com/GerHobbelt/esprima/contributors).
 
 ### Features
 
@@ -16,7 +16,7 @@ with the help of [many contributors](https://github.com/jquery/esprima/contribut
 - Sensible [syntax tree format](https://github.com/estree/estree/blob/master/es5.md) as standardized by [ESTree project](https://github.com/estree/estree)
 - Experimental support for [JSX](https://facebook.github.io/jsx/), a syntax extension for [React](https://facebook.github.io/react/)
 - Optional tracking of syntax node location (index-based and line-column)
-- [Heavily tested](http://esprima.org/test/ci.html) (~1500 [unit tests](https://github.com/jquery/esprima/tree/master/test/fixtures) with [full code coverage](https://codecov.io/github/jquery/esprima))
+- [Heavily tested](http://esprima.org/test/ci.html) (~1500 [unit tests](https://github.com/GerHobbelt/esprima/tree/master/test/fixtures) with [full code coverage](https://codecov.io/github/GerHobbelt/esprima))
 
 ### API
 
