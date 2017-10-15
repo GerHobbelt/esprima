@@ -875,19 +875,19 @@ export class Scanner {
                                 ++this.index;
                                 str += this.scanUnicodeCodePointEscape();
                             } else {
-                                const unescaped = this.scanHexEscape(ch);
-                                if (unescaped === null) {
+                                const unescaped1 = this.scanHexEscape(ch);
+                                if (unescaped1 === null) {
                                     this.throwUnexpectedToken();
                                 }
-                                str += unescaped;
+                                str += unescaped1;
                             }
                             break;
                         case 'x':
-                            const unescaped = this.scanHexEscape(ch);
-                            if (unescaped === null) {
+                            const unescaped2 = this.scanHexEscape(ch);
+                            if (unescaped2 === null) {
                                 this.throwUnexpectedToken(Messages.InvalidHexEscapeSequence);
                             }
-                            str += unescaped;
+                            str += unescaped2;
                             break;
                         case 'n':
                             str += '\n';
@@ -1001,9 +1001,9 @@ export class Scanner {
                                 cooked += this.scanUnicodeCodePointEscape();
                             } else {
                                 const restore = this.index;
-                                const unescaped = this.scanHexEscape(ch);
-                                if (unescaped !== null) {
-                                    cooked += unescaped;
+                                const unescaped1 = this.scanHexEscape(ch);
+                                if (unescaped1 !== null) {
+                                    cooked += unescaped1;
                                 } else {
                                     this.index = restore;
                                     cooked += ch;
@@ -1011,11 +1011,11 @@ export class Scanner {
                             }
                             break;
                         case 'x':
-                            const unescaped = this.scanHexEscape(ch);
-                            if (unescaped === null) {
+                            const unescaped2 = this.scanHexEscape(ch);
+                            if (unescaped2 === null) {
                                 this.throwUnexpectedToken(Messages.InvalidHexEscapeSequence);
                             }
-                            cooked += unescaped;
+                            cooked += unescaped2;
                             break;
                         case 'b':
                             cooked += '\b';

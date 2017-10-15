@@ -57,9 +57,9 @@ export class CommentHandler {
 
         if (this.trailing.length > 0) {
             for (let i = this.trailing.length - 1; i >= 0; --i) {
-                const entry = this.trailing[i];
-                if (entry.start >= metadata.end.offset) {
-                    trailingComments.unshift(entry.comment);
+                const trailEntry = this.trailing[i];
+                if (trailEntry.start >= metadata.end.offset) {
+                    trailingComments.unshift(trailEntry.comment);
                 }
             }
             this.trailing.length = 0;
@@ -107,9 +107,9 @@ export class CommentHandler {
         }
 
         for (let i = this.leading.length - 1; i >= 0; --i) {
-            const entry = this.leading[i];
-            if (entry.start <= metadata.start.offset) {
-                leadingComments.unshift(entry.comment);
+            const leadEntry = this.leading[i];
+            if (leadEntry.start <= metadata.start.offset) {
+                leadingComments.unshift(leadEntry.comment);
                 this.leading.splice(i, 1);
             }
         }

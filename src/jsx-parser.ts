@@ -484,9 +484,9 @@ export class JSXParser extends Parser {
         this.expectJSX('<');
         if (this.matchJSX('/')) {
             this.expectJSX('/');
-            const name = this.parseJSXElementName();
+            const name2 = this.parseJSXElementName();
             this.expectJSX('>');
-            return this.finalize(node, new JSXNode.JSXClosingElement(name));
+            return this.finalize(node, new JSXNode.JSXClosingElement(name2));
         }
 
         const name = this.parseJSXElementName();
