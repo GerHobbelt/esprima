@@ -4679,6 +4679,16 @@ var Scanner = /** @class */ (function () {
             if (character_1.Character.isIdentifierPart(ch)) {
                 ++this.index;
             }
+            else if ((ch === 0x23 || ch === 0x40) &&
+                character_1.Character.isIdentifierPart(this.source.charCodeAt(this.index - 1))) {
+                // # and @  (JISON action variables contain these, e.g. `@1` or `#LABEL#`)
+                //
+                // Note that these characters may only occur at the START or END of an identifier
+                // AND these cannot occur on their own but must be a prefix or postfix of a
+                // larger identifier, e.g. `@1`, `@label1`, `#3`, `#loc`, `#id#`
+                ++this.index;
+                break;
+            }
             else {
                 break;
             }
@@ -4710,7 +4720,9 @@ var Scanner = /** @class */ (function () {
         }
         while (!this.eof()) {
             cp = this.codePointAt(this.index);
-            if (!character_1.Character.isIdentifierPart(cp)) {
+            if (!character_1.Character.isIdentifierPart(cp) &&
+                // # and @  (JISON action variables contain these, e.g. `@1` or `#LABEL#`)
+                cp !== 0x23 && cp !== 0x40) {
                 break;
             }
             ch = character_1.Character.fromCodePoint(cp);
@@ -5427,7 +5439,16 @@ var Scanner = /** @class */ (function () {
             };
         }
         var cp = this.source.charCodeAt(this.index);
-        if (character_1.Character.isIdentifierStart(cp)) {
+        if (character_1.Character.isIdentifierStart(cp) ||
+            //
+            // # and @  (JISON action variables contain these, e.g. `@1` or `#LABEL#`)
+            //
+            // Note that these characters may only occur at the START or END of an identifier
+            // AND these cannot occur on their own but must be a prefix or postfix of a
+            // larger identifier, e.g. `@1`, `@label1`, `#3`, `#loc`, `#id#`
+            //
+            ((cp === 0x23 || cp === 0x40) &&
+                character_1.Character.isIdentifierPart(this.source.charCodeAt(this.index + 1)))) {
             return this.scanIdentifier();
         }
         // Very common: ( and ) and ;
@@ -5588,7 +5609,7 @@ exports.tokenize = tokenize;
 var syntax_1 = __webpack_require__(0);
 exports.Syntax = syntax_1.Syntax;
 // Sync with *.json manifests.
-exports.version = '4.0.1-3';
+exports.version = '4.0.1-4';
 
 
 /***/ }),

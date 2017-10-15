@@ -435,6 +435,16 @@ export class Scanner {
             }
             if (Character.isIdentifierPart(ch)) {
                 ++this.index;
+            } else if ((ch === 0x23 || ch === 0x40) &&
+                Character.isIdentifierPart(this.source.charCodeAt(this.index - 1))
+            ) {
+                // # and @  (JISON action variables contain these, e.g. `@1` or `#LABEL#`)
+                //
+                // Note that these characters may only occur at the START or END of an identifier
+                // AND these cannot occur on their own but must be a prefix or postfix of a
+                // larger identifier, e.g. `@1`, `@label1`, `#3`, `#loc`, `#id#`
+                ++this.index;
+                break;
             } else {
                 break;
             }
@@ -469,7 +479,10 @@ export class Scanner {
 
         while (!this.eof()) {
             cp = this.codePointAt(this.index);
-            if (!Character.isIdentifierPart(cp)) {
+            if (!Character.isIdentifierPart(cp) &&
+                // # and @  (JISON action variables contain these, e.g. `@1` or `#LABEL#`)
+                cp !== 0x23 && cp !== 0x40
+            ) {
                 break;
             }
             ch = Character.fromCodePoint(cp);
@@ -1254,7 +1267,18 @@ export class Scanner {
 
         const cp = this.source.charCodeAt(this.index);
 
-        if (Character.isIdentifierStart(cp)) {
+        if (Character.isIdentifierStart(cp) ||
+            //
+            // # and @  (JISON action variables contain these, e.g. `@1` or `#LABEL#`)
+            //
+            // Note that these characters may only occur at the START or END of an identifier
+            // AND these cannot occur on their own but must be a prefix or postfix of a
+            // larger identifier, e.g. `@1`, `@label1`, `#3`, `#loc`, `#id#`
+            //
+            ((cp === 0x23 || cp === 0x40) &&
+                Character.isIdentifierPart(this.source.charCodeAt(this.index + 1))
+            )
+        ) {
             return this.scanIdentifier();
         }
 
