@@ -39,7 +39,7 @@ var esprima = require('../'),
     tick = new Date(),
     testCase,
     header,
-    regenTestCases = false;
+    regenTestCases = false;      // set to TRUE to regenerate all reference test values
 
 function generateTestCase(testCase) {
     var options, tree, filePath, fileName;
@@ -93,6 +93,7 @@ Object.keys(cases).forEach(function (key) {
             }
 
             e.source = testCase.case || testCase.key;
+            e.key = testCase.key;
             failures.push(e);
         }
     } else {
@@ -113,12 +114,12 @@ if (failures.length) {
             expectedObject = JSON.parse(failure.expected);
             actualObject = JSON.parse(failure.actual);
 
-            console.error(failure.source + ': Expected\n    ' +
+            console.error('=== ' + failure.key + ' === ::\n' + failure.source + ': Expected\n    ' +
                 failure.expected.split('\n').join('\n    ') +
                 '\nto match\n    ' + failure.actual + '\nDiff:\n' +
                 diff(expectedObject, actualObject));
         } catch (ex) {
-            console.error(failure.source + ': Expected\n    ' +
+            console.error('=== ' + failure.key + ' === ::\n' + failure.source + ': Expected\n    ' +
                 failure.expected.split('\n').join('\n    ') +
                 '\nto match\n    ' + failure.actual);
         }
