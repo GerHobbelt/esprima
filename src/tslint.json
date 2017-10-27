@@ -7,6 +7,7 @@
     "member-access": false,
     "member-ordering": false,
     "no-use-before-declare": true,
+    "no-consecutive-blank-lines": [true, 2],
     "object-literal-shorthand": false,
     "object-literal-sort-keys": false,
     "one-variable-per-declaration": false,
