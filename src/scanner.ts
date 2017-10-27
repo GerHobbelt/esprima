@@ -422,6 +422,15 @@ export class Scanner {
 
     private getIdentifier(): string {
         const start = this.index++;
+        const ch1 = this.source.charCodeAt(this.index - 1);
+        const ch2 = this.source.charCodeAt(this.index);
+        if ((ch1 === 0x23 || ch1 === 0x40) &&
+            (ch2 === 0x23 || ch2 === 0x40)
+        ) {
+            // ## and @@ at start of identifier name  (JISON action variables contain these, e.g. `@@1` or `##INDEX`)
+            ++this.index;
+        }
+
         while (!this.eof()) {
             const ch = this.source.charCodeAt(this.index);
             if (ch === 0x5C) {
@@ -438,7 +447,7 @@ export class Scanner {
             } else if ((ch === 0x23 || ch === 0x40) &&
                 Character.isIdentifierPart(this.source.charCodeAt(this.index - 1))
             ) {
-                // # and @  (JISON action variables contain these, e.g. `@1` or `#LABEL#`)
+                // # and @ at end of identifier name  (JISON action variables contain these, e.g. `@1` or `#LABEL#`)
                 //
                 // Note that these characters may only occur at the START or END of an identifier
                 // AND these cannot occur on their own but must be a prefix or postfix of a
@@ -1266,6 +1275,7 @@ export class Scanner {
         }
 
         const cp = this.source.charCodeAt(this.index);
+        const cpNext = this.source.charCodeAt(this.index + 1);
 
         if (Character.isIdentifierStart(cp) ||
             //
@@ -1276,7 +1286,18 @@ export class Scanner {
             // larger identifier, e.g. `@1`, `@label1`, `#3`, `#loc`, `#id#`
             //
             ((cp === 0x23 || cp === 0x40) &&
-                Character.isIdentifierPart(this.source.charCodeAt(this.index + 1))
+                (Character.isIdentifierPart(cpNext) ||
+                    //
+                    // ## and @@  (JISON action variables contain these, e.g. `@@1` or `##INDEX`)
+                    //
+                    // Note that these characters may only occur at the START of an identifier
+                    // AND these cannot occur on their own but must be a prefix of a
+                    // larger identifier, e.g. `@@1`, `@@label1`, `##3`, `##loc`, `##id`
+                    //
+                    ((cpNext === 0x23 || cpNext === 0x40) &&
+                        Character.isIdentifierPart(this.source.charCodeAt(this.index + 2))
+                    )
+                )
             )
         ) {
             return this.scanIdentifier();

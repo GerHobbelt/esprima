@@ -4666,6 +4666,13 @@ var Scanner = /** @class */ (function () {
     };
     Scanner.prototype.getIdentifier = function () {
         var start = this.index++;
+        var ch1 = this.source.charCodeAt(this.index - 1);
+        var ch2 = this.source.charCodeAt(this.index);
+        if ((ch1 === 0x23 || ch1 === 0x40) &&
+            (ch2 === 0x23 || ch2 === 0x40)) {
+            // ## and @@ at start of identifier name  (JISON action variables contain these, e.g. `@@1` or `##INDEX`)
+            ++this.index;
+        }
         while (!this.eof()) {
             var ch = this.source.charCodeAt(this.index);
             if (ch === 0x5C) {
@@ -4683,7 +4690,7 @@ var Scanner = /** @class */ (function () {
             }
             else if ((ch === 0x23 || ch === 0x40) &&
                 character_1.Character.isIdentifierPart(this.source.charCodeAt(this.index - 1))) {
-                // # and @  (JISON action variables contain these, e.g. `@1` or `#LABEL#`)
+                // # and @ at end of identifier name  (JISON action variables contain these, e.g. `@1` or `#LABEL#`)
                 //
                 // Note that these characters may only occur at the START or END of an identifier
                 // AND these cannot occur on their own but must be a prefix or postfix of a
@@ -5441,6 +5448,7 @@ var Scanner = /** @class */ (function () {
             };
         }
         var cp = this.source.charCodeAt(this.index);
+        var cpNext = this.source.charCodeAt(this.index + 1);
         if (character_1.Character.isIdentifierStart(cp) ||
             //
             // # and @  (JISON action variables contain these, e.g. `@1` or `#LABEL#`)
@@ -5450,7 +5458,16 @@ var Scanner = /** @class */ (function () {
             // larger identifier, e.g. `@1`, `@label1`, `#3`, `#loc`, `#id#`
             //
             ((cp === 0x23 || cp === 0x40) &&
-                character_1.Character.isIdentifierPart(this.source.charCodeAt(this.index + 1)))) {
+                (character_1.Character.isIdentifierPart(cpNext) ||
+                    //
+                    // ## and @@  (JISON action variables contain these, e.g. `@@1` or `##INDEX`)
+                    //
+                    // Note that these characters may only occur at the START of an identifier
+                    // AND these cannot occur on their own but must be a prefix of a
+                    // larger identifier, e.g. `@@1`, `@@label1`, `##3`, `##loc`, `##id`
+                    //
+                    ((cpNext === 0x23 || cpNext === 0x40) &&
+                        character_1.Character.isIdentifierPart(this.source.charCodeAt(this.index + 2)))))) {
             return this.scanIdentifier();
         }
         // Very common: ( and ) and ;
@@ -5611,7 +5628,7 @@ exports.tokenize = tokenize;
 var syntax_1 = __webpack_require__(0);
 exports.Syntax = syntax_1.Syntax;
 // Sync with *.json manifests.
-exports.version = '4.0.1-9';
+exports.version = '4.0.1-10';
 
 
 /***/ }),
