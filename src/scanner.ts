@@ -421,16 +421,8 @@ export class Scanner {
     }
 
     private getIdentifier(): string {
-        const start = this.index++;
-        const ch1 = this.source.charCodeAt(this.index - 1);
-        const ch2 = this.source.charCodeAt(this.index);
-        if ((ch1 === 0x23 || ch1 === 0x40) &&
-            (ch2 === 0x23 || ch2 === 0x40)
-        ) {
-            // ## and @@ at start of identifier name  (JISON action variables contain these, e.g. `@@1` or `##INDEX`)
-            ++this.index;
-        }
-
+        const start = this.index;
+        this.index++;
         while (!this.eof()) {
             const ch = this.source.charCodeAt(this.index);
             if (ch === 0x5C) {
@@ -545,12 +537,15 @@ export class Scanner {
 
     // https://tc39.github.io/ecma262/#sec-names-and-keywords
 
-    private scanIdentifier(): RawToken {
+    private scanIdentifier(start: number): RawToken {
         let type: Token;
-        const start = this.index;
+        const partStart = this.index;
 
         // Backslash (U+005C) starts an escaped character.
-        const id = (this.source.charCodeAt(start) === 0x5C) ? this.getComplexIdentifier() : this.getIdentifier();
+        let id = ((this.source.charCodeAt(partStart) === 0x5C) ? this.getComplexIdentifier() : this.getIdentifier());
+        if (partStart > start) {
+            id = this.source.slice(start, partStart) + id;
+        }
 
         // There is no keyword or literal with only one character.
         // Thus, it must be an identifier.
@@ -1275,9 +1270,10 @@ export class Scanner {
         }
 
         const cp = this.source.charCodeAt(this.index);
-        const cpNext = this.source.charCodeAt(this.index + 1);
 
-        if (Character.isIdentifierStart(cp) ||
+        if (Character.isIdentifierStart(cp)) {
+            return this.scanIdentifier(this.index);
+        } else if (cp === 0x23 || cp === 0x40) {
             //
             // # and @  (JISON action variables contain these, e.g. `@1` or `#LABEL#`)
             //
@@ -1285,22 +1281,39 @@ export class Scanner {
             // AND these cannot occur on their own but must be a prefix or postfix of a
             // larger identifier, e.g. `@1`, `@label1`, `#3`, `#loc`, `#id#`
             //
-            ((cp === 0x23 || cp === 0x40) &&
-                (Character.isIdentifierPart(cpNext) ||
-                    //
-                    // ## and @@  (JISON action variables contain these, e.g. `@@1` or `##INDEX`)
-                    //
-                    // Note that these characters may only occur at the START of an identifier
-                    // AND these cannot occur on their own but must be a prefix of a
-                    // larger identifier, e.g. `@@1`, `@@label1`, `##3`, `##loc`, `##id`
-                    //
-                    ((cpNext === 0x23 || cpNext === 0x40) &&
-                        Character.isIdentifierPart(this.source.charCodeAt(this.index + 2))
-                    )
-                )
-            )
-        ) {
-            return this.scanIdentifier();
+            const start = this.index;
+            const cpNext = this.source.charCodeAt(this.index + 1);
+            if (Character.isIdentifierPart(cpNext)) {
+                this.index += 1;
+                return this.scanIdentifier(start);
+            } else if (cpNext === 0x23 || cpNext === 0x40) {
+                //
+                // ## and @@  (JISON action variables contain these, e.g. `@@1` or `##INDEX`)
+                //
+                // Note that these characters may only occur at the START of an identifier
+                // AND these cannot occur on their own but must be a prefix of a
+                // larger identifier, e.g. `@@1`, `@@label1`, `##3`, `##loc`, `##id`
+                //
+                const cpNextNext = this.source.charCodeAt(this.index + 2);
+                if (Character.isIdentifierPart(cpNextNext)) {
+                    this.index += 2;
+                    return this.scanIdentifier(start);
+                } else if (cpNextNext === 0x2D) {
+                    // negative reference index variable, e.g. `@@-1`:
+                    const cpN3 = this.source.charCodeAt(this.index + 3);
+                    if (Character.isDecimalDigit(cpN3)) {
+                        this.index += 3;
+                        return this.scanIdentifier(start);
+                    }
+                }
+            } else if (cpNext === 0x2D) {
+                // negative reference index variable, e.g. `@-1`:
+                const cpN2 = this.source.charCodeAt(this.index + 2);
+                if (Character.isDecimalDigit(cpN2)) {
+                    this.index += 2;
+                    return this.scanIdentifier(start);
+                }
+            }
         }
 
         // Very common: ( and ) and ;
@@ -1335,7 +1348,7 @@ export class Scanner {
         // Possible identifier start in a surrogate pair.
         if (cp >= 0xD800 && cp < 0xDFFF) {
             if (Character.isIdentifierStart(this.codePointAt(this.index))) {
-                return this.scanIdentifier();
+                return this.scanIdentifier(this.index);
             }
         }
 

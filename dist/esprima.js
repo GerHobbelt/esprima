@@ -4665,14 +4665,8 @@ var Scanner = /** @class */ (function () {
         return character_1.Character.fromCodePoint(code);
     };
     Scanner.prototype.getIdentifier = function () {
-        var start = this.index++;
-        var ch1 = this.source.charCodeAt(this.index - 1);
-        var ch2 = this.source.charCodeAt(this.index);
-        if ((ch1 === 0x23 || ch1 === 0x40) &&
-            (ch2 === 0x23 || ch2 === 0x40)) {
-            // ## and @@ at start of identifier name  (JISON action variables contain these, e.g. `@@1` or `##INDEX`)
-            ++this.index;
-        }
+        var start = this.index;
+        this.index++;
         while (!this.eof()) {
             var ch = this.source.charCodeAt(this.index);
             if (ch === 0x5C) {
@@ -4778,11 +4772,14 @@ var Scanner = /** @class */ (function () {
         };
     };
     // https://tc39.github.io/ecma262/#sec-names-and-keywords
-    Scanner.prototype.scanIdentifier = function () {
+    Scanner.prototype.scanIdentifier = function (start) {
         var type;
-        var start = this.index;
+        var partStart = this.index;
         // Backslash (U+005C) starts an escaped character.
-        var id = (this.source.charCodeAt(start) === 0x5C) ? this.getComplexIdentifier() : this.getIdentifier();
+        var id = ((this.source.charCodeAt(partStart) === 0x5C) ? this.getComplexIdentifier() : this.getIdentifier());
+        if (partStart > start) {
+            id = this.source.slice(start, partStart) + id;
+        }
         // There is no keyword or literal with only one character.
         // Thus, it must be an identifier.
         if (id.length === 1) {
@@ -5448,8 +5445,10 @@ var Scanner = /** @class */ (function () {
             };
         }
         var cp = this.source.charCodeAt(this.index);
-        var cpNext = this.source.charCodeAt(this.index + 1);
-        if (character_1.Character.isIdentifierStart(cp) ||
+        if (character_1.Character.isIdentifierStart(cp)) {
+            return this.scanIdentifier(this.index);
+        }
+        else if (cp === 0x23 || cp === 0x40) {
             //
             // # and @  (JISON action variables contain these, e.g. `@1` or `#LABEL#`)
             //
@@ -5457,18 +5456,42 @@ var Scanner = /** @class */ (function () {
             // AND these cannot occur on their own but must be a prefix or postfix of a
             // larger identifier, e.g. `@1`, `@label1`, `#3`, `#loc`, `#id#`
             //
-            ((cp === 0x23 || cp === 0x40) &&
-                (character_1.Character.isIdentifierPart(cpNext) ||
-                    //
-                    // ## and @@  (JISON action variables contain these, e.g. `@@1` or `##INDEX`)
-                    //
-                    // Note that these characters may only occur at the START of an identifier
-                    // AND these cannot occur on their own but must be a prefix of a
-                    // larger identifier, e.g. `@@1`, `@@label1`, `##3`, `##loc`, `##id`
-                    //
-                    ((cpNext === 0x23 || cpNext === 0x40) &&
-                        character_1.Character.isIdentifierPart(this.source.charCodeAt(this.index + 2)))))) {
-            return this.scanIdentifier();
+            var start = this.index;
+            var cpNext = this.source.charCodeAt(this.index + 1);
+            if (character_1.Character.isIdentifierPart(cpNext)) {
+                this.index += 1;
+                return this.scanIdentifier(start);
+            }
+            else if (cpNext === 0x23 || cpNext === 0x40) {
+                //
+                // ## and @@  (JISON action variables contain these, e.g. `@@1` or `##INDEX`)
+                //
+                // Note that these characters may only occur at the START of an identifier
+                // AND these cannot occur on their own but must be a prefix of a
+                // larger identifier, e.g. `@@1`, `@@label1`, `##3`, `##loc`, `##id`
+                //
+                var cpNextNext = this.source.charCodeAt(this.index + 2);
+                if (character_1.Character.isIdentifierPart(cpNextNext)) {
+                    this.index += 2;
+                    return this.scanIdentifier(start);
+                }
+                else if (cpNextNext === 0x2D) {
+                    // negative reference index variable, e.g. `@@-1`:
+                    var cpN3 = this.source.charCodeAt(this.index + 3);
+                    if (character_1.Character.isDecimalDigit(cpN3)) {
+                        this.index += 3;
+                        return this.scanIdentifier(start);
+                    }
+                }
+            }
+            else if (cpNext === 0x2D) {
+                // negative reference index variable, e.g. `@-1`:
+                var cpN2 = this.source.charCodeAt(this.index + 2);
+                if (character_1.Character.isDecimalDigit(cpN2)) {
+                    this.index += 2;
+                    return this.scanIdentifier(start);
+                }
+            }
         }
         // Very common: ( and ) and ;
         if (cp === 0x28 || cp === 0x29 || cp === 0x3B) {
@@ -5497,7 +5520,7 @@ var Scanner = /** @class */ (function () {
         // Possible identifier start in a surrogate pair.
         if (cp >= 0xD800 && cp < 0xDFFF) {
             if (character_1.Character.isIdentifierStart(this.codePointAt(this.index))) {
-                return this.scanIdentifier();
+                return this.scanIdentifier(this.index);
             }
         }
         return this.scanPunctuator();
