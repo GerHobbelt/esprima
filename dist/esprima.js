@@ -1494,7 +1494,7 @@ var Parser = /** @class */ (function () {
                         expr = this.finalize(node, new Node.RegexLiteral(token.regex, raw, token.pattern, token.flags));
                         break;
                     default:
-                        expr = this.throwUnexpectedToken(this.nextToken());
+                        this.throwUnexpectedToken(this.nextToken());
                 }
                 break;
             case 4 /* Keyword */:
@@ -1521,12 +1521,12 @@ var Parser = /** @class */ (function () {
                         expr = this.parseImportCall();
                     }
                     else {
-                        expr = this.throwUnexpectedToken(this.nextToken());
+                        this.throwUnexpectedToken(this.nextToken());
                     }
                 }
                 break;
             default:
-                expr = this.throwUnexpectedToken(this.nextToken());
+                this.throwUnexpectedToken(this.nextToken());
         }
         return expr;
     };
@@ -1630,11 +1630,11 @@ var Parser = /** @class */ (function () {
                     this.expect(']');
                 }
                 else {
-                    key = this.throwUnexpectedToken(token);
+                    this.throwUnexpectedToken(token);
                 }
                 break;
             default:
-                key = this.throwUnexpectedToken(token);
+                this.throwUnexpectedToken(token);
         }
         return key;
     };
@@ -3362,7 +3362,7 @@ var Parser = /** @class */ (function () {
                 }
                 break;
             default:
-                statement = this.throwUnexpectedToken(this.lookahead);
+                this.throwUnexpectedToken(this.lookahead);
         }
         return statement;
     };
@@ -4364,7 +4364,7 @@ var Scanner = /** @class */ (function () {
     };
     Scanner.prototype.throwUnexpectedToken = function (message) {
         if (message === void 0) { message = messages_1.Messages.UnexpectedTokenIllegal; }
-        return this.errorHandler.throwError(this.index, this.lineNumber, this.index - this.lineStart + 1, message);
+        this.errorHandler.throwError(this.index, this.lineNumber, this.index - this.lineStart + 1, message);
     };
     Scanner.prototype.tolerateUnexpectedToken = function (message) {
         if (message === void 0) { message = messages_1.Messages.UnexpectedTokenIllegal; }
