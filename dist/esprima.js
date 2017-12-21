@@ -9,7 +9,7 @@
 		exports["esprima"] = factory();
 	else
 		root["esprima"] = factory();
-})(this, function() {
+})(typeof self !== 'undefined' ? self : this, function() {
 return /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
@@ -3087,9 +3087,9 @@ var Parser = /** @class */ (function () {
         }
         var node = this.createNode();
         this.expectKeyword('return');
-        var hasArgument = !this.match(';') && !this.match('}') &&
-            (!this.hasLineTerminator || this.match('`')) &&
-            this.lookahead.type !== 2 /* EOF */;
+        var hasArgument = (!this.match(';') && !this.match('}') &&
+            !this.hasLineTerminator && this.lookahead.type !== 2 /* EOF */) ||
+            this.lookahead.type === 10 /* Template */;
         var argument = hasArgument ? this.parseExpression() : null;
         this.consumeSemicolon();
         return this.finalize(node, new Node.ReturnStatement(argument));
@@ -3904,6 +3904,7 @@ var Parser = /** @class */ (function () {
     Parser.prototype.parseModule = function () {
         this.context.strict = true;
         this.context.isModule = true;
+        this.scanner.isModule = true;
         var node = this.createNode();
         var body = this.parseDirectivePrologues();
         while (this.lookahead.type !== 2 /* EOF */) {
@@ -4339,6 +4340,7 @@ var Scanner = /** @class */ (function () {
         this.source = code;
         this.errorHandler = handler;
         this.trackComment = false;
+        this.isModule = false;
         this.length = code.length;
         this.index = 0;
         this.lineNumber = (code.length > 0) ? 1 : 0;
@@ -4544,7 +4546,7 @@ var Scanner = /** @class */ (function () {
                     break;
                 }
             }
-            else if (ch === 0x3C) {
+            else if (ch === 0x3C && !this.isModule) {
                 if (this.source.slice(this.index + 1, this.index + 4) === '!--') {
                     this.index += 4; // `<!--`
                     var comment = this.skipSingleLineComment(4);
@@ -6769,7 +6771,7 @@ var Reader = /** @class */ (function () {
             case '}':
                 // Dividing a function by anything makes little sense,
                 // but we have to check for that.
-                regex = false;
+                regex = true;
                 if (this.values[this.curly - 3] === 'function') {
                     // Anonymous function, e.g. function(){} /42
                     var check = this.values[this.curly - 4];
@@ -6847,8 +6849,21 @@ var Tokenizer = /** @class */ (function () {
                         end: {}
                     };
                 }
-                var startRegex = (this.scanner.source[this.scanner.index] === '/') && this.reader.isRegexStart();
-                var token = startRegex ? this.scanner.scanRegExp() : this.scanner.lex();
+                var maybeRegex = (this.scanner.source[this.scanner.index] === '/') && this.reader.isRegexStart();
+                var token = void 0;
+                if (maybeRegex) {
+                    var state = this.scanner.saveState();
+                    try {
+                        token = this.scanner.scanRegExp();
+                    }
+                    catch (e) {
+                        this.scanner.restoreState(state);
+                        token = this.scanner.lex();
+                    }
+                }
+                else {
+                    token = this.scanner.lex();
+                }
                 this.reader.push(token);
                 var entry = {
                     type: token_1.TokenName[token.type],
