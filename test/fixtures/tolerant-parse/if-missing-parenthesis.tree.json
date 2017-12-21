@@ -59,6 +59,7 @@
                 }
             },
             "consequent": {
+                "type": "EmptyStatement",
                 "range": [
                     11,
                     11
@@ -72,8 +73,7 @@
                         "line": 2,
                         "column": 0
                     }
-                },
-                "type": "EmptyStatement"
+                }
             },
             "alternate": null,
             "range": [
@@ -107,6 +107,7 @@
             "column": 0
         }
     },
+    "comments": [],
     "tokens": [
         {
             "type": "Keyword",

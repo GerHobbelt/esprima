@@ -204,6 +204,7 @@
             "column": 22
         }
     },
+    "comments": [],
     "tokens": [
         {
             "type": "Identifier",

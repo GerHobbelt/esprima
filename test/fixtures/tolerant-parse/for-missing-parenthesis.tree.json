@@ -169,6 +169,7 @@
                 }
             },
             "body": {
+                "type": "EmptyStatement",
                 "range": [
                     27,
                     27
@@ -182,8 +183,7 @@
                         "line": 2,
                         "column": 0
                     }
-                },
-                "type": "EmptyStatement"
+                }
             },
             "range": [
                 0,
@@ -216,6 +216,7 @@
             "column": 0
         }
     },
+    "comments": [],
     "tokens": [
         {
             "type": "Keyword",

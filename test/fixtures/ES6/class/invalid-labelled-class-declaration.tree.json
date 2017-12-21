@@ -106,6 +106,7 @@
             "column": 13
         }
     },
+    "comments": [],
     "tokens": [
         {
             "type": "Identifier",

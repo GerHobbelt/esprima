@@ -76,6 +76,21 @@
         }
     ],
     "sourceType": "script",
+    "range": [
+        0,
+        16
+    ],
+    "loc": {
+        "start": {
+            "line": 1,
+            "column": 0
+        },
+        "end": {
+            "line": 1,
+            "column": 16
+        }
+    },
+    "comments": [],
     "tokens": [
         {
             "type": "Keyword",
@@ -247,19 +262,5 @@
             "column": 7,
             "message": "Error: Line 1: Invalid left-hand side in for-in"
         }
-    ],
-    "range": [
-        0,
-        16
-    ],
-    "loc": {
-        "start": {
-            "line": 1,
-            "column": 0
-        },
-        "end": {
-            "line": 1,
-            "column": 16
-        }
-    }
+    ]
 }

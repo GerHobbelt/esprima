@@ -22,7 +22,22 @@
             }
         }
     ],
-    "sourceType": "module",
+    "sourceType": "script",
+    "range": [
+        0,
+        10
+    ],
+    "loc": {
+        "start": {
+            "line": 1,
+            "column": 0
+        },
+        "end": {
+            "line": 1,
+            "column": 10
+        }
+    },
+    "comments": [],
     "tokens": [
         {
             "type": "Keyword",
@@ -97,18 +112,12 @@
             }
         }
     ],
-    "range": [
-        0,
-        10
-    ],
-    "loc": {
-        "start": {
-            "line": 1,
-            "column": 0
-        },
-        "end": {
-            "line": 1,
-            "column": 10
+    "errors": [
+        {
+            "index": 0,
+            "lineNumber": 1,
+            "column": 1,
+            "message": "Error: Line 1: Unexpected token"
         }
-    }
+    ]
 }

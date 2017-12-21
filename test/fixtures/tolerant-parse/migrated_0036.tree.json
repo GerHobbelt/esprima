@@ -133,6 +133,21 @@
         }
     ],
     "sourceType": "script",
+    "range": [
+        0,
+        36
+    ],
+    "loc": {
+        "start": {
+            "line": 1,
+            "column": 0
+        },
+        "end": {
+            "line": 1,
+            "column": 36
+        }
+    },
+    "comments": [],
     "tokens": [
         {
             "type": "String",
@@ -358,19 +373,5 @@
             "column": 27,
             "message": "Error: Line 1: Parameter name eval or arguments is not allowed in strict mode"
         }
-    ],
-    "range": [
-        0,
-        36
-    ],
-    "loc": {
-        "start": {
-            "line": 1,
-            "column": 0
-        },
-        "end": {
-            "line": 1,
-            "column": 36
-        }
-    }
+    ]
 }

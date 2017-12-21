@@ -187,6 +187,7 @@
             "column": 19
         }
     },
+    "comments": [],
     "tokens": [
         {
             "type": "Identifier",

@@ -151,6 +151,21 @@
         }
     ],
     "sourceType": "script",
+    "range": [
+        0,
+        41
+    ],
+    "loc": {
+        "start": {
+            "line": 1,
+            "column": 0
+        },
+        "end": {
+            "line": 1,
+            "column": 41
+        }
+    },
+    "comments": [],
     "tokens": [
         {
             "type": "String",
@@ -412,19 +427,5 @@
             "column": 33,
             "message": "Error: Line 1: Strict mode function may not have duplicate parameter names"
         }
-    ],
-    "range": [
-        0,
-        41
-    ],
-    "loc": {
-        "start": {
-            "line": 1,
-            "column": 0
-        },
-        "end": {
-            "line": 1,
-            "column": 41
-        }
-    }
+    ]
 }

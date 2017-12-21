@@ -340,12 +340,13 @@
             exception.tokenize = undefined;
         }
 
-        expected = JSON.stringify(exception);
+        expected = JSON.stringify(exception, null, 4);
 
         code = testCase.case || testCase.source || '';
 
         for (i = 0; i < options.length; i += 1) {
 
+            actual = undefined;
             try {
                 if (tokenize) {
                     esprima.tokenize(code, options[i]);
@@ -355,7 +356,7 @@
             } catch (e) {
                 err = errorToObject(e);
                 err.description = e.description;
-                actual = JSON.stringify(err);
+                actual = JSON.stringify(err, null, 4);
             }
 
             if (expected !== actual) {

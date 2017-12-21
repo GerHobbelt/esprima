@@ -53,6 +53,7 @@
             "column": 9
         }
     },
+    "comments": [],
     "tokens": [
         {
             "type": "Boolean",

@@ -331,6 +331,21 @@
         }
     ],
     "sourceType": "script",
+    "range": [
+        0,
+        54
+    ],
+    "loc": {
+        "start": {
+            "line": 1,
+            "column": 0
+        },
+        "end": {
+            "line": 1,
+            "column": 54
+        }
+    },
+    "comments": [],
     "tokens": [
         {
             "type": "Keyword",
@@ -760,19 +775,5 @@
             "column": 45,
             "message": "Error: Line 1: Unexpected token four"
         }
-    ],
-    "range": [
-        0,
-        54
-    ],
-    "loc": {
-        "start": {
-            "line": 1,
-            "column": 0
-        },
-        "end": {
-            "line": 1,
-            "column": 54
-        }
-    }
+    ]
 }

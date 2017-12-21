@@ -77,12 +77,12 @@ function getBaselineSyntax(name) {
 }
 
 function createBaselineSyntax(name, syntax) {
-    var tree = JSON.stringify(syntax);
+    var tree = JSON.stringify(syntax, null, 4);
     fs.writeFileSync('test/3rdparty/syntax/' + name + '.json', tree, 'utf-8');
 }
 
 function writeActualSyntax(name, syntax) {
-    var tree = JSON.stringify(syntax);
+    var tree = JSON.stringify(syntax, null, 4);
     fs.writeFileSync('test/3rdparty/syntax/' + name + '.actual.json', tree, 'utf-8');
 }
 
@@ -97,12 +97,12 @@ function getBaselineTokens(name) {
 }
 
 function createBaselineTokens(name, tokens) {
-    var data = JSON.stringify(sortedObject(tokens));
+    var data = JSON.stringify(sortedObject(tokens), null, 4);
     fs.writeFileSync('test/3rdparty/syntax/' + name + '.tokens', data, 'utf-8');
 }
 
 function writeActualTokens(name, tokens) {
-    var data = JSON.stringify(sortedObject(tokens));
+    var data = JSON.stringify(sortedObject(tokens), null, 4);
     fs.writeFileSync('test/3rdparty/syntax/' + name + '.actual.tokens', data, 'utf-8');
 }
 

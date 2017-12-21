@@ -112,6 +112,21 @@
         }
     ],
     "sourceType": "script",
+    "range": [
+        0,
+        23
+    ],
+    "loc": {
+        "start": {
+            "line": 1,
+            "column": 0
+        },
+        "end": {
+            "line": 1,
+            "column": 23
+        }
+    },
+    "comments": [],
     "tokens": [
         {
             "type": "String",
@@ -229,19 +244,5 @@
             "column": 15,
             "message": "Error: Line 1: Assignment to eval or arguments is not allowed in strict mode"
         }
-    ],
-    "range": [
-        0,
-        23
-    ],
-    "loc": {
-        "start": {
-            "line": 1,
-            "column": 0
-        },
-        "end": {
-            "line": 1,
-            "column": 23
-        }
-    }
+    ]
 }

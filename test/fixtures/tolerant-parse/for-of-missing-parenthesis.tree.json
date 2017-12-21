@@ -40,6 +40,7 @@
                 }
             },
             "body": {
+                "type": "EmptyStatement",
                 "range": [
                     15,
                     15
@@ -53,8 +54,7 @@
                         "line": 3,
                         "column": 0
                     }
-                },
-                "type": "EmptyStatement"
+                }
             },
             "range": [
                 0,
@@ -87,6 +87,7 @@
             "column": 0
         }
     },
+    "comments": [],
     "tokens": [
         {
             "type": "Keyword",

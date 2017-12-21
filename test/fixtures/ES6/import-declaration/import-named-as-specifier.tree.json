@@ -2,39 +2,13 @@
     "type": "Program",
     "body": [
         {
-            "range": [
-                0,
-                31
-            ],
-            "loc": {
-                "start": {
-                    "line": 1,
-                    "column": 0
-                },
-                "end": {
-                    "line": 1,
-                    "column": 31
-                }
-            },
             "type": "ImportDeclaration",
             "specifiers": [
                 {
-                    "range": [
-                        8,
-                        18
-                    ],
-                    "loc": {
-                        "start": {
-                            "line": 1,
-                            "column": 8
-                        },
-                        "end": {
-                            "line": 1,
-                            "column": 18
-                        }
-                    },
                     "type": "ImportSpecifier",
                     "local": {
+                        "type": "Identifier",
+                        "name": "baz",
                         "range": [
                             15,
                             18
@@ -48,11 +22,11 @@
                                 "line": 1,
                                 "column": 18
                             }
-                        },
-                        "type": "Identifier",
-                        "name": "baz"
+                        }
                     },
                     "imported": {
+                        "type": "Identifier",
+                        "name": "bar",
                         "range": [
                             8,
                             11
@@ -66,13 +40,28 @@
                                 "line": 1,
                                 "column": 11
                             }
+                        }
+                    },
+                    "range": [
+                        8,
+                        18
+                    ],
+                    "loc": {
+                        "start": {
+                            "line": 1,
+                            "column": 8
                         },
-                        "type": "Identifier",
-                        "name": "bar"
+                        "end": {
+                            "line": 1,
+                            "column": 18
+                        }
                     }
                 }
             ],
             "source": {
+                "type": "Literal",
+                "value": "foo",
+                "raw": "\"foo\"",
                 "range": [
                     25,
                     30
@@ -86,14 +75,40 @@
                         "line": 1,
                         "column": 30
                     }
+                }
+            },
+            "range": [
+                0,
+                31
+            ],
+            "loc": {
+                "start": {
+                    "line": 1,
+                    "column": 0
                 },
-                "type": "Literal",
-                "value": "foo",
-                "raw": "\"foo\""
+                "end": {
+                    "line": 1,
+                    "column": 31
+                }
             }
         }
     ],
-    "sourceType": "module",
+    "sourceType": "script",
+    "range": [
+        0,
+        31
+    ],
+    "loc": {
+        "start": {
+            "line": 1,
+            "column": 0
+        },
+        "end": {
+            "line": 1,
+            "column": 31
+        }
+    },
+    "comments": [],
     "tokens": [
         {
             "type": "Keyword",
@@ -258,18 +273,12 @@
             }
         }
     ],
-    "range": [
-        0,
-        31
-    ],
-    "loc": {
-        "start": {
-            "line": 1,
-            "column": 0
-        },
-        "end": {
-            "line": 1,
-            "column": 31
+    "errors": [
+        {
+            "index": 0,
+            "lineNumber": 1,
+            "column": 1,
+            "message": "Error: Line 1: Unexpected token"
         }
-    }
+    ]
 }

@@ -81,6 +81,21 @@
         }
     ],
     "sourceType": "script",
+    "range": [
+        0,
+        18
+    ],
+    "loc": {
+        "start": {
+            "line": 1,
+            "column": 0
+        },
+        "end": {
+            "line": 1,
+            "column": 18
+        }
+    },
+    "comments": [],
     "tokens": [
         {
             "type": "Keyword",
@@ -139,10 +154,6 @@
         {
             "type": "RegularExpression",
             "value": "/[P QR]/\\g",
-            "regex": {
-                "pattern": "[P QR]",
-                "flags": "g"
-            },
             "range": [
                 8,
                 18
@@ -156,6 +167,10 @@
                     "line": 1,
                     "column": 18
                 }
+            },
+            "regex": {
+                "pattern": "[P QR]",
+                "flags": "g"
             }
         }
     ],
@@ -166,19 +181,5 @@
             "column": 18,
             "message": "Error: Line 1: Unexpected token ILLEGAL"
         }
-    ],
-    "range": [
-        0,
-        18
-    ],
-    "loc": {
-        "start": {
-            "line": 1,
-            "column": 0
-        },
-        "end": {
-            "line": 1,
-            "column": 18
-        }
-    }
+    ]
 }

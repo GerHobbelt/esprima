@@ -131,6 +131,7 @@
             "column": 32
         }
     },
+    "comments": [],
     "tokens": [
         {
             "type": "Keyword",

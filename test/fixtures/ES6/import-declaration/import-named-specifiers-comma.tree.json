@@ -2,23 +2,46 @@
     "type": "Program",
     "body": [
         {
-            "range": [
-                0,
-                30
-            ],
-            "loc": {
-                "start": {
-                    "line": 1,
-                    "column": 0
-                },
-                "end": {
-                    "line": 1,
-                    "column": 30
-                }
-            },
             "type": "ImportDeclaration",
             "specifiers": [
                 {
+                    "type": "ImportSpecifier",
+                    "local": {
+                        "type": "Identifier",
+                        "name": "bar",
+                        "range": [
+                            8,
+                            11
+                        ],
+                        "loc": {
+                            "start": {
+                                "line": 1,
+                                "column": 8
+                            },
+                            "end": {
+                                "line": 1,
+                                "column": 11
+                            }
+                        }
+                    },
+                    "imported": {
+                        "type": "Identifier",
+                        "name": "bar",
+                        "range": [
+                            8,
+                            11
+                        ],
+                        "loc": {
+                            "start": {
+                                "line": 1,
+                                "column": 8
+                            },
+                            "end": {
+                                "line": 1,
+                                "column": 11
+                            }
+                        }
+                    },
                     "range": [
                         8,
                         11
@@ -32,46 +55,46 @@
                             "line": 1,
                             "column": 11
                         }
-                    },
-                    "type": "ImportSpecifier",
-                    "local": {
-                        "range": [
-                            8,
-                            11
-                        ],
-                        "loc": {
-                            "start": {
-                                "line": 1,
-                                "column": 8
-                            },
-                            "end": {
-                                "line": 1,
-                                "column": 11
-                            }
-                        },
-                        "type": "Identifier",
-                        "name": "bar"
-                    },
-                    "imported": {
-                        "range": [
-                            8,
-                            11
-                        ],
-                        "loc": {
-                            "start": {
-                                "line": 1,
-                                "column": 8
-                            },
-                            "end": {
-                                "line": 1,
-                                "column": 11
-                            }
-                        },
-                        "type": "Identifier",
-                        "name": "bar"
                     }
                 },
                 {
+                    "type": "ImportSpecifier",
+                    "local": {
+                        "type": "Identifier",
+                        "name": "baz",
+                        "range": [
+                            13,
+                            16
+                        ],
+                        "loc": {
+                            "start": {
+                                "line": 1,
+                                "column": 13
+                            },
+                            "end": {
+                                "line": 1,
+                                "column": 16
+                            }
+                        }
+                    },
+                    "imported": {
+                        "type": "Identifier",
+                        "name": "baz",
+                        "range": [
+                            13,
+                            16
+                        ],
+                        "loc": {
+                            "start": {
+                                "line": 1,
+                                "column": 13
+                            },
+                            "end": {
+                                "line": 1,
+                                "column": 16
+                            }
+                        }
+                    },
                     "range": [
                         13,
                         16
@@ -85,47 +108,13 @@
                             "line": 1,
                             "column": 16
                         }
-                    },
-                    "type": "ImportSpecifier",
-                    "local": {
-                        "range": [
-                            13,
-                            16
-                        ],
-                        "loc": {
-                            "start": {
-                                "line": 1,
-                                "column": 13
-                            },
-                            "end": {
-                                "line": 1,
-                                "column": 16
-                            }
-                        },
-                        "type": "Identifier",
-                        "name": "baz"
-                    },
-                    "imported": {
-                        "range": [
-                            13,
-                            16
-                        ],
-                        "loc": {
-                            "start": {
-                                "line": 1,
-                                "column": 13
-                            },
-                            "end": {
-                                "line": 1,
-                                "column": 16
-                            }
-                        },
-                        "type": "Identifier",
-                        "name": "baz"
                     }
                 }
             ],
             "source": {
+                "type": "Literal",
+                "value": "foo",
+                "raw": "\"foo\"",
                 "range": [
                     24,
                     29
@@ -139,14 +128,40 @@
                         "line": 1,
                         "column": 29
                     }
+                }
+            },
+            "range": [
+                0,
+                30
+            ],
+            "loc": {
+                "start": {
+                    "line": 1,
+                    "column": 0
                 },
-                "type": "Literal",
-                "value": "foo",
-                "raw": "\"foo\""
+                "end": {
+                    "line": 1,
+                    "column": 30
+                }
             }
         }
     ],
-    "sourceType": "module",
+    "sourceType": "script",
+    "range": [
+        0,
+        30
+    ],
+    "loc": {
+        "start": {
+            "line": 1,
+            "column": 0
+        },
+        "end": {
+            "line": 1,
+            "column": 30
+        }
+    },
+    "comments": [],
     "tokens": [
         {
             "type": "Keyword",
@@ -329,18 +344,12 @@
             }
         }
     ],
-    "range": [
-        0,
-        30
-    ],
-    "loc": {
-        "start": {
-            "line": 1,
-            "column": 0
-        },
-        "end": {
-            "line": 1,
-            "column": 30
+    "errors": [
+        {
+            "index": 0,
+            "lineNumber": 1,
+            "column": 1,
+            "message": "Error: Line 1: Unexpected token"
         }
-    }
+    ]
 }

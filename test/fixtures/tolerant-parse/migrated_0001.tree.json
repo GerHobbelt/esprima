@@ -77,6 +77,20 @@
         }
     ],
     "sourceType": "script",
+    "range": [
+        0,
+        12
+    ],
+    "loc": {
+        "start": {
+            "line": 1,
+            "column": 0
+        },
+        "end": {
+            "line": 1,
+            "column": 12
+        }
+    },
     "comments": [
         {
             "type": "Block",
@@ -196,19 +210,5 @@
             "column": 17,
             "message": "Error: Line 1: Unexpected token ILLEGAL"
         }
-    ],
-    "range": [
-        0,
-        12
-    ],
-    "loc": {
-        "start": {
-            "line": 1,
-            "column": 0
-        },
-        "end": {
-            "line": 1,
-            "column": 12
-        }
-    }
+    ]
 }

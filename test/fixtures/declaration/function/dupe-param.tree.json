@@ -2,22 +2,10 @@
     "type": "Program",
     "body": [
         {
-            "range": [
-                0,
-                32
-            ],
-            "loc": {
-                "start": {
-                    "line": 1,
-                    "column": 0
-                },
-                "end": {
-                    "line": 1,
-                    "column": 32
-                }
-            },
             "type": "FunctionDeclaration",
             "id": {
+                "type": "Identifier",
+                "name": "a",
                 "range": [
                     9,
                     10
@@ -31,12 +19,12 @@
                         "line": 1,
                         "column": 10
                     }
-                },
-                "type": "Identifier",
-                "name": "a"
+                }
             },
             "params": [
                 {
+                    "type": "Identifier",
+                    "name": "x",
                     "range": [
                         11,
                         12
@@ -50,11 +38,11 @@
                             "line": 1,
                             "column": 12
                         }
-                    },
-                    "type": "Identifier",
-                    "name": "x"
+                    }
                 },
                 {
+                    "type": "Identifier",
+                    "name": "x",
                     "range": [
                         14,
                         15
@@ -68,45 +56,18 @@
                             "line": 1,
                             "column": 15
                         }
-                    },
-                    "type": "Identifier",
-                    "name": "x"
+                    }
                 }
             ],
             "body": {
-                "range": [
-                    17,
-                    32
-                ],
-                "loc": {
-                    "start": {
-                        "line": 1,
-                        "column": 17
-                    },
-                    "end": {
-                        "line": 1,
-                        "column": 32
-                    }
-                },
                 "type": "BlockStatement",
                 "body": [
                     {
-                        "range": [
-                            18,
-                            31
-                        ],
-                        "loc": {
-                            "start": {
-                                "line": 1,
-                                "column": 18
-                            },
-                            "end": {
-                                "line": 1,
-                                "column": 31
-                            }
-                        },
                         "type": "ExpressionStatement",
                         "expression": {
+                            "type": "Literal",
+                            "value": "use strict",
+                            "raw": "'use strict'",
                             "range": [
                                 18,
                                 30
@@ -120,21 +81,75 @@
                                     "line": 1,
                                     "column": 30
                                 }
-                            },
-                            "type": "Literal",
-                            "value": "use strict",
-                            "raw": "'use strict'"
+                            }
                         },
-                        "directive": "use strict"
+                        "directive": "use strict",
+                        "range": [
+                            18,
+                            31
+                        ],
+                        "loc": {
+                            "start": {
+                                "line": 1,
+                                "column": 18
+                            },
+                            "end": {
+                                "line": 1,
+                                "column": 31
+                            }
+                        }
                     }
-                ]
+                ],
+                "range": [
+                    17,
+                    32
+                ],
+                "loc": {
+                    "start": {
+                        "line": 1,
+                        "column": 17
+                    },
+                    "end": {
+                        "line": 1,
+                        "column": 32
+                    }
+                }
             },
             "generator": false,
             "expression": false,
-            "async": false
+            "async": false,
+            "range": [
+                0,
+                32
+            ],
+            "loc": {
+                "start": {
+                    "line": 1,
+                    "column": 0
+                },
+                "end": {
+                    "line": 1,
+                    "column": 32
+                }
+            }
         }
     ],
     "sourceType": "script",
+    "range": [
+        0,
+        32
+    ],
+    "loc": {
+        "start": {
+            "line": 1,
+            "column": 0
+        },
+        "end": {
+            "line": 1,
+            "column": 32
+        }
+    },
+    "comments": [],
     "tokens": [
         {
             "type": "Keyword",
@@ -342,19 +357,5 @@
             "column": 15,
             "message": "Error: Line 1: Strict mode function may not have duplicate parameter names"
         }
-    ],
-    "range": [
-        0,
-        32
-    ],
-    "loc": {
-        "start": {
-            "line": 1,
-            "column": 0
-        },
-        "end": {
-            "line": 1,
-            "column": 32
-        }
-    }
+    ]
 }

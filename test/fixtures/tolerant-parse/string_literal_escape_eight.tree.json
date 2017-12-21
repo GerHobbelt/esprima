@@ -2,39 +2,13 @@
     "type": "Program",
     "body": [
         {
-            "range": [
-                0,
-                16
-            ],
-            "loc": {
-                "start": {
-                    "line": 1,
-                    "column": 0
-                },
-                "end": {
-                    "line": 1,
-                    "column": 16
-                }
-            },
             "type": "VariableDeclaration",
             "declarations": [
                 {
-                    "range": [
-                        4,
-                        15
-                    ],
-                    "loc": {
-                        "start": {
-                            "line": 1,
-                            "column": 4
-                        },
-                        "end": {
-                            "line": 1,
-                            "column": 15
-                        }
-                    },
                     "type": "VariableDeclarator",
                     "id": {
+                        "type": "Identifier",
+                        "name": "x",
                         "range": [
                             4,
                             5
@@ -48,11 +22,12 @@
                                 "line": 1,
                                 "column": 5
                             }
-                        },
-                        "type": "Identifier",
-                        "name": "x"
+                        }
                     },
                     "init": {
+                        "type": "Literal",
+                        "value": "abc8",
+                        "raw": "'abc\\8'",
                         "range": [
                             8,
                             15
@@ -66,17 +41,57 @@
                                 "line": 1,
                                 "column": 15
                             }
+                        }
+                    },
+                    "range": [
+                        4,
+                        15
+                    ],
+                    "loc": {
+                        "start": {
+                            "line": 1,
+                            "column": 4
                         },
-                        "type": "Literal",
-                        "value": "abc8",
-                        "raw": "'abc\\8'"
+                        "end": {
+                            "line": 1,
+                            "column": 15
+                        }
                     }
                 }
             ],
-            "kind": "var"
+            "kind": "var",
+            "range": [
+                0,
+                16
+            ],
+            "loc": {
+                "start": {
+                    "line": 1,
+                    "column": 0
+                },
+                "end": {
+                    "line": 1,
+                    "column": 16
+                }
+            }
         }
     ],
     "sourceType": "script",
+    "range": [
+        0,
+        16
+    ],
+    "loc": {
+        "start": {
+            "line": 1,
+            "column": 0
+        },
+        "end": {
+            "line": 1,
+            "column": 16
+        }
+    },
+    "comments": [],
     "tokens": [
         {
             "type": "Keyword",
@@ -176,19 +191,5 @@
             "column": 15,
             "message": "Error: Line 1: Unexpected token ILLEGAL"
         }
-    ],
-    "range": [
-        0,
-        16
-    ],
-    "loc": {
-        "start": {
-            "line": 1,
-            "column": 0
-        },
-        "end": {
-            "line": 1,
-            "column": 16
-        }
-    }
+    ]
 }

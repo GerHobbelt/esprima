@@ -168,6 +168,21 @@
         }
     ],
     "sourceType": "script",
+    "range": [
+        0,
+        43
+    ],
+    "loc": {
+        "start": {
+            "line": 1,
+            "column": 0
+        },
+        "end": {
+            "line": 1,
+            "column": 43
+        }
+    },
+    "comments": [],
     "tokens": [
         {
             "type": "Punctuator",
@@ -465,19 +480,5 @@
             "column": 29,
             "message": "Error: Line 1: Strict mode code may not include a with statement"
         }
-    ],
-    "range": [
-        0,
-        43
-    ],
-    "loc": {
-        "start": {
-            "line": 1,
-            "column": 0
-        },
-        "end": {
-            "line": 1,
-            "column": 43
-        }
-    }
+    ]
 }

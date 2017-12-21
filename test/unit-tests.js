@@ -39,10 +39,10 @@ var esprima = require('../'),
     tick = new Date(),
     testCase,
     header,
-    regenTestCases = false;      // set to TRUE to regenerate all reference test values
+    regenTestCases = (process.argv && process.argv[1] === '--regenerate');      // set to TRUE to regenerate all reference test values
 
 function generateTestCase(testCase) {
-    var options, tree, filePath, fileName;
+    var options, tree, filePath, fileName, servicedType, list, code, tokens, i, len;
 
     fileName = testCase.key + ".tree.json";
     try {
@@ -53,22 +53,114 @@ function generateTestCase(testCase) {
             tokens: true,
             sourceType: testCase.key.match(/\.module$/) ? 'module' : 'script'
         };
-        var code = testCase.case || testCase.source || "";
+        code = testCase.case || testCase.source || "";
         tree = esprima.parse(code, options);
         tree = JSON.stringify(tree, null, 4);
+        servicedType = 'tree';
     } catch (e) {
         if (typeof e.index === 'undefined') {
-            console.error("Failed to generate test result.", testCase);
+            console.error("Failed to generate test result.", e, testCase);
             throw e;
         }
         tree = errorToObject(e);
         tree.description = e.description;
-        tree = JSON.stringify(tree);
+        tree = JSON.stringify(tree, null, 4);
         fileName = testCase.key + ".failure.json";
+        servicedType = 'failure';
     }
 
     filePath = path.join(__dirname, 'fixtures', fileName);
     fs.writeFileSync(filePath, tree);
+
+    // when there are several test TYPES, generate them all:
+
+    // PATCH: make sure we also have a 'tokens' test for all 'tokenize' tests!
+    if (!testCase.tokens && testCase.key.match(/tokenize/)) {
+        testCase.tokens = 666;
+    }
+    // PATCH: make sure we also have a 'tree' test for all 'tolerant-parse' tests!
+    if (!testCase.tree && testCase.key.match(/tolerant/)) {
+        testCase.tree = 111;
+    }
+    // PATCH: make sure we also have a 'tree' test next to every 'failure' test!
+    if (!testCase.tree && servicedType === 'failure') {
+        testCase.tree = 666;
+    }
+
+    // type: tokens
+    if (testCase.hasOwnProperty('tokens')) {
+        fileName = testCase.key + ".tokens.json";
+
+        try {
+            options = {
+                jsx: true,
+                tokens: true,
+                sourceType: testCase.key.match(/\.module$/) ? 'module' : 'script',
+
+                comment: true,
+                tolerant: true,
+                loc: true,
+                range: true
+            };
+            code = testCase.case || testCase.source || "";
+
+            list = esprima.tokenize(code, options);
+        } catch (e) {
+            console.warn("Failed to generate tokens test result.", e, testCase);
+
+            list = errorToObject(e);
+            list.description = e.description;
+        }
+        tree = JSON.stringify(list, null, 4);
+
+        filePath = path.join(__dirname, 'fixtures', fileName);
+        fs.writeFileSync(filePath, tree);
+    }
+
+    // type: tree    (i.e. when we found a *failure* but also want to see a *tree* output)
+    if (servicedType === 'failure' && testCase.hasOwnProperty('tree')) {
+        // also regenerate a 'tree' fixture, which includes the failure as an 'error' data chunk:
+
+        fileName = testCase.key + ".tree.json";
+        try {
+            options = {
+                sourceType: testCase.key.match(/\.module$/) ? 'module' : 'script',
+
+                jsx: true,
+                comment: true,
+                range: true,
+                loc: true,
+                tokens: true,
+                raw: true,
+                tolerant: true,
+                source: null,
+            };
+            code = testCase.case || testCase.source || "";
+            tree = esprima.parse(code, options);
+
+            for (i = 0, len = tree.errors.length; i < len; i++) {
+                tree.errors[i] = errorToObject(tree.errors[i]);
+            }
+
+            tree = JSON.stringify(tree, null, 4);
+            servicedType = 'tree';
+        } catch (e) {
+            // only terminate when we already had such a fixture type before, i.e. when we now fail to REgenerate the fixture:
+            if (testCase.tree !== 666) {
+                console.error("Failed to generate tree-on-failure test result.", e, testCase, options);
+                throw e;
+            } else {
+                console.warn("Failed to generate tree-on-failure test result.", e.message);
+            }
+            tree = errorToObject(e);
+            tree.description = e.description;
+            tree = JSON.stringify(tree, null, 4);
+        }
+
+        filePath = path.join(__dirname, 'fixtures', fileName);
+        fs.writeFileSync(filePath, tree);
+    }
+
     console.error("Done.");
 }
 

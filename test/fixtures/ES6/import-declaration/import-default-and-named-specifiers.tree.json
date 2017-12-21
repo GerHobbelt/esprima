@@ -2,39 +2,13 @@
     "type": "Program",
     "body": [
         {
-            "range": [
-                0,
-                29
-            ],
-            "loc": {
-                "start": {
-                    "line": 1,
-                    "column": 0
-                },
-                "end": {
-                    "line": 1,
-                    "column": 29
-                }
-            },
             "type": "ImportDeclaration",
             "specifiers": [
                 {
-                    "range": [
-                        7,
-                        10
-                    ],
-                    "loc": {
-                        "start": {
-                            "line": 1,
-                            "column": 7
-                        },
-                        "end": {
-                            "line": 1,
-                            "column": 10
-                        }
-                    },
                     "type": "ImportDefaultSpecifier",
                     "local": {
+                        "type": "Identifier",
+                        "name": "foo",
                         "range": [
                             7,
                             10
@@ -48,12 +22,61 @@
                                 "line": 1,
                                 "column": 10
                             }
+                        }
+                    },
+                    "range": [
+                        7,
+                        10
+                    ],
+                    "loc": {
+                        "start": {
+                            "line": 1,
+                            "column": 7
                         },
-                        "type": "Identifier",
-                        "name": "foo"
+                        "end": {
+                            "line": 1,
+                            "column": 10
+                        }
                     }
                 },
                 {
+                    "type": "ImportSpecifier",
+                    "local": {
+                        "type": "Identifier",
+                        "name": "bar",
+                        "range": [
+                            13,
+                            16
+                        ],
+                        "loc": {
+                            "start": {
+                                "line": 1,
+                                "column": 13
+                            },
+                            "end": {
+                                "line": 1,
+                                "column": 16
+                            }
+                        }
+                    },
+                    "imported": {
+                        "type": "Identifier",
+                        "name": "bar",
+                        "range": [
+                            13,
+                            16
+                        ],
+                        "loc": {
+                            "start": {
+                                "line": 1,
+                                "column": 13
+                            },
+                            "end": {
+                                "line": 1,
+                                "column": 16
+                            }
+                        }
+                    },
                     "range": [
                         13,
                         16
@@ -67,47 +90,13 @@
                             "line": 1,
                             "column": 16
                         }
-                    },
-                    "type": "ImportSpecifier",
-                    "local": {
-                        "range": [
-                            13,
-                            16
-                        ],
-                        "loc": {
-                            "start": {
-                                "line": 1,
-                                "column": 13
-                            },
-                            "end": {
-                                "line": 1,
-                                "column": 16
-                            }
-                        },
-                        "type": "Identifier",
-                        "name": "bar"
-                    },
-                    "imported": {
-                        "range": [
-                            13,
-                            16
-                        ],
-                        "loc": {
-                            "start": {
-                                "line": 1,
-                                "column": 13
-                            },
-                            "end": {
-                                "line": 1,
-                                "column": 16
-                            }
-                        },
-                        "type": "Identifier",
-                        "name": "bar"
                     }
                 }
             ],
             "source": {
+                "type": "Literal",
+                "value": "foo",
+                "raw": "\"foo\"",
                 "range": [
                     23,
                     28
@@ -121,14 +110,40 @@
                         "line": 1,
                         "column": 28
                     }
+                }
+            },
+            "range": [
+                0,
+                29
+            ],
+            "loc": {
+                "start": {
+                    "line": 1,
+                    "column": 0
                 },
-                "type": "Literal",
-                "value": "foo",
-                "raw": "\"foo\""
+                "end": {
+                    "line": 1,
+                    "column": 29
+                }
             }
         }
     ],
-    "sourceType": "module",
+    "sourceType": "script",
+    "range": [
+        0,
+        29
+    ],
+    "loc": {
+        "start": {
+            "line": 1,
+            "column": 0
+        },
+        "end": {
+            "line": 1,
+            "column": 29
+        }
+    },
+    "comments": [],
     "tokens": [
         {
             "type": "Keyword",
@@ -293,18 +308,12 @@
             }
         }
     ],
-    "range": [
-        0,
-        29
-    ],
-    "loc": {
-        "start": {
-            "line": 1,
-            "column": 0
-        },
-        "end": {
-            "line": 1,
-            "column": 29
+    "errors": [
+        {
+            "index": 0,
+            "lineNumber": 1,
+            "column": 1,
+            "message": "Error: Line 1: Unexpected token"
         }
-    }
+    ]
 }
