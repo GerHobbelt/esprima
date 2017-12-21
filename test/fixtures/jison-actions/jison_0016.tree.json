@@ -36,8 +36,8 @@
                                     "type": "Identifier",
                                     "name": "$handle",
                                     "range": [
-                                        30,
-                                        37
+                                        29,
+                                        36
                                     ],
                                     "loc": {
                                         "start": {
@@ -54,8 +54,8 @@
                                     "type": "Identifier",
                                     "name": "length",
                                     "range": [
-                                        38,
-                                        44
+                                        37,
+                                        43
                                     ],
                                     "loc": {
                                         "start": {
@@ -69,8 +69,8 @@
                                     }
                                 },
                                 "range": [
-                                    30,
-                                    44
+                                    29,
+                                    43
                                 ],
                                 "loc": {
                                     "start": {
@@ -88,8 +88,8 @@
                                 "value": 0,
                                 "raw": "0",
                                 "range": [
-                                    49,
-                                    50
+                                    48,
+                                    49
                                 ],
                                 "loc": {
                                     "start": {
@@ -103,8 +103,8 @@
                                 }
                             },
                             "range": [
-                                30,
-                                50
+                                29,
+                                49
                             ],
                             "loc": {
                                 "start": {
@@ -128,8 +128,8 @@
                                             "type": "Identifier",
                                             "name": "yyerror",
                                             "range": [
-                                                67,
-                                                74
+                                                65,
+                                                72
                                             ],
                                             "loc": {
                                                 "start": {
@@ -149,8 +149,8 @@
                                                     "type": "Identifier",
                                                     "name": "rmCommonWS",
                                                     "range": [
-                                                        75,
-                                                        85
+                                                        73,
+                                                        83
                                                     ],
                                                     "loc": {
                                                         "start": {
@@ -169,13 +169,13 @@
                                                         {
                                                             "type": "TemplateElement",
                                                             "value": {
-                                                                "raw": "\r\n                You cannot specify a precedence override for an epsilon (a.k.a. empty) rule!\r\n\r\n                  Erroneous area:\r\n                ",
+                                                                "raw": "\n                You cannot specify a precedence override for an epsilon (a.k.a. empty) rule!\n\n                  Erroneous area:\n                ",
                                                                 "cooked": "\n                You cannot specify a precedence override for an epsilon (a.k.a. empty) rule!\n\n                  Erroneous area:\n                "
                                                             },
                                                             "tail": false,
                                                             "range": [
-                                                                85,
-                                                                237
+                                                                83,
+                                                                231
                                                             ],
                                                             "loc": {
                                                                 "start": {
@@ -191,13 +191,13 @@
                                                         {
                                                             "type": "TemplateElement",
                                                             "value": {
-                                                                "raw": "\r\n            ",
+                                                                "raw": "\n            ",
                                                                 "cooked": "\n            "
                                                             },
                                                             "tail": true,
                                                             "range": [
-                                                                381,
-                                                                397
+                                                                375,
+                                                                390
                                                             ],
                                                             "loc": {
                                                                 "start": {
@@ -221,8 +221,8 @@
                                                                     "type": "Identifier",
                                                                     "name": "yylexer",
                                                                     "range": [
-                                                                        237,
-                                                                        244
+                                                                        231,
+                                                                        238
                                                                     ],
                                                                     "loc": {
                                                                         "start": {
@@ -239,8 +239,8 @@
                                                                     "type": "Identifier",
                                                                     "name": "prettyPrintRange",
                                                                     "range": [
-                                                                        245,
-                                                                        261
+                                                                        239,
+                                                                        255
                                                                     ],
                                                                     "loc": {
                                                                         "start": {
@@ -254,8 +254,8 @@
                                                                     }
                                                                 },
                                                                 "range": [
-                                                                    237,
-                                                                    261
+                                                                    231,
+                                                                    255
                                                                 ],
                                                                 "loc": {
                                                                     "start": {
@@ -273,8 +273,8 @@
                                                                     "type": "Identifier",
                                                                     "name": "@handle",
                                                                     "range": [
-                                                                        262,
-                                                                        269
+                                                                        256,
+                                                                        263
                                                                     ],
                                                                     "loc": {
                                                                         "start": {
@@ -291,8 +291,8 @@
                                                                     "type": "Identifier",
                                                                     "name": "@0",
                                                                     "range": [
-                                                                        271,
-                                                                        273
+                                                                        265,
+                                                                        267
                                                                     ],
                                                                     "loc": {
                                                                         "start": {
@@ -309,8 +309,8 @@
                                                                     "type": "Identifier",
                                                                     "name": "@action",
                                                                     "range": [
-                                                                        360,
-                                                                        367
+                                                                        354,
+                                                                        361
                                                                     ],
                                                                     "loc": {
                                                                         "start": {
@@ -325,8 +325,8 @@
                                                                 }
                                                             ],
                                                             "range": [
-                                                                237,
-                                                                381
+                                                                231,
+                                                                375
                                                             ],
                                                             "loc": {
                                                                 "start": {
@@ -341,8 +341,8 @@
                                                         }
                                                     ],
                                                     "range": [
-                                                        85,
-                                                        397
+                                                        83,
+                                                        390
                                                     ],
                                                     "loc": {
                                                         "start": {
@@ -356,8 +356,8 @@
                                                     }
                                                 },
                                                 "range": [
-                                                    75,
-                                                    397
+                                                    73,
+                                                    390
                                                 ],
                                                 "loc": {
                                                     "start": {
@@ -372,8 +372,8 @@
                                             }
                                         ],
                                         "range": [
-                                            67,
-                                            398
+                                            65,
+                                            391
                                         ],
                                         "loc": {
                                             "start": {
@@ -387,8 +387,8 @@
                                         }
                                     },
                                     "range": [
-                                        67,
-                                        399
+                                        65,
+                                        392
                                     ],
                                     "loc": {
                                         "start": {
@@ -403,8 +403,8 @@
                                 }
                             ],
                             "range": [
-                                52,
-                                410
+                                51,
+                                402
                             ],
                             "loc": {
                                 "start": {
@@ -419,8 +419,8 @@
                         },
                         "alternate": null,
                         "range": [
-                            26,
-                            410
+                            25,
+                            402
                         ],
                         "loc": {
                             "start": {
@@ -444,8 +444,8 @@
                                     "type": "Identifier",
                                     "name": "$$",
                                     "range": [
-                                        420,
-                                        422
+                                        411,
+                                        413
                                     ],
                                     "loc": {
                                         "start": {
@@ -462,8 +462,8 @@
                                     "type": "Identifier",
                                     "name": "push",
                                     "range": [
-                                        423,
-                                        427
+                                        414,
+                                        418
                                     ],
                                     "loc": {
                                         "start": {
@@ -477,8 +477,8 @@
                                     }
                                 },
                                 "range": [
-                                    420,
-                                    427
+                                    411,
+                                    418
                                 ],
                                 "loc": {
                                     "start": {
@@ -496,8 +496,8 @@
                                     "type": "Identifier",
                                     "name": "$prec",
                                     "range": [
-                                        428,
-                                        433
+                                        419,
+                                        424
                                     ],
                                     "loc": {
                                         "start": {
@@ -512,8 +512,8 @@
                                 }
                             ],
                             "range": [
-                                420,
-                                434
+                                411,
+                                425
                             ],
                             "loc": {
                                 "start": {
@@ -527,8 +527,8 @@
                             }
                         },
                         "range": [
-                            420,
-                            435
+                            411,
+                            426
                         ],
                         "loc": {
                             "start": {
@@ -544,7 +544,7 @@
                 ],
                 "range": [
                     15,
-                    442
+                    432
                 ],
                 "loc": {
                     "start": {
@@ -560,7 +560,7 @@
             "alternate": null,
             "range": [
                 4,
-                442
+                432
             ],
             "loc": {
                 "start": {
@@ -577,7 +577,7 @@
     "sourceType": "script",
     "range": [
         4,
-        442
+        432
     ],
     "loc": {
         "start": {
@@ -684,8 +684,8 @@
             "type": "Keyword",
             "value": "if",
             "range": [
-                26,
-                28
+                25,
+                27
             ],
             "loc": {
                 "start": {
@@ -702,8 +702,8 @@
             "type": "Punctuator",
             "value": "(",
             "range": [
-                29,
-                30
+                28,
+                29
             ],
             "loc": {
                 "start": {
@@ -720,8 +720,8 @@
             "type": "Identifier",
             "value": "$handle",
             "range": [
-                30,
-                37
+                29,
+                36
             ],
             "loc": {
                 "start": {
@@ -738,8 +738,8 @@
             "type": "Punctuator",
             "value": ".",
             "range": [
-                37,
-                38
+                36,
+                37
             ],
             "loc": {
                 "start": {
@@ -756,8 +756,8 @@
             "type": "Identifier",
             "value": "length",
             "range": [
-                38,
-                44
+                37,
+                43
             ],
             "loc": {
                 "start": {
@@ -774,8 +774,8 @@
             "type": "Punctuator",
             "value": "===",
             "range": [
-                45,
-                48
+                44,
+                47
             ],
             "loc": {
                 "start": {
@@ -792,8 +792,8 @@
             "type": "Numeric",
             "value": "0",
             "range": [
-                49,
-                50
+                48,
+                49
             ],
             "loc": {
                 "start": {
@@ -810,8 +810,8 @@
             "type": "Punctuator",
             "value": ")",
             "range": [
-                50,
-                51
+                49,
+                50
             ],
             "loc": {
                 "start": {
@@ -828,8 +828,8 @@
             "type": "Punctuator",
             "value": "{",
             "range": [
-                52,
-                53
+                51,
+                52
             ],
             "loc": {
                 "start": {
@@ -846,8 +846,8 @@
             "type": "Identifier",
             "value": "yyerror",
             "range": [
-                67,
-                74
+                65,
+                72
             ],
             "loc": {
                 "start": {
@@ -864,8 +864,8 @@
             "type": "Punctuator",
             "value": "(",
             "range": [
-                74,
-                75
+                72,
+                73
             ],
             "loc": {
                 "start": {
@@ -882,8 +882,8 @@
             "type": "Identifier",
             "value": "rmCommonWS",
             "range": [
-                75,
-                85
+                73,
+                83
             ],
             "loc": {
                 "start": {
@@ -898,10 +898,10 @@
         },
         {
             "type": "Template",
-            "value": "`\r\n                You cannot specify a precedence override for an epsilon (a.k.a. empty) rule!\r\n\r\n                  Erroneous area:\r\n                ${",
+            "value": "`\n                You cannot specify a precedence override for an epsilon (a.k.a. empty) rule!\n\n                  Erroneous area:\n                ${",
             "range": [
-                85,
-                237
+                83,
+                231
             ],
             "loc": {
                 "start": {
@@ -918,8 +918,8 @@
             "type": "Identifier",
             "value": "yylexer",
             "range": [
-                237,
-                244
+                231,
+                238
             ],
             "loc": {
                 "start": {
@@ -936,8 +936,8 @@
             "type": "Punctuator",
             "value": ".",
             "range": [
-                244,
-                245
+                238,
+                239
             ],
             "loc": {
                 "start": {
@@ -954,8 +954,8 @@
             "type": "Identifier",
             "value": "prettyPrintRange",
             "range": [
-                245,
-                261
+                239,
+                255
             ],
             "loc": {
                 "start": {
@@ -972,8 +972,8 @@
             "type": "Punctuator",
             "value": "(",
             "range": [
-                261,
-                262
+                255,
+                256
             ],
             "loc": {
                 "start": {
@@ -990,8 +990,8 @@
             "type": "Identifier",
             "value": "@handle",
             "range": [
-                262,
-                269
+                256,
+                263
             ],
             "loc": {
                 "start": {
@@ -1008,8 +1008,8 @@
             "type": "Punctuator",
             "value": ",",
             "range": [
-                269,
-                270
+                263,
+                264
             ],
             "loc": {
                 "start": {
@@ -1026,8 +1026,8 @@
             "type": "Identifier",
             "value": "@0",
             "range": [
-                271,
-                273
+                265,
+                267
             ],
             "loc": {
                 "start": {
@@ -1044,8 +1044,8 @@
             "type": "Punctuator",
             "value": ",",
             "range": [
-                358,
-                359
+                352,
+                353
             ],
             "loc": {
                 "start": {
@@ -1062,8 +1062,8 @@
             "type": "Identifier",
             "value": "@action",
             "range": [
-                360,
-                367
+                354,
+                361
             ],
             "loc": {
                 "start": {
@@ -1080,8 +1080,8 @@
             "type": "Punctuator",
             "value": ")",
             "range": [
-                380,
-                381
+                374,
+                375
             ],
             "loc": {
                 "start": {
@@ -1096,10 +1096,10 @@
         },
         {
             "type": "Template",
-            "value": "}\r\n            `",
+            "value": "}\n            `",
             "range": [
-                381,
-                397
+                375,
+                390
             ],
             "loc": {
                 "start": {
@@ -1116,8 +1116,8 @@
             "type": "Punctuator",
             "value": ")",
             "range": [
-                397,
-                398
+                390,
+                391
             ],
             "loc": {
                 "start": {
@@ -1134,8 +1134,8 @@
             "type": "Punctuator",
             "value": ";",
             "range": [
-                398,
-                399
+                391,
+                392
             ],
             "loc": {
                 "start": {
@@ -1152,8 +1152,8 @@
             "type": "Punctuator",
             "value": "}",
             "range": [
-                409,
-                410
+                401,
+                402
             ],
             "loc": {
                 "start": {
@@ -1170,8 +1170,8 @@
             "type": "Identifier",
             "value": "$$",
             "range": [
-                420,
-                422
+                411,
+                413
             ],
             "loc": {
                 "start": {
@@ -1188,8 +1188,8 @@
             "type": "Punctuator",
             "value": ".",
             "range": [
-                422,
-                423
+                413,
+                414
             ],
             "loc": {
                 "start": {
@@ -1206,8 +1206,8 @@
             "type": "Identifier",
             "value": "push",
             "range": [
-                423,
-                427
+                414,
+                418
             ],
             "loc": {
                 "start": {
@@ -1224,8 +1224,8 @@
             "type": "Punctuator",
             "value": "(",
             "range": [
-                427,
-                428
+                418,
+                419
             ],
             "loc": {
                 "start": {
@@ -1242,8 +1242,8 @@
             "type": "Identifier",
             "value": "$prec",
             "range": [
-                428,
-                433
+                419,
+                424
             ],
             "loc": {
                 "start": {
@@ -1260,8 +1260,8 @@
             "type": "Punctuator",
             "value": ")",
             "range": [
-                433,
-                434
+                424,
+                425
             ],
             "loc": {
                 "start": {
@@ -1278,8 +1278,8 @@
             "type": "Punctuator",
             "value": ";",
             "range": [
-                434,
-                435
+                425,
+                426
             ],
             "loc": {
                 "start": {
@@ -1296,8 +1296,8 @@
             "type": "Punctuator",
             "value": "}",
             "range": [
-                441,
-                442
+                431,
+                432
             ],
             "loc": {
                 "start": {
