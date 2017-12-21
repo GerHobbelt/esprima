@@ -2,100 +2,136 @@
     "type": "Program",
     "body": [
         {
-            "range": [
-                5,
-                39
-            ],
             "type": "FunctionDeclaration",
             "id": {
+                "type": "Identifier",
+                "name": "a",
                 "range": [
                     14,
                     15
                 ],
-                "type": "Identifier",
-                "name": "a"
+                "loc": {
+                    "start": {
+                        "line": 1,
+                        "column": 14
+                    },
+                    "end": {
+                        "line": 1,
+                        "column": 15
+                    }
+                }
             },
             "params": [],
             "body": {
-                "range": [
-                    18,
-                    39
-                ],
                 "type": "BlockStatement",
                 "body": [
                     {
-                        "range": [
-                            23,
-                            38
-                        ],
                         "type": "FunctionDeclaration",
                         "id": {
+                            "type": "Identifier",
+                            "name": "o",
                             "range": [
                                 32,
                                 33
                             ],
-                            "type": "Identifier",
-                            "name": "o"
+                            "loc": {
+                                "start": {
+                                    "line": 1,
+                                    "column": 32
+                                },
+                                "end": {
+                                    "line": 1,
+                                    "column": 33
+                                }
+                            }
                         },
                         "params": [],
                         "body": {
+                            "type": "BlockStatement",
+                            "body": [],
                             "range": [
                                 36,
                                 38
                             ],
-                            "type": "BlockStatement",
-                            "body": []
+                            "loc": {
+                                "start": {
+                                    "line": 1,
+                                    "column": 36
+                                },
+                                "end": {
+                                    "line": 1,
+                                    "column": 38
+                                }
+                            }
                         },
                         "generator": false,
                         "expression": false,
                         "async": false,
-                        "leadingComments": [
-                            {
-                                "type": "Block",
-                                "value": "",
-                                "range": [
-                                    19,
-                                    23
-                                ]
+                        "range": [
+                            23,
+                            38
+                        ],
+                        "loc": {
+                            "start": {
+                                "line": 1,
+                                "column": 23
+                            },
+                            "end": {
+                                "line": 1,
+                                "column": 38
                             }
-                        ]
+                        }
                     }
-                ]
+                ],
+                "range": [
+                    18,
+                    39
+                ],
+                "loc": {
+                    "start": {
+                        "line": 1,
+                        "column": 18
+                    },
+                    "end": {
+                        "line": 1,
+                        "column": 39
+                    }
+                }
             },
             "generator": false,
             "expression": false,
             "async": false,
-            "leadingComments": [
-                {
-                    "type": "Block",
-                    "value": "",
-                    "range": [
-                        0,
-                        4
-                    ]
+            "range": [
+                5,
+                39
+            ],
+            "loc": {
+                "start": {
+                    "line": 1,
+                    "column": 5
+                },
+                "end": {
+                    "line": 1,
+                    "column": 39
                 }
-            ]
+            }
         }
     ],
     "sourceType": "script",
-    "comments": [
-        {
-            "type": "Block",
-            "value": "",
-            "range": [
-                0,
-                4
-            ]
-        },
-        {
-            "type": "Block",
-            "value": "",
-            "range": [
-                19,
-                23
-            ]
-        }
+    "range": [
+        5,
+        39
     ],
+    "loc": {
+        "start": {
+            "line": 1,
+            "column": 5
+        },
+        "end": {
+            "line": 1,
+            "column": 39
+        }
+    },
     "tokens": [
         {
             "type": "Keyword",
@@ -103,7 +139,17 @@
             "range": [
                 5,
                 13
-            ]
+            ],
+            "loc": {
+                "start": {
+                    "line": 1,
+                    "column": 5
+                },
+                "end": {
+                    "line": 1,
+                    "column": 13
+                }
+            }
         },
         {
             "type": "Identifier",
@@ -111,7 +157,17 @@
             "range": [
                 14,
                 15
-            ]
+            ],
+            "loc": {
+                "start": {
+                    "line": 1,
+                    "column": 14
+                },
+                "end": {
+                    "line": 1,
+                    "column": 15
+                }
+            }
         },
         {
             "type": "Punctuator",
@@ -119,7 +175,17 @@
             "range": [
                 15,
                 16
-            ]
+            ],
+            "loc": {
+                "start": {
+                    "line": 1,
+                    "column": 15
+                },
+                "end": {
+                    "line": 1,
+                    "column": 16
+                }
+            }
         },
         {
             "type": "Punctuator",
@@ -127,7 +193,17 @@
             "range": [
                 16,
                 17
-            ]
+            ],
+            "loc": {
+                "start": {
+                    "line": 1,
+                    "column": 16
+                },
+                "end": {
+                    "line": 1,
+                    "column": 17
+                }
+            }
         },
         {
             "type": "Punctuator",
@@ -135,7 +211,17 @@
             "range": [
                 18,
                 19
-            ]
+            ],
+            "loc": {
+                "start": {
+                    "line": 1,
+                    "column": 18
+                },
+                "end": {
+                    "line": 1,
+                    "column": 19
+                }
+            }
         },
         {
             "type": "Keyword",
@@ -143,7 +229,17 @@
             "range": [
                 23,
                 31
-            ]
+            ],
+            "loc": {
+                "start": {
+                    "line": 1,
+                    "column": 23
+                },
+                "end": {
+                    "line": 1,
+                    "column": 31
+                }
+            }
         },
         {
             "type": "Identifier",
@@ -151,7 +247,17 @@
             "range": [
                 32,
                 33
-            ]
+            ],
+            "loc": {
+                "start": {
+                    "line": 1,
+                    "column": 32
+                },
+                "end": {
+                    "line": 1,
+                    "column": 33
+                }
+            }
         },
         {
             "type": "Punctuator",
@@ -159,7 +265,17 @@
             "range": [
                 33,
                 34
-            ]
+            ],
+            "loc": {
+                "start": {
+                    "line": 1,
+                    "column": 33
+                },
+                "end": {
+                    "line": 1,
+                    "column": 34
+                }
+            }
         },
         {
             "type": "Punctuator",
@@ -167,7 +283,17 @@
             "range": [
                 34,
                 35
-            ]
+            ],
+            "loc": {
+                "start": {
+                    "line": 1,
+                    "column": 34
+                },
+                "end": {
+                    "line": 1,
+                    "column": 35
+                }
+            }
         },
         {
             "type": "Punctuator",
@@ -175,7 +301,17 @@
             "range": [
                 36,
                 37
-            ]
+            ],
+            "loc": {
+                "start": {
+                    "line": 1,
+                    "column": 36
+                },
+                "end": {
+                    "line": 1,
+                    "column": 37
+                }
+            }
         },
         {
             "type": "Punctuator",
@@ -183,7 +319,17 @@
             "range": [
                 37,
                 38
-            ]
+            ],
+            "loc": {
+                "start": {
+                    "line": 1,
+                    "column": 37
+                },
+                "end": {
+                    "line": 1,
+                    "column": 38
+                }
+            }
         },
         {
             "type": "Punctuator",
@@ -191,11 +337,17 @@
             "range": [
                 38,
                 39
-            ]
+            ],
+            "loc": {
+                "start": {
+                    "line": 1,
+                    "column": 38
+                },
+                "end": {
+                    "line": 1,
+                    "column": 39
+                }
+            }
         }
-    ],
-    "range": [
-        5,
-        39
     ]
 }

@@ -2,39 +2,13 @@
     "type": "Program",
     "body": [
         {
-            "range": [
-                0,
-                11
-            ],
-            "loc": {
-                "start": {
-                    "line": 1,
-                    "column": 0
-                },
-                "end": {
-                    "line": 1,
-                    "column": 11
-                }
-            },
             "type": "VariableDeclaration",
             "declarations": [
                 {
-                    "range": [
-                        4,
-                        10
-                    ],
-                    "loc": {
-                        "start": {
-                            "line": 1,
-                            "column": 4
-                        },
-                        "end": {
-                            "line": 1,
-                            "column": 10
-                        }
-                    },
                     "type": "VariableDeclarator",
                     "id": {
+                        "type": "ArrayPattern",
+                        "elements": [],
                         "range": [
                             4,
                             6
@@ -48,11 +22,12 @@
                                 "line": 1,
                                 "column": 6
                             }
-                        },
-                        "type": "ArrayPattern",
-                        "elements": []
+                        }
                     },
                     "init": {
+                        "type": "Literal",
+                        "value": 0,
+                        "raw": "0",
                         "range": [
                             9,
                             10
@@ -66,17 +41,56 @@
                                 "line": 1,
                                 "column": 10
                             }
+                        }
+                    },
+                    "range": [
+                        4,
+                        10
+                    ],
+                    "loc": {
+                        "start": {
+                            "line": 1,
+                            "column": 4
                         },
-                        "type": "Literal",
-                        "value": 0,
-                        "raw": "0"
+                        "end": {
+                            "line": 1,
+                            "column": 10
+                        }
                     }
                 }
             ],
-            "kind": "var"
+            "kind": "var",
+            "range": [
+                0,
+                11
+            ],
+            "loc": {
+                "start": {
+                    "line": 1,
+                    "column": 0
+                },
+                "end": {
+                    "line": 1,
+                    "column": 11
+                }
+            }
         }
     ],
     "sourceType": "script",
+    "range": [
+        0,
+        11
+    ],
+    "loc": {
+        "start": {
+            "line": 1,
+            "column": 0
+        },
+        "end": {
+            "line": 1,
+            "column": 11
+        }
+    },
     "tokens": [
         {
             "type": "Keyword",
@@ -186,19 +200,5 @@
                 }
             }
         }
-    ],
-    "range": [
-        0,
-        11
-    ],
-    "loc": {
-        "start": {
-            "line": 1,
-            "column": 0
-        },
-        "end": {
-            "line": 1,
-            "column": 11
-        }
-    }
+    ]
 }

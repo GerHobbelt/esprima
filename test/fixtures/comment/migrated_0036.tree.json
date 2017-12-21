@@ -2,11 +2,19 @@
     "type": "Program",
     "body": [],
     "sourceType": "script",
-    "comments": [
-        {
-            "type": "Line",
-            "value": " foo"
-        }
+    "range": [
+        8,
+        8
     ],
+    "loc": {
+        "start": {
+            "line": 1,
+            "column": 8
+        },
+        "end": {
+            "line": 1,
+            "column": 8
+        }
+    },
     "tokens": []
 }

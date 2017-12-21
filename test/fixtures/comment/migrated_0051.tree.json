@@ -2,89 +2,115 @@
     "type": "Program",
     "body": [
         {
-            "range": [
-                0,
-                51
-            ],
             "type": "ExpressionStatement",
             "expression": {
-                "range": [
-                    14,
-                    50
-                ],
                 "type": "ObjectExpression",
                 "properties": [
                     {
-                        "range": [
-                            40,
-                            48
-                        ],
                         "type": "Property",
                         "key": {
+                            "type": "Identifier",
+                            "name": "p1",
                             "range": [
                                 40,
                                 42
                             ],
-                            "type": "Identifier",
-                            "name": "p1"
+                            "loc": {
+                                "start": {
+                                    "line": 3,
+                                    "column": 4
+                                },
+                                "end": {
+                                    "line": 3,
+                                    "column": 6
+                                }
+                            }
                         },
                         "computed": false,
                         "value": {
+                            "type": "Literal",
+                            "value": null,
+                            "raw": "null",
                             "range": [
                                 44,
                                 48
                             ],
-                            "type": "Literal",
-                            "value": null,
-                            "raw": "null"
+                            "loc": {
+                                "start": {
+                                    "line": 3,
+                                    "column": 8
+                                },
+                                "end": {
+                                    "line": 3,
+                                    "column": 12
+                                }
+                            }
                         },
                         "kind": "init",
                         "method": false,
                         "shorthand": false,
-                        "leadingComments": [
-                            {
-                                "type": "Block",
-                                "value": " comment 2 ",
-                                "range": [
-                                    20,
-                                    35
-                                ]
+                        "range": [
+                            40,
+                            48
+                        ],
+                        "loc": {
+                            "start": {
+                                "line": 3,
+                                "column": 4
+                            },
+                            "end": {
+                                "line": 3,
+                                "column": 12
                             }
-                        ]
+                        }
                     }
                 ],
-                "leadingComments": [
-                    {
-                        "type": "Block",
-                        "value": " comment ",
-                        "range": [
-                            1,
-                            14
-                        ]
+                "range": [
+                    14,
+                    50
+                ],
+                "loc": {
+                    "start": {
+                        "line": 1,
+                        "column": 14
+                    },
+                    "end": {
+                        "line": 4,
+                        "column": 1
                     }
-                ]
+                }
+            },
+            "range": [
+                0,
+                51
+            ],
+            "loc": {
+                "start": {
+                    "line": 1,
+                    "column": 0
+                },
+                "end": {
+                    "line": 4,
+                    "column": 2
+                }
             }
         }
     ],
     "sourceType": "script",
-    "comments": [
-        {
-            "type": "Block",
-            "value": " comment ",
-            "range": [
-                1,
-                14
-            ]
-        },
-        {
-            "type": "Block",
-            "value": " comment 2 ",
-            "range": [
-                20,
-                35
-            ]
-        }
+    "range": [
+        0,
+        51
     ],
+    "loc": {
+        "start": {
+            "line": 1,
+            "column": 0
+        },
+        "end": {
+            "line": 4,
+            "column": 2
+        }
+    },
     "tokens": [
         {
             "type": "Punctuator",
@@ -92,7 +118,17 @@
             "range": [
                 0,
                 1
-            ]
+            ],
+            "loc": {
+                "start": {
+                    "line": 1,
+                    "column": 0
+                },
+                "end": {
+                    "line": 1,
+                    "column": 1
+                }
+            }
         },
         {
             "type": "Punctuator",
@@ -100,7 +136,17 @@
             "range": [
                 14,
                 15
-            ]
+            ],
+            "loc": {
+                "start": {
+                    "line": 1,
+                    "column": 14
+                },
+                "end": {
+                    "line": 1,
+                    "column": 15
+                }
+            }
         },
         {
             "type": "Identifier",
@@ -108,7 +154,17 @@
             "range": [
                 40,
                 42
-            ]
+            ],
+            "loc": {
+                "start": {
+                    "line": 3,
+                    "column": 4
+                },
+                "end": {
+                    "line": 3,
+                    "column": 6
+                }
+            }
         },
         {
             "type": "Punctuator",
@@ -116,7 +172,17 @@
             "range": [
                 42,
                 43
-            ]
+            ],
+            "loc": {
+                "start": {
+                    "line": 3,
+                    "column": 6
+                },
+                "end": {
+                    "line": 3,
+                    "column": 7
+                }
+            }
         },
         {
             "type": "Null",
@@ -124,7 +190,17 @@
             "range": [
                 44,
                 48
-            ]
+            ],
+            "loc": {
+                "start": {
+                    "line": 3,
+                    "column": 8
+                },
+                "end": {
+                    "line": 3,
+                    "column": 12
+                }
+            }
         },
         {
             "type": "Punctuator",
@@ -132,7 +208,17 @@
             "range": [
                 49,
                 50
-            ]
+            ],
+            "loc": {
+                "start": {
+                    "line": 4,
+                    "column": 0
+                },
+                "end": {
+                    "line": 4,
+                    "column": 1
+                }
+            }
         },
         {
             "type": "Punctuator",
@@ -140,11 +226,17 @@
             "range": [
                 50,
                 51
-            ]
+            ],
+            "loc": {
+                "start": {
+                    "line": 4,
+                    "column": 1
+                },
+                "end": {
+                    "line": 4,
+                    "column": 2
+                }
+            }
         }
-    ],
-    "range": [
-        0,
-        51
     ]
 }

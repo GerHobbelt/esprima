@@ -61,6 +61,20 @@
         }
     ],
     "sourceType": "script",
+    "range": [
+        0,
+        12
+    ],
+    "loc": {
+        "start": {
+            "line": 1,
+            "column": 0
+        },
+        "end": {
+            "line": 1,
+            "column": 12
+        }
+    },
     "tokens": [
         {
             "type": "Punctuator",
@@ -134,19 +148,5 @@
                 }
             }
         }
-    ],
-    "range": [
-        0,
-        12
-    ],
-    "loc": {
-        "start": {
-            "line": 1,
-            "column": 0
-        },
-        "end": {
-            "line": 1,
-            "column": 12
-        }
-    }
+    ]
 }

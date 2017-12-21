@@ -2,54 +2,14 @@
     "type": "Program",
     "body": [
         {
-            "range": [
-                0,
-                11
-            ],
-            "loc": {
-                "start": {
-                    "line": 1,
-                    "column": 0
-                },
-                "end": {
-                    "line": 1,
-                    "column": 11
-                }
-            },
             "type": "ExpressionStatement",
             "expression": {
-                "range": [
-                    0,
-                    11
-                ],
-                "loc": {
-                    "start": {
-                        "line": 1,
-                        "column": 0
-                    },
-                    "end": {
-                        "line": 1,
-                        "column": 11
-                    }
-                },
                 "type": "NewExpression",
                 "callee": {
-                    "range": [
-                        4,
-                        11
-                    ],
-                    "loc": {
-                        "start": {
-                            "line": 1,
-                            "column": 4
-                        },
-                        "end": {
-                            "line": 1,
-                            "column": 11
-                        }
-                    },
                     "type": "TaggedTemplateExpression",
                     "tag": {
+                        "type": "Identifier",
+                        "name": "raw",
                         "range": [
                             4,
                             7
@@ -63,28 +23,18 @@
                                 "line": 1,
                                 "column": 7
                             }
-                        },
-                        "type": "Identifier",
-                        "name": "raw"
+                        }
                     },
                     "quasi": {
-                        "range": [
-                            7,
-                            11
-                        ],
-                        "loc": {
-                            "start": {
-                                "line": 1,
-                                "column": 7
-                            },
-                            "end": {
-                                "line": 1,
-                                "column": 11
-                            }
-                        },
                         "type": "TemplateLiteral",
                         "quasis": [
                             {
+                                "type": "TemplateElement",
+                                "value": {
+                                    "raw": "42",
+                                    "cooked": "42"
+                                },
+                                "tail": true,
                                 "range": [
                                     7,
                                     11
@@ -98,23 +48,87 @@
                                         "line": 1,
                                         "column": 11
                                     }
-                                },
-                                "type": "TemplateElement",
-                                "value": {
-                                    "raw": "42",
-                                    "cooked": "42"
-                                },
-                                "tail": true
+                                }
                             }
                         ],
-                        "expressions": []
+                        "expressions": [],
+                        "range": [
+                            7,
+                            11
+                        ],
+                        "loc": {
+                            "start": {
+                                "line": 1,
+                                "column": 7
+                            },
+                            "end": {
+                                "line": 1,
+                                "column": 11
+                            }
+                        }
+                    },
+                    "range": [
+                        4,
+                        11
+                    ],
+                    "loc": {
+                        "start": {
+                            "line": 1,
+                            "column": 4
+                        },
+                        "end": {
+                            "line": 1,
+                            "column": 11
+                        }
                     }
                 },
-                "arguments": []
+                "arguments": [],
+                "range": [
+                    0,
+                    11
+                ],
+                "loc": {
+                    "start": {
+                        "line": 1,
+                        "column": 0
+                    },
+                    "end": {
+                        "line": 1,
+                        "column": 11
+                    }
+                }
+            },
+            "range": [
+                0,
+                11
+            ],
+            "loc": {
+                "start": {
+                    "line": 1,
+                    "column": 0
+                },
+                "end": {
+                    "line": 1,
+                    "column": 11
+                }
             }
         }
     ],
     "sourceType": "script",
+    "range": [
+        0,
+        11
+    ],
+    "loc": {
+        "start": {
+            "line": 1,
+            "column": 0
+        },
+        "end": {
+            "line": 1,
+            "column": 11
+        }
+    },
     "tokens": [
         {
             "type": "Keyword",
@@ -170,19 +184,5 @@
                 }
             }
         }
-    ],
-    "range": [
-        0,
-        11
-    ],
-    "loc": {
-        "start": {
-            "line": 1,
-            "column": 0
-        },
-        "end": {
-            "line": 1,
-            "column": 11
-        }
-    }
+    ]
 }

@@ -7,54 +7,52 @@
                 "type": "Literal",
                 "value": 42,
                 "raw": "42",
-                "trailingComments": [
-                    {
-                        "type": "Block",
-                        "value": " block comment 1 ",
-                        "range": [
-                            3,
-                            24
-                        ]
-                    },
-                    {
-                        "type": "Block",
-                        "value": " block comment 2 ",
-                        "range": [
-                            25,
-                            46
-                        ]
-                    }
-                ],
                 "range": [
                     0,
                     2
-                ]
+                ],
+                "loc": {
+                    "start": {
+                        "line": 1,
+                        "column": 0
+                    },
+                    "end": {
+                        "line": 1,
+                        "column": 2
+                    }
+                }
             },
             "range": [
                 0,
                 46
-            ]
+            ],
+            "loc": {
+                "start": {
+                    "line": 1,
+                    "column": 0
+                },
+                "end": {
+                    "line": 1,
+                    "column": 46
+                }
+            }
         }
     ],
     "sourceType": "script",
-    "comments": [
-        {
-            "type": "Block",
-            "value": " block comment 1 ",
-            "range": [
-                3,
-                24
-            ]
-        },
-        {
-            "type": "Block",
-            "value": " block comment 2 ",
-            "range": [
-                25,
-                46
-            ]
-        }
+    "range": [
+        0,
+        46
     ],
+    "loc": {
+        "start": {
+            "line": 1,
+            "column": 0
+        },
+        "end": {
+            "line": 1,
+            "column": 46
+        }
+    },
     "tokens": [
         {
             "type": "Numeric",
@@ -62,11 +60,17 @@
             "range": [
                 0,
                 2
-            ]
+            ],
+            "loc": {
+                "start": {
+                    "line": 1,
+                    "column": 0
+                },
+                "end": {
+                    "line": 1,
+                    "column": 2
+                }
+            }
         }
-    ],
-    "range": [
-        0,
-        46
     ]
 }

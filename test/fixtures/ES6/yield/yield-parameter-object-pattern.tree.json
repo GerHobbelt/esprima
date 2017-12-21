@@ -2,22 +2,10 @@
     "type": "Program",
     "body": [
         {
-            "range": [
-                0,
-                24
-            ],
-            "loc": {
-                "start": {
-                    "line": 1,
-                    "column": 0
-                },
-                "end": {
-                    "line": 1,
-                    "column": 24
-                }
-            },
             "type": "FunctionDeclaration",
             "id": {
+                "type": "Identifier",
+                "name": "f",
                 "range": [
                     9,
                     10
@@ -31,45 +19,17 @@
                         "line": 1,
                         "column": 10
                     }
-                },
-                "type": "Identifier",
-                "name": "f"
+                }
             },
             "params": [
                 {
-                    "range": [
-                        11,
-                        21
-                    ],
-                    "loc": {
-                        "start": {
-                            "line": 1,
-                            "column": 11
-                        },
-                        "end": {
-                            "line": 1,
-                            "column": 21
-                        }
-                    },
                     "type": "ObjectPattern",
                     "properties": [
                         {
-                            "range": [
-                                12,
-                                20
-                            ],
-                            "loc": {
-                                "start": {
-                                    "line": 1,
-                                    "column": 12
-                                },
-                                "end": {
-                                    "line": 1,
-                                    "column": 20
-                                }
-                            },
                             "type": "Property",
                             "key": {
+                                "type": "Identifier",
+                                "name": "yield",
                                 "range": [
                                     12,
                                     17
@@ -83,12 +43,12 @@
                                         "line": 1,
                                         "column": 17
                                     }
-                                },
-                                "type": "Identifier",
-                                "name": "yield"
+                                }
                             },
                             "computed": false,
                             "value": {
+                                "type": "Identifier",
+                                "name": "y",
                                 "range": [
                                     19,
                                     20
@@ -102,18 +62,46 @@
                                         "line": 1,
                                         "column": 20
                                     }
-                                },
-                                "type": "Identifier",
-                                "name": "y"
+                                }
                             },
                             "kind": "init",
                             "method": false,
-                            "shorthand": false
+                            "shorthand": false,
+                            "range": [
+                                12,
+                                20
+                            ],
+                            "loc": {
+                                "start": {
+                                    "line": 1,
+                                    "column": 12
+                                },
+                                "end": {
+                                    "line": 1,
+                                    "column": 20
+                                }
+                            }
                         }
-                    ]
+                    ],
+                    "range": [
+                        11,
+                        21
+                    ],
+                    "loc": {
+                        "start": {
+                            "line": 1,
+                            "column": 11
+                        },
+                        "end": {
+                            "line": 1,
+                            "column": 21
+                        }
+                    }
                 }
             ],
             "body": {
+                "type": "BlockStatement",
+                "body": [],
                 "range": [
                     22,
                     24
@@ -127,16 +115,42 @@
                         "line": 1,
                         "column": 24
                     }
-                },
-                "type": "BlockStatement",
-                "body": []
+                }
             },
             "generator": false,
             "expression": false,
-            "async": false
+            "async": false,
+            "range": [
+                0,
+                24
+            ],
+            "loc": {
+                "start": {
+                    "line": 1,
+                    "column": 0
+                },
+                "end": {
+                    "line": 1,
+                    "column": 24
+                }
+            }
         }
     ],
     "sourceType": "script",
+    "range": [
+        0,
+        24
+    ],
+    "loc": {
+        "start": {
+            "line": 1,
+            "column": 0
+        },
+        "end": {
+            "line": 1,
+            "column": 24
+        }
+    },
     "tokens": [
         {
             "type": "Keyword",
@@ -336,19 +350,5 @@
                 }
             }
         }
-    ],
-    "range": [
-        0,
-        24
-    ],
-    "loc": {
-        "start": {
-            "line": 1,
-            "column": 0
-        },
-        "end": {
-            "line": 1,
-            "column": 24
-        }
-    }
+    ]
 }

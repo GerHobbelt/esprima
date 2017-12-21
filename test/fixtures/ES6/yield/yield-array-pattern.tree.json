@@ -2,56 +2,16 @@
     "type": "Program",
     "body": [
         {
-            "range": [
-                0,
-                13
-            ],
-            "loc": {
-                "start": {
-                    "line": 1,
-                    "column": 0
-                },
-                "end": {
-                    "line": 1,
-                    "column": 13
-                }
-            },
             "type": "ExpressionStatement",
             "expression": {
-                "range": [
-                    1,
-                    12
-                ],
-                "loc": {
-                    "start": {
-                        "line": 1,
-                        "column": 1
-                    },
-                    "end": {
-                        "line": 1,
-                        "column": 12
-                    }
-                },
                 "type": "AssignmentExpression",
                 "operator": "=",
                 "left": {
-                    "range": [
-                        1,
-                        8
-                    ],
-                    "loc": {
-                        "start": {
-                            "line": 1,
-                            "column": 1
-                        },
-                        "end": {
-                            "line": 1,
-                            "column": 8
-                        }
-                    },
                     "type": "ArrayPattern",
                     "elements": [
                         {
+                            "type": "Identifier",
+                            "name": "yield",
                             "range": [
                                 2,
                                 7
@@ -65,13 +25,27 @@
                                     "line": 1,
                                     "column": 7
                                 }
-                            },
-                            "type": "Identifier",
-                            "name": "yield"
+                            }
                         }
-                    ]
+                    ],
+                    "range": [
+                        1,
+                        8
+                    ],
+                    "loc": {
+                        "start": {
+                            "line": 1,
+                            "column": 1
+                        },
+                        "end": {
+                            "line": 1,
+                            "column": 8
+                        }
+                    }
                 },
                 "right": {
+                    "type": "Identifier",
+                    "name": "x",
                     "range": [
                         11,
                         12
@@ -85,14 +59,54 @@
                             "line": 1,
                             "column": 12
                         }
+                    }
+                },
+                "range": [
+                    1,
+                    12
+                ],
+                "loc": {
+                    "start": {
+                        "line": 1,
+                        "column": 1
                     },
-                    "type": "Identifier",
-                    "name": "x"
+                    "end": {
+                        "line": 1,
+                        "column": 12
+                    }
+                }
+            },
+            "range": [
+                0,
+                13
+            ],
+            "loc": {
+                "start": {
+                    "line": 1,
+                    "column": 0
+                },
+                "end": {
+                    "line": 1,
+                    "column": 13
                 }
             }
         }
     ],
     "sourceType": "script",
+    "range": [
+        0,
+        13
+    ],
+    "loc": {
+        "start": {
+            "line": 1,
+            "column": 0
+        },
+        "end": {
+            "line": 1,
+            "column": 13
+        }
+    },
     "tokens": [
         {
             "type": "Punctuator",
@@ -220,19 +234,5 @@
                 }
             }
         }
-    ],
-    "range": [
-        0,
-        13
-    ],
-    "loc": {
-        "start": {
-            "line": 1,
-            "column": 0
-        },
-        "end": {
-            "line": 1,
-            "column": 13
-        }
-    }
+    ]
 }

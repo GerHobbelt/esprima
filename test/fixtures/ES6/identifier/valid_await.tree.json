@@ -2,39 +2,13 @@
     "type": "Program",
     "body": [
         {
-            "range": [
-                0,
-                10
-            ],
-            "loc": {
-                "start": {
-                    "line": 1,
-                    "column": 0
-                },
-                "end": {
-                    "line": 1,
-                    "column": 10
-                }
-            },
             "type": "VariableDeclaration",
             "declarations": [
                 {
-                    "range": [
-                        4,
-                        9
-                    ],
-                    "loc": {
-                        "start": {
-                            "line": 1,
-                            "column": 4
-                        },
-                        "end": {
-                            "line": 1,
-                            "column": 9
-                        }
-                    },
                     "type": "VariableDeclarator",
                     "id": {
+                        "type": "Identifier",
+                        "name": "await",
                         "range": [
                             4,
                             9
@@ -48,32 +22,46 @@
                                 "line": 1,
                                 "column": 9
                             }
-                        },
-                        "type": "Identifier",
-                        "name": "await"
+                        }
                     },
-                    "init": null
+                    "init": null,
+                    "range": [
+                        4,
+                        9
+                    ],
+                    "loc": {
+                        "start": {
+                            "line": 1,
+                            "column": 4
+                        },
+                        "end": {
+                            "line": 1,
+                            "column": 9
+                        }
+                    }
                 }
             ],
-            "kind": "var"
-        },
-        {
+            "kind": "var",
             "range": [
-                11,
-                19
+                0,
+                10
             ],
             "loc": {
                 "start": {
                     "line": 1,
-                    "column": 11
+                    "column": 0
                 },
                 "end": {
                     "line": 1,
-                    "column": 19
+                    "column": 10
                 }
-            },
+            }
+        },
+        {
             "type": "ExpressionStatement",
             "expression": {
+                "type": "Identifier",
+                "name": "await",
                 "range": [
                     12,
                     17
@@ -87,13 +75,39 @@
                         "line": 1,
                         "column": 17
                     }
+                }
+            },
+            "range": [
+                11,
+                19
+            ],
+            "loc": {
+                "start": {
+                    "line": 1,
+                    "column": 11
                 },
-                "type": "Identifier",
-                "name": "await"
+                "end": {
+                    "line": 1,
+                    "column": 19
+                }
             }
         }
     ],
     "sourceType": "script",
+    "range": [
+        0,
+        19
+    ],
+    "loc": {
+        "start": {
+            "line": 1,
+            "column": 0
+        },
+        "end": {
+            "line": 1,
+            "column": 19
+        }
+    },
     "tokens": [
         {
             "type": "Keyword",
@@ -221,19 +235,5 @@
                 }
             }
         }
-    ],
-    "range": [
-        0,
-        19
-    ],
-    "loc": {
-        "start": {
-            "line": 1,
-            "column": 0
-        },
-        "end": {
-            "line": 1,
-            "column": 19
-        }
-    }
+    ]
 }

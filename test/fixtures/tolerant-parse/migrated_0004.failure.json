@@ -1,1 +1,7 @@
-{"index":9,"lineNumber":3,"column":1,"message":"Error: Line 3: Unexpected token ILLEGAL","description":"Unexpected token ILLEGAL"}
+{
+    "index": 9,
+    "lineNumber": 3,
+    "column": 1,
+    "message": "Error: Line 3: Unexpected token ILLEGAL",
+    "description": "Unexpected token ILLEGAL"
+}

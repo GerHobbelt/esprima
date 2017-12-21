@@ -2,27 +2,6 @@
     "type": "Program",
     "body": [],
     "sourceType": "script",
-    "comments": [
-        {
-            "type": "Line",
-            "value": " comment",
-            "range": [
-                0,
-                11
-            ],
-            "loc": {
-                "start": {
-                    "line": 1,
-                    "column": 0
-                },
-                "end": {
-                    "line": 1,
-                    "column": 11
-                }
-            }
-        }
-    ],
-    "tokens": [],
     "range": [
         11,
         11
@@ -36,5 +15,6 @@
             "line": 1,
             "column": 11
         }
-    }
+    },
+    "tokens": []
 }

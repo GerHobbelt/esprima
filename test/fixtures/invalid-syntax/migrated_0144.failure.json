@@ -2,5 +2,6 @@
     "index": 8,
     "lineNumber": 1,
     "column": 9,
-    "message": "Error: Line 1: Unexpected string"
+    "message": "Error: Line 1: Unexpected string",
+    "description": "Unexpected string"
 }

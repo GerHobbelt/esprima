@@ -64,46 +64,6 @@
                                 }
                             }
                         },
-                        "leadingComments": [
-                            {
-                                "type": "Block",
-                                "value": " infinite ",
-                                "range": [
-                                    15,
-                                    29
-                                ],
-                                "loc": {
-                                    "start": {
-                                        "line": 1,
-                                        "column": 15
-                                    },
-                                    "end": {
-                                        "line": 1,
-                                        "column": 29
-                                    }
-                                }
-                            }
-                        ],
-                        "trailingComments": [
-                            {
-                                "type": "Block",
-                                "value": " bar ",
-                                "range": [
-                                    47,
-                                    56
-                                ],
-                                "loc": {
-                                    "start": {
-                                        "line": 1,
-                                        "column": 47
-                                    },
-                                    "end": {
-                                        "line": 1,
-                                        "column": 56
-                                    }
-                                }
-                            }
-                        ],
                         "range": [
                             30,
                             46
@@ -160,26 +120,6 @@
                             }
                         ],
                         "kind": "var",
-                        "leadingComments": [
-                            {
-                                "type": "Block",
-                                "value": " bar ",
-                                "range": [
-                                    47,
-                                    56
-                                ],
-                                "loc": {
-                                    "start": {
-                                        "line": 1,
-                                        "column": 47
-                                    },
-                                    "end": {
-                                        "line": 1,
-                                        "column": 56
-                                    }
-                                }
-                            }
-                        ],
                         "range": [
                             57,
                             66
@@ -231,44 +171,20 @@
         }
     ],
     "sourceType": "script",
-    "comments": [
-        {
-            "type": "Block",
-            "value": " infinite ",
-            "range": [
-                15,
-                29
-            ],
-            "loc": {
-                "start": {
-                    "line": 1,
-                    "column": 15
-                },
-                "end": {
-                    "line": 1,
-                    "column": 29
-                }
-            }
-        },
-        {
-            "type": "Block",
-            "value": " bar ",
-            "range": [
-                47,
-                56
-            ],
-            "loc": {
-                "start": {
-                    "line": 1,
-                    "column": 47
-                },
-                "end": {
-                    "line": 1,
-                    "column": 56
-                }
-            }
-        }
+    "range": [
+        0,
+        68
     ],
+    "loc": {
+        "start": {
+            "line": 1,
+            "column": 0
+        },
+        "end": {
+            "line": 1,
+            "column": 68
+        }
+    },
     "tokens": [
         {
             "type": "Keyword",
@@ -540,19 +456,5 @@
                 }
             }
         }
-    ],
-    "range": [
-        0,
-        68
-    ],
-    "loc": {
-        "start": {
-            "line": 1,
-            "column": 0
-        },
-        "end": {
-            "line": 1,
-            "column": 68
-        }
-    }
+    ]
 }

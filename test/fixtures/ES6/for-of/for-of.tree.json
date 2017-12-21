@@ -2,22 +2,10 @@
     "type": "Program",
     "body": [
         {
-            "range": [
-                0,
-                13
-            ],
-            "loc": {
-                "start": {
-                    "line": 1,
-                    "column": 0
-                },
-                "end": {
-                    "line": 1,
-                    "column": 13
-                }
-            },
             "type": "ForOfStatement",
             "left": {
+                "type": "Identifier",
+                "name": "p",
                 "range": [
                     5,
                     6
@@ -31,11 +19,11 @@
                         "line": 1,
                         "column": 6
                     }
-                },
-                "type": "Identifier",
-                "name": "p"
+                }
             },
             "right": {
+                "type": "Identifier",
+                "name": "q",
                 "range": [
                     10,
                     11
@@ -49,11 +37,10 @@
                         "line": 1,
                         "column": 11
                     }
-                },
-                "type": "Identifier",
-                "name": "q"
+                }
             },
             "body": {
+                "type": "EmptyStatement",
                 "range": [
                     12,
                     13
@@ -67,12 +54,39 @@
                         "line": 1,
                         "column": 13
                     }
+                }
+            },
+            "range": [
+                0,
+                13
+            ],
+            "loc": {
+                "start": {
+                    "line": 1,
+                    "column": 0
                 },
-                "type": "EmptyStatement"
+                "end": {
+                    "line": 1,
+                    "column": 13
+                }
             }
         }
     ],
     "sourceType": "script",
+    "range": [
+        0,
+        13
+    ],
+    "loc": {
+        "start": {
+            "line": 1,
+            "column": 0
+        },
+        "end": {
+            "line": 1,
+            "column": 13
+        }
+    },
     "tokens": [
         {
             "type": "Keyword",
@@ -200,19 +214,5 @@
                 }
             }
         }
-    ],
-    "range": [
-        0,
-        13
-    ],
-    "loc": {
-        "start": {
-            "line": 1,
-            "column": 0
-        },
-        "end": {
-            "line": 1,
-            "column": 13
-        }
-    }
+    ]
 }

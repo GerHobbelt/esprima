@@ -2,55 +2,15 @@
     "type": "Program",
     "body": [
         {
-            "range": [
-                0,
-                20
-            ],
-            "loc": {
-                "start": {
-                    "line": 1,
-                    "column": 0
-                },
-                "end": {
-                    "line": 1,
-                    "column": 20
-                }
-            },
             "type": "ForOfStatement",
             "left": {
-                "range": [
-                    5,
-                    10
-                ],
-                "loc": {
-                    "start": {
-                        "line": 1,
-                        "column": 5
-                    },
-                    "end": {
-                        "line": 1,
-                        "column": 10
-                    }
-                },
                 "type": "VariableDeclaration",
                 "declarations": [
                     {
-                        "range": [
-                            9,
-                            10
-                        ],
-                        "loc": {
-                            "start": {
-                                "line": 1,
-                                "column": 9
-                            },
-                            "end": {
-                                "line": 1,
-                                "column": 10
-                            }
-                        },
                         "type": "VariableDeclarator",
                         "id": {
+                            "type": "Identifier",
+                            "name": "x",
                             "range": [
                                 9,
                                 10
@@ -64,16 +24,44 @@
                                     "line": 1,
                                     "column": 10
                                 }
-                            },
-                            "type": "Identifier",
-                            "name": "x"
+                            }
                         },
-                        "init": null
+                        "init": null,
+                        "range": [
+                            9,
+                            10
+                        ],
+                        "loc": {
+                            "start": {
+                                "line": 1,
+                                "column": 9
+                            },
+                            "end": {
+                                "line": 1,
+                                "column": 10
+                            }
+                        }
                     }
                 ],
-                "kind": "var"
+                "kind": "var",
+                "range": [
+                    5,
+                    10
+                ],
+                "loc": {
+                    "start": {
+                        "line": 1,
+                        "column": 5
+                    },
+                    "end": {
+                        "line": 1,
+                        "column": 10
+                    }
+                }
             },
             "right": {
+                "type": "Identifier",
+                "name": "list",
                 "range": [
                     14,
                     18
@@ -87,11 +75,10 @@
                         "line": 1,
                         "column": 18
                     }
-                },
-                "type": "Identifier",
-                "name": "list"
+                }
             },
             "body": {
+                "type": "EmptyStatement",
                 "range": [
                     19,
                     20
@@ -105,12 +92,39 @@
                         "line": 1,
                         "column": 20
                     }
+                }
+            },
+            "range": [
+                0,
+                20
+            ],
+            "loc": {
+                "start": {
+                    "line": 1,
+                    "column": 0
                 },
-                "type": "EmptyStatement"
+                "end": {
+                    "line": 1,
+                    "column": 20
+                }
             }
         }
     ],
     "sourceType": "script",
+    "range": [
+        0,
+        20
+    ],
+    "loc": {
+        "start": {
+            "line": 1,
+            "column": 0
+        },
+        "end": {
+            "line": 1,
+            "column": 20
+        }
+    },
     "tokens": [
         {
             "type": "Keyword",
@@ -256,19 +270,5 @@
                 }
             }
         }
-    ],
-    "range": [
-        0,
-        20
-    ],
-    "loc": {
-        "start": {
-            "line": 1,
-            "column": 0
-        },
-        "end": {
-            "line": 1,
-            "column": 20
-        }
-    }
+    ]
 }

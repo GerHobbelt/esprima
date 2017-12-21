@@ -111,6 +111,20 @@
         }
     ],
     "sourceType": "script",
+    "range": [
+        0,
+        52
+    ],
+    "loc": {
+        "start": {
+            "line": 1,
+            "column": 0
+        },
+        "end": {
+            "line": 2,
+            "column": 18
+        }
+    },
     "tokens": [
         {
             "type": "Keyword",
@@ -274,19 +288,5 @@
                 }
             }
         }
-    ],
-    "range": [
-        0,
-        52
-    ],
-    "loc": {
-        "start": {
-            "line": 1,
-            "column": 0
-        },
-        "end": {
-            "line": 2,
-            "column": 18
-        }
-    }
+    ]
 }

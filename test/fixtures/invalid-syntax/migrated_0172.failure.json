@@ -2,5 +2,6 @@
     "index": 5,
     "lineNumber": 1,
     "column": 6,
-    "message": "Error: Line 1: Illegal break statement"
+    "message": "Error: Line 1: Illegal break statement",
+    "description": "Illegal break statement"
 }

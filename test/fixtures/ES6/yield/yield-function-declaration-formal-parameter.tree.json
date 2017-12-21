@@ -2,22 +2,10 @@
     "type": "Program",
     "body": [
         {
-            "range": [
-                0,
-                20
-            ],
-            "loc": {
-                "start": {
-                    "line": 1,
-                    "column": 0
-                },
-                "end": {
-                    "line": 1,
-                    "column": 20
-                }
-            },
             "type": "FunctionDeclaration",
             "id": {
+                "type": "Identifier",
+                "name": "f",
                 "range": [
                     9,
                     10
@@ -31,12 +19,12 @@
                         "line": 1,
                         "column": 10
                     }
-                },
-                "type": "Identifier",
-                "name": "f"
+                }
             },
             "params": [
                 {
+                    "type": "Identifier",
+                    "name": "yield",
                     "range": [
                         11,
                         16
@@ -50,12 +38,12 @@
                             "line": 1,
                             "column": 16
                         }
-                    },
-                    "type": "Identifier",
-                    "name": "yield"
+                    }
                 }
             ],
             "body": {
+                "type": "BlockStatement",
+                "body": [],
                 "range": [
                     18,
                     20
@@ -69,16 +57,42 @@
                         "line": 1,
                         "column": 20
                     }
-                },
-                "type": "BlockStatement",
-                "body": []
+                }
             },
             "generator": false,
             "expression": false,
-            "async": false
+            "async": false,
+            "range": [
+                0,
+                20
+            ],
+            "loc": {
+                "start": {
+                    "line": 1,
+                    "column": 0
+                },
+                "end": {
+                    "line": 1,
+                    "column": 20
+                }
+            }
         }
     ],
     "sourceType": "script",
+    "range": [
+        0,
+        20
+    ],
+    "loc": {
+        "start": {
+            "line": 1,
+            "column": 0
+        },
+        "end": {
+            "line": 1,
+            "column": 20
+        }
+    },
     "tokens": [
         {
             "type": "Keyword",
@@ -206,19 +220,5 @@
                 }
             }
         }
-    ],
-    "range": [
-        0,
-        20
-    ],
-    "loc": {
-        "start": {
-            "line": 1,
-            "column": 0
-        },
-        "end": {
-            "line": 1,
-            "column": 20
-        }
-    }
+    ]
 }

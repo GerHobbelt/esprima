@@ -1,1 +1,7 @@
-{"index":29,"lineNumber":3,"column":15,"message":"Error: Line 3: Illegal newline after throw","description":"Illegal newline after throw"}
+{
+    "index": 29,
+    "lineNumber": 3,
+    "column": 15,
+    "message": "Error: Line 3: Illegal newline after throw",
+    "description": "Illegal newline after throw"
+}

@@ -2,39 +2,13 @@
     "type": "Program",
     "body": [
         {
-            "range": [
-                0,
-                6
-            ],
-            "loc": {
-                "start": {
-                    "line": 1,
-                    "column": 0
-                },
-                "end": {
-                    "line": 1,
-                    "column": 6
-                }
-            },
             "type": "VariableDeclaration",
             "declarations": [
                 {
-                    "range": [
-                        4,
-                        5
-                    ],
-                    "loc": {
-                        "start": {
-                            "line": 1,
-                            "column": 4
-                        },
-                        "end": {
-                            "line": 1,
-                            "column": 5
-                        }
-                    },
                     "type": "VariableDeclarator",
                     "id": {
+                        "type": "Identifier",
+                        "name": "℘",
                         "range": [
                             4,
                             5
@@ -48,17 +22,57 @@
                                 "line": 1,
                                 "column": 5
                             }
-                        },
-                        "type": "Identifier",
-                        "name": "℘"
+                        }
                     },
-                    "init": null
+                    "init": null,
+                    "range": [
+                        4,
+                        5
+                    ],
+                    "loc": {
+                        "start": {
+                            "line": 1,
+                            "column": 4
+                        },
+                        "end": {
+                            "line": 1,
+                            "column": 5
+                        }
+                    }
                 }
             ],
-            "kind": "var"
+            "kind": "var",
+            "range": [
+                0,
+                6
+            ],
+            "loc": {
+                "start": {
+                    "line": 1,
+                    "column": 0
+                },
+                "end": {
+                    "line": 1,
+                    "column": 6
+                }
+            }
         }
     ],
     "sourceType": "script",
+    "range": [
+        0,
+        6
+    ],
+    "loc": {
+        "start": {
+            "line": 1,
+            "column": 0
+        },
+        "end": {
+            "line": 1,
+            "column": 6
+        }
+    },
     "tokens": [
         {
             "type": "Keyword",
@@ -114,19 +128,5 @@
                 }
             }
         }
-    ],
-    "range": [
-        0,
-        6
-    ],
-    "loc": {
-        "start": {
-            "line": 1,
-            "column": 0
-        },
-        "end": {
-            "line": 1,
-            "column": 6
-        }
-    }
+    ]
 }

@@ -246,6 +246,20 @@
         }
     ],
     "sourceType": "script",
+    "range": [
+        0,
+        36
+    ],
+    "loc": {
+        "start": {
+            "line": 1,
+            "column": 0
+        },
+        "end": {
+            "line": 1,
+            "column": 36
+        }
+    },
     "tokens": [
         {
             "type": "Identifier",
@@ -499,19 +513,5 @@
                 }
             }
         }
-    ],
-    "range": [
-        0,
-        36
-    ],
-    "loc": {
-        "start": {
-            "line": 1,
-            "column": 0
-        },
-        "end": {
-            "line": 1,
-            "column": 36
-        }
-    }
+    ]
 }

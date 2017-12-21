@@ -1,1 +1,7 @@
-{"index":3,"lineNumber":1,"column":4,"message":"Error: Line 1: Generator declarations are not allowed in legacy contexts","description":"Generator declarations are not allowed in legacy contexts"}
+{
+    "index": 3,
+    "lineNumber": 1,
+    "column": 4,
+    "message": "Error: Line 1: Generator declarations are not allowed in legacy contexts",
+    "description": "Generator declarations are not allowed in legacy contexts"
+}

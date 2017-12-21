@@ -2,39 +2,13 @@
     "type": "Program",
     "body": [
         {
-            "range": [
-                0,
-                13
-            ],
-            "loc": {
-                "start": {
-                    "line": 1,
-                    "column": 0
-                },
-                "end": {
-                    "line": 1,
-                    "column": 13
-                }
-            },
             "type": "ForStatement",
             "init": {
-                "range": [
-                    4,
-                    9
-                ],
-                "loc": {
-                    "start": {
-                        "line": 1,
-                        "column": 4
-                    },
-                    "end": {
-                        "line": 1,
-                        "column": 9
-                    }
-                },
                 "type": "SequenceExpression",
                 "expressions": [
                     {
+                        "type": "Identifier",
+                        "name": "a",
                         "range": [
                             4,
                             5
@@ -48,11 +22,11 @@
                                 "line": 1,
                                 "column": 5
                             }
-                        },
-                        "type": "Identifier",
-                        "name": "a"
+                        }
                     },
                     {
+                        "type": "Identifier",
+                        "name": "b",
                         "range": [
                             6,
                             7
@@ -66,11 +40,11 @@
                                 "line": 1,
                                 "column": 7
                             }
-                        },
-                        "type": "Identifier",
-                        "name": "b"
+                        }
                     },
                     {
+                        "type": "Identifier",
+                        "name": "c",
                         "range": [
                             8,
                             9
@@ -84,15 +58,28 @@
                                 "line": 1,
                                 "column": 9
                             }
-                        },
-                        "type": "Identifier",
-                        "name": "c"
+                        }
                     }
-                ]
+                ],
+                "range": [
+                    4,
+                    9
+                ],
+                "loc": {
+                    "start": {
+                        "line": 1,
+                        "column": 4
+                    },
+                    "end": {
+                        "line": 1,
+                        "column": 9
+                    }
+                }
             },
             "test": null,
             "update": null,
             "body": {
+                "type": "EmptyStatement",
                 "range": [
                     12,
                     13
@@ -106,12 +93,39 @@
                         "line": 1,
                         "column": 13
                     }
+                }
+            },
+            "range": [
+                0,
+                13
+            ],
+            "loc": {
+                "start": {
+                    "line": 1,
+                    "column": 0
                 },
-                "type": "EmptyStatement"
+                "end": {
+                    "line": 1,
+                    "column": 13
+                }
             }
         }
     ],
     "sourceType": "script",
+    "range": [
+        0,
+        13
+    ],
+    "loc": {
+        "start": {
+            "line": 1,
+            "column": 0
+        },
+        "end": {
+            "line": 1,
+            "column": 13
+        }
+    },
     "tokens": [
         {
             "type": "Keyword",
@@ -311,19 +325,5 @@
                 }
             }
         }
-    ],
-    "range": [
-        0,
-        13
-    ],
-    "loc": {
-        "start": {
-            "line": 1,
-            "column": 0
-        },
-        "end": {
-            "line": 1,
-            "column": 13
-        }
-    }
+    ]
 }

@@ -1,1 +1,7 @@
-{"index":13,"lineNumber":1,"column":14,"message":"Error: Line 1: Unexpected identifier","description":"Unexpected identifier"}
+{
+    "index": 13,
+    "lineNumber": 1,
+    "column": 14,
+    "message": "Error: Line 1: Unexpected identifier",
+    "description": "Unexpected identifier"
+}

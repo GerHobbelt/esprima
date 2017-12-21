@@ -81,6 +81,20 @@
         }
     ],
     "sourceType": "script",
+    "range": [
+        0,
+        17
+    ],
+    "loc": {
+        "start": {
+            "line": 1,
+            "column": 0
+        },
+        "end": {
+            "line": 1,
+            "column": 17
+        }
+    },
     "tokens": [
         {
             "type": "Keyword",
@@ -139,10 +153,6 @@
         {
             "type": "RegularExpression",
             "value": "/[P QR]/i",
-            "regex": {
-                "pattern": "[P QR]",
-                "flags": "i"
-            },
             "range": [
                 8,
                 17
@@ -156,21 +166,11 @@
                     "line": 1,
                     "column": 17
                 }
+            },
+            "regex": {
+                "pattern": "[P QR]",
+                "flags": "i"
             }
         }
-    ],
-    "range": [
-        0,
-        17
-    ],
-    "loc": {
-        "start": {
-            "line": 1,
-            "column": 0
-        },
-        "end": {
-            "line": 1,
-            "column": 17
-        }
-    }
+    ]
 }

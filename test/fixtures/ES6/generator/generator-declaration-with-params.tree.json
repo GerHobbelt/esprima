@@ -2,22 +2,10 @@
     "type": "Program",
     "body": [
         {
-            "range": [
-                0,
-                25
-            ],
-            "loc": {
-                "start": {
-                    "line": 1,
-                    "column": 0
-                },
-                "end": {
-                    "line": 1,
-                    "column": 25
-                }
-            },
             "type": "FunctionDeclaration",
             "id": {
+                "type": "Identifier",
+                "name": "foo",
                 "range": [
                     10,
                     13
@@ -31,12 +19,12 @@
                         "line": 1,
                         "column": 13
                     }
-                },
-                "type": "Identifier",
-                "name": "foo"
+                }
             },
             "params": [
                 {
+                    "type": "Identifier",
+                    "name": "x",
                     "range": [
                         14,
                         15
@@ -50,11 +38,11 @@
                             "line": 1,
                             "column": 15
                         }
-                    },
-                    "type": "Identifier",
-                    "name": "x"
+                    }
                 },
                 {
+                    "type": "Identifier",
+                    "name": "y",
                     "range": [
                         17,
                         18
@@ -68,11 +56,11 @@
                             "line": 1,
                             "column": 18
                         }
-                    },
-                    "type": "Identifier",
-                    "name": "y"
+                    }
                 },
                 {
+                    "type": "Identifier",
+                    "name": "z",
                     "range": [
                         20,
                         21
@@ -86,12 +74,12 @@
                             "line": 1,
                             "column": 21
                         }
-                    },
-                    "type": "Identifier",
-                    "name": "z"
+                    }
                 }
             ],
             "body": {
+                "type": "BlockStatement",
+                "body": [],
                 "range": [
                     23,
                     25
@@ -105,16 +93,42 @@
                         "line": 1,
                         "column": 25
                     }
-                },
-                "type": "BlockStatement",
-                "body": []
+                }
             },
             "generator": true,
             "expression": false,
-            "async": false
+            "async": false,
+            "range": [
+                0,
+                25
+            ],
+            "loc": {
+                "start": {
+                    "line": 1,
+                    "column": 0
+                },
+                "end": {
+                    "line": 1,
+                    "column": 25
+                }
+            }
         }
     ],
     "sourceType": "script",
+    "range": [
+        0,
+        25
+    ],
+    "loc": {
+        "start": {
+            "line": 1,
+            "column": 0
+        },
+        "end": {
+            "line": 1,
+            "column": 25
+        }
+    },
     "tokens": [
         {
             "type": "Keyword",
@@ -332,19 +346,5 @@
                 }
             }
         }
-    ],
-    "range": [
-        0,
-        25
-    ],
-    "loc": {
-        "start": {
-            "line": 1,
-            "column": 0
-        },
-        "end": {
-            "line": 1,
-            "column": 25
-        }
-    }
+    ]
 }

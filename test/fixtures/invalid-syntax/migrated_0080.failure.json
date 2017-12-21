@@ -2,5 +2,6 @@
     "index": 4,
     "lineNumber": 1,
     "column": 5,
-    "message": "Error: Line 1: Unexpected token ,"
+    "message": "Error: Line 1: Unexpected token ,",
+    "description": "Unexpected token ,"
 }

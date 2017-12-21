@@ -81,6 +81,20 @@
         }
     ],
     "sourceType": "script",
+    "range": [
+        0,
+        18
+    ],
+    "loc": {
+        "start": {
+            "line": 1,
+            "column": 0
+        },
+        "end": {
+            "line": 1,
+            "column": 18
+        }
+    },
     "tokens": [
         {
             "type": "Keyword",
@@ -139,10 +153,6 @@
         {
             "type": "RegularExpression",
             "value": "/foo\\/bar/",
-            "regex": {
-                "pattern": "foo\\/bar",
-                "flags": ""
-            },
             "range": [
                 8,
                 18
@@ -156,21 +166,11 @@
                     "line": 1,
                     "column": 18
                 }
+            },
+            "regex": {
+                "pattern": "foo\\/bar",
+                "flags": ""
             }
         }
-    ],
-    "range": [
-        0,
-        18
-    ],
-    "loc": {
-        "start": {
-            "line": 1,
-            "column": 0
-        },
-        "end": {
-            "line": 1,
-            "column": 18
-        }
-    }
+    ]
 }

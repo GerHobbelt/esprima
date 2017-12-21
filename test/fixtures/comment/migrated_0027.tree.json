@@ -62,26 +62,6 @@
                                 }
                             }
                         },
-                        "trailingComments": [
-                            {
-                                "type": "Line",
-                                "value": " Some comment",
-                                "range": [
-                                    18,
-                                    33
-                                ],
-                                "loc": {
-                                    "start": {
-                                        "line": 1,
-                                        "column": 18
-                                    },
-                                    "end": {
-                                        "line": 1,
-                                        "column": 33
-                                    }
-                                }
-                            }
-                        ],
                         "range": [
                             9,
                             17
@@ -131,26 +111,20 @@
         }
     ],
     "sourceType": "script",
-    "comments": [
-        {
-            "type": "Line",
-            "value": " Some comment",
-            "range": [
-                18,
-                33
-            ],
-            "loc": {
-                "start": {
-                    "line": 1,
-                    "column": 18
-                },
-                "end": {
-                    "line": 1,
-                    "column": 33
-                }
-            }
-        }
+    "range": [
+        0,
+        36
     ],
+    "loc": {
+        "start": {
+            "line": 1,
+            "column": 0
+        },
+        "end": {
+            "line": 2,
+            "column": 2
+        }
+    },
     "tokens": [
         {
             "type": "Keyword",
@@ -314,19 +288,5 @@
                 }
             }
         }
-    ],
-    "range": [
-        0,
-        36
-    ],
-    "loc": {
-        "start": {
-            "line": 1,
-            "column": 0
-        },
-        "end": {
-            "line": 2,
-            "column": 2
-        }
-    }
+    ]
 }

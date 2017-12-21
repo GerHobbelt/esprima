@@ -81,6 +81,20 @@
         }
     ],
     "sourceType": "script",
+    "range": [
+        0,
+        16
+    ],
+    "loc": {
+        "start": {
+            "line": 1,
+            "column": 0
+        },
+        "end": {
+            "line": 1,
+            "column": 16
+        }
+    },
     "tokens": [
         {
             "type": "Keyword",
@@ -139,10 +153,6 @@
         {
             "type": "RegularExpression",
             "value": "/[a-z]/i",
-            "regex": {
-                "pattern": "[a-z]",
-                "flags": "i"
-            },
             "range": [
                 8,
                 16
@@ -156,21 +166,11 @@
                     "line": 1,
                     "column": 16
                 }
+            },
+            "regex": {
+                "pattern": "[a-z]",
+                "flags": "i"
             }
         }
-    ],
-    "range": [
-        0,
-        16
-    ],
-    "loc": {
-        "start": {
-            "line": 1,
-            "column": 0
-        },
-        "end": {
-            "line": 1,
-            "column": 16
-        }
-    }
+    ]
 }

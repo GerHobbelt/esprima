@@ -74,26 +74,6 @@
                                         }
                                     ],
                                     "kind": "var",
-                                    "trailingComments": [
-                                        {
-                                            "type": "Block",
-                                            "value": " sync ",
-                                            "range": [
-                                                30,
-                                                40
-                                            ],
-                                            "loc": {
-                                                "start": {
-                                                    "line": 1,
-                                                    "column": 30
-                                                },
-                                                "end": {
-                                                    "line": 1,
-                                                    "column": 40
-                                                }
-                                            }
-                                        }
-                                    ],
                                     "range": [
                                         13,
                                         29
@@ -146,26 +126,6 @@
                     "property": {
                         "type": "Identifier",
                         "name": "call",
-                        "leadingComments": [
-                            {
-                                "type": "Block",
-                                "value": " sync ",
-                                "range": [
-                                    30,
-                                    40
-                                ],
-                                "loc": {
-                                    "start": {
-                                        "line": 1,
-                                        "column": 30
-                                    },
-                                    "end": {
-                                        "line": 1,
-                                        "column": 40
-                                    }
-                                }
-                            }
-                        ],
                         "range": [
                             44,
                             48
@@ -247,26 +207,20 @@
         }
     ],
     "sourceType": "script",
-    "comments": [
-        {
-            "type": "Block",
-            "value": " sync ",
-            "range": [
-                30,
-                40
-            ],
-            "loc": {
-                "start": {
-                    "line": 1,
-                    "column": 30
-                },
-                "end": {
-                    "line": 1,
-                    "column": 40
-                }
-            }
-        }
+    "range": [
+        0,
+        54
     ],
+    "loc": {
+        "start": {
+            "line": 1,
+            "column": 0
+        },
+        "end": {
+            "line": 1,
+            "column": 54
+        }
+    },
     "tokens": [
         {
             "type": "Punctuator",
@@ -574,19 +528,5 @@
                 }
             }
         }
-    ],
-    "range": [
-        0,
-        54
-    ],
-    "loc": {
-        "start": {
-            "line": 1,
-            "column": 0
-        },
-        "end": {
-            "line": 1,
-            "column": 54
-        }
-    }
+    ]
 }

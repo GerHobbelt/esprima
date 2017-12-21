@@ -2,22 +2,10 @@
     "type": "Program",
     "body": [
         {
-            "range": [
-                0,
-                21
-            ],
-            "loc": {
-                "start": {
-                    "line": 1,
-                    "column": 0
-                },
-                "end": {
-                    "line": 1,
-                    "column": 21
-                }
-            },
             "type": "TryStatement",
             "block": {
+                "type": "BlockStatement",
+                "body": [],
                 "range": [
                     4,
                     7
@@ -31,27 +19,13 @@
                         "line": 1,
                         "column": 7
                     }
-                },
-                "type": "BlockStatement",
-                "body": []
+                }
             },
             "handler": {
-                "range": [
-                    8,
-                    21
-                ],
-                "loc": {
-                    "start": {
-                        "line": 1,
-                        "column": 8
-                    },
-                    "end": {
-                        "line": 1,
-                        "column": 21
-                    }
-                },
                 "type": "CatchClause",
                 "param": {
+                    "type": "ArrayPattern",
+                    "elements": [],
                     "range": [
                         15,
                         17
@@ -65,11 +39,11 @@
                             "line": 1,
                             "column": 17
                         }
-                    },
-                    "type": "ArrayPattern",
-                    "elements": []
+                    }
                 },
                 "body": {
+                    "type": "BlockStatement",
+                    "body": [],
                     "range": [
                         19,
                         21
@@ -83,15 +57,55 @@
                             "line": 1,
                             "column": 21
                         }
+                    }
+                },
+                "range": [
+                    8,
+                    21
+                ],
+                "loc": {
+                    "start": {
+                        "line": 1,
+                        "column": 8
                     },
-                    "type": "BlockStatement",
-                    "body": []
+                    "end": {
+                        "line": 1,
+                        "column": 21
+                    }
                 }
             },
-            "finalizer": null
+            "finalizer": null,
+            "range": [
+                0,
+                21
+            ],
+            "loc": {
+                "start": {
+                    "line": 1,
+                    "column": 0
+                },
+                "end": {
+                    "line": 1,
+                    "column": 21
+                }
+            }
         }
     ],
     "sourceType": "script",
+    "range": [
+        0,
+        21
+    ],
+    "loc": {
+        "start": {
+            "line": 1,
+            "column": 0
+        },
+        "end": {
+            "line": 1,
+            "column": 21
+        }
+    },
     "tokens": [
         {
             "type": "Keyword",
@@ -273,19 +287,5 @@
                 }
             }
         }
-    ],
-    "range": [
-        0,
-        21
-    ],
-    "loc": {
-        "start": {
-            "line": 1,
-            "column": 0
-        },
-        "end": {
-            "line": 1,
-            "column": 21
-        }
-    }
+    ]
 }
