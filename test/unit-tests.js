@@ -234,6 +234,8 @@ function generateTestCase(testCase) {
 
                 expected = actual;
                 testCase.tree = JSON.parse(expected);
+                testCase.tree.comments = testCase.tree.comments || [];
+                testCase.tree.errors = testCase.tree.errors || [];
             }
         }
 
