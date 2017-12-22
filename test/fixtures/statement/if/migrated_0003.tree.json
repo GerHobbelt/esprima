@@ -1,101 +1,4 @@
 {
-    "type": "Program",
-    "body": [
-        {
-            "type": "IfStatement",
-            "test": {
-                "type": "Identifier",
-                "name": "morning",
-                "range": [
-                    4,
-                    11
-                ],
-                "loc": {
-                    "start": {
-                        "line": 1,
-                        "column": 4
-                    },
-                    "end": {
-                        "line": 1,
-                        "column": 11
-                    }
-                }
-            },
-            "consequent": {
-                "type": "FunctionDeclaration",
-                "id": {
-                    "type": "Identifier",
-                    "name": "a",
-                    "range": [
-                        22,
-                        23
-                    ],
-                    "loc": {
-                        "start": {
-                            "line": 1,
-                            "column": 22
-                        },
-                        "end": {
-                            "line": 1,
-                            "column": 23
-                        }
-                    }
-                },
-                "params": [],
-                "body": {
-                    "type": "BlockStatement",
-                    "body": [],
-                    "range": [
-                        25,
-                        27
-                    ],
-                    "loc": {
-                        "start": {
-                            "line": 1,
-                            "column": 25
-                        },
-                        "end": {
-                            "line": 1,
-                            "column": 27
-                        }
-                    }
-                },
-                "generator": false,
-                "expression": false,
-                "async": false,
-                "range": [
-                    13,
-                    27
-                ],
-                "loc": {
-                    "start": {
-                        "line": 1,
-                        "column": 13
-                    },
-                    "end": {
-                        "line": 1,
-                        "column": 27
-                    }
-                }
-            },
-            "alternate": null,
-            "range": [
-                0,
-                27
-            ],
-            "loc": {
-                "start": {
-                    "line": 1,
-                    "column": 0
-                },
-                "end": {
-                    "line": 1,
-                    "column": 27
-                }
-            }
-        }
-    ],
-    "sourceType": "script",
     "range": [
         0,
         27
@@ -110,10 +13,106 @@
             "column": 27
         }
     },
+    "type": "Program",
+    "body": [
+        {
+            "range": [
+                0,
+                27
+            ],
+            "loc": {
+                "start": {
+                    "line": 1,
+                    "column": 0
+                },
+                "end": {
+                    "line": 1,
+                    "column": 27
+                }
+            },
+            "type": "IfStatement",
+            "test": {
+                "range": [
+                    4,
+                    11
+                ],
+                "loc": {
+                    "start": {
+                        "line": 1,
+                        "column": 4
+                    },
+                    "end": {
+                        "line": 1,
+                        "column": 11
+                    }
+                },
+                "type": "Identifier",
+                "name": "morning"
+            },
+            "consequent": {
+                "range": [
+                    13,
+                    27
+                ],
+                "loc": {
+                    "start": {
+                        "line": 1,
+                        "column": 13
+                    },
+                    "end": {
+                        "line": 1,
+                        "column": 27
+                    }
+                },
+                "type": "FunctionDeclaration",
+                "id": {
+                    "range": [
+                        22,
+                        23
+                    ],
+                    "loc": {
+                        "start": {
+                            "line": 1,
+                            "column": 22
+                        },
+                        "end": {
+                            "line": 1,
+                            "column": 23
+                        }
+                    },
+                    "type": "Identifier",
+                    "name": "a"
+                },
+                "params": [],
+                "body": {
+                    "range": [
+                        25,
+                        27
+                    ],
+                    "loc": {
+                        "start": {
+                            "line": 1,
+                            "column": 25
+                        },
+                        "end": {
+                            "line": 1,
+                            "column": 27
+                        }
+                    },
+                    "type": "BlockStatement",
+                    "body": []
+                },
+                "generator": false,
+                "expression": false,
+                "async": false
+            },
+            "alternate": null
+        }
+    ],
+    "sourceType": "script",
+    "comments": [],
     "tokens": [
         {
-            "type": "Keyword",
-            "value": "if",
             "range": [
                 0,
                 2
@@ -127,11 +126,11 @@
                     "line": 1,
                     "column": 2
                 }
-            }
+            },
+            "type": "Keyword",
+            "value": "if"
         },
         {
-            "type": "Punctuator",
-            "value": "(",
             "range": [
                 3,
                 4
@@ -145,11 +144,11 @@
                     "line": 1,
                     "column": 4
                 }
-            }
+            },
+            "type": "Punctuator",
+            "value": "("
         },
         {
-            "type": "Identifier",
-            "value": "morning",
             "range": [
                 4,
                 11
@@ -163,11 +162,11 @@
                     "line": 1,
                     "column": 11
                 }
-            }
+            },
+            "type": "Identifier",
+            "value": "morning"
         },
         {
-            "type": "Punctuator",
-            "value": ")",
             "range": [
                 11,
                 12
@@ -181,11 +180,11 @@
                     "line": 1,
                     "column": 12
                 }
-            }
+            },
+            "type": "Punctuator",
+            "value": ")"
         },
         {
-            "type": "Keyword",
-            "value": "function",
             "range": [
                 13,
                 21
@@ -199,11 +198,11 @@
                     "line": 1,
                     "column": 21
                 }
-            }
+            },
+            "type": "Keyword",
+            "value": "function"
         },
         {
-            "type": "Identifier",
-            "value": "a",
             "range": [
                 22,
                 23
@@ -217,11 +216,11 @@
                     "line": 1,
                     "column": 23
                 }
-            }
+            },
+            "type": "Identifier",
+            "value": "a"
         },
         {
-            "type": "Punctuator",
-            "value": "(",
             "range": [
                 23,
                 24
@@ -235,11 +234,11 @@
                     "line": 1,
                     "column": 24
                 }
-            }
+            },
+            "type": "Punctuator",
+            "value": "("
         },
         {
-            "type": "Punctuator",
-            "value": ")",
             "range": [
                 24,
                 25
@@ -253,11 +252,11 @@
                     "line": 1,
                     "column": 25
                 }
-            }
+            },
+            "type": "Punctuator",
+            "value": ")"
         },
         {
-            "type": "Punctuator",
-            "value": "{",
             "range": [
                 25,
                 26
@@ -271,11 +270,11 @@
                     "line": 1,
                     "column": 26
                 }
-            }
+            },
+            "type": "Punctuator",
+            "value": "{"
         },
         {
-            "type": "Punctuator",
-            "value": "}",
             "range": [
                 26,
                 27
@@ -289,7 +288,10 @@
                     "line": 1,
                     "column": 27
                 }
-            }
+            },
+            "type": "Punctuator",
+            "value": "}"
         }
-    ]
+    ],
+    "errors": []
 }

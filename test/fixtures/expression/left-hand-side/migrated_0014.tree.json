@@ -1,79 +1,4 @@
 {
-    "type": "Program",
-    "body": [
-        {
-            "type": "ExpressionStatement",
-            "expression": {
-                "type": "MemberExpression",
-                "computed": true,
-                "object": {
-                    "type": "Identifier",
-                    "name": "universe",
-                    "range": [
-                        0,
-                        8
-                    ],
-                    "loc": {
-                        "start": {
-                            "line": 1,
-                            "column": 0
-                        },
-                        "end": {
-                            "line": 1,
-                            "column": 8
-                        }
-                    }
-                },
-                "property": {
-                    "type": "Identifier",
-                    "name": "galaxyName",
-                    "range": [
-                        9,
-                        19
-                    ],
-                    "loc": {
-                        "start": {
-                            "line": 1,
-                            "column": 9
-                        },
-                        "end": {
-                            "line": 1,
-                            "column": 19
-                        }
-                    }
-                },
-                "range": [
-                    0,
-                    20
-                ],
-                "loc": {
-                    "start": {
-                        "line": 1,
-                        "column": 0
-                    },
-                    "end": {
-                        "line": 1,
-                        "column": 20
-                    }
-                }
-            },
-            "range": [
-                0,
-                20
-            ],
-            "loc": {
-                "start": {
-                    "line": 1,
-                    "column": 0
-                },
-                "end": {
-                    "line": 1,
-                    "column": 20
-                }
-            }
-        }
-    ],
-    "sourceType": "script",
     "range": [
         0,
         20
@@ -88,10 +13,84 @@
             "column": 20
         }
     },
+    "type": "Program",
+    "body": [
+        {
+            "range": [
+                0,
+                20
+            ],
+            "loc": {
+                "start": {
+                    "line": 1,
+                    "column": 0
+                },
+                "end": {
+                    "line": 1,
+                    "column": 20
+                }
+            },
+            "type": "ExpressionStatement",
+            "expression": {
+                "range": [
+                    0,
+                    20
+                ],
+                "loc": {
+                    "start": {
+                        "line": 1,
+                        "column": 0
+                    },
+                    "end": {
+                        "line": 1,
+                        "column": 20
+                    }
+                },
+                "type": "MemberExpression",
+                "computed": true,
+                "object": {
+                    "range": [
+                        0,
+                        8
+                    ],
+                    "loc": {
+                        "start": {
+                            "line": 1,
+                            "column": 0
+                        },
+                        "end": {
+                            "line": 1,
+                            "column": 8
+                        }
+                    },
+                    "type": "Identifier",
+                    "name": "universe"
+                },
+                "property": {
+                    "range": [
+                        9,
+                        19
+                    ],
+                    "loc": {
+                        "start": {
+                            "line": 1,
+                            "column": 9
+                        },
+                        "end": {
+                            "line": 1,
+                            "column": 19
+                        }
+                    },
+                    "type": "Identifier",
+                    "name": "galaxyName"
+                }
+            }
+        }
+    ],
+    "sourceType": "script",
+    "comments": [],
     "tokens": [
         {
-            "type": "Identifier",
-            "value": "universe",
             "range": [
                 0,
                 8
@@ -105,11 +104,11 @@
                     "line": 1,
                     "column": 8
                 }
-            }
+            },
+            "type": "Identifier",
+            "value": "universe"
         },
         {
-            "type": "Punctuator",
-            "value": "[",
             "range": [
                 8,
                 9
@@ -123,11 +122,11 @@
                     "line": 1,
                     "column": 9
                 }
-            }
+            },
+            "type": "Punctuator",
+            "value": "["
         },
         {
-            "type": "Identifier",
-            "value": "galaxyName",
             "range": [
                 9,
                 19
@@ -141,11 +140,11 @@
                     "line": 1,
                     "column": 19
                 }
-            }
+            },
+            "type": "Identifier",
+            "value": "galaxyName"
         },
         {
-            "type": "Punctuator",
-            "value": "]",
             "range": [
                 19,
                 20
@@ -159,7 +158,10 @@
                     "line": 1,
                     "column": 20
                 }
-            }
+            },
+            "type": "Punctuator",
+            "value": "]"
         }
-    ]
+    ],
+    "errors": []
 }

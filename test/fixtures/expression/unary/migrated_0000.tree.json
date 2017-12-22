@@ -1,62 +1,4 @@
 {
-    "type": "Program",
-    "body": [
-        {
-            "type": "ExpressionStatement",
-            "expression": {
-                "type": "UpdateExpression",
-                "operator": "++",
-                "argument": {
-                    "type": "Identifier",
-                    "name": "x",
-                    "range": [
-                        2,
-                        3
-                    ],
-                    "loc": {
-                        "start": {
-                            "line": 1,
-                            "column": 2
-                        },
-                        "end": {
-                            "line": 1,
-                            "column": 3
-                        }
-                    }
-                },
-                "prefix": true,
-                "range": [
-                    0,
-                    3
-                ],
-                "loc": {
-                    "start": {
-                        "line": 1,
-                        "column": 0
-                    },
-                    "end": {
-                        "line": 1,
-                        "column": 3
-                    }
-                }
-            },
-            "range": [
-                0,
-                3
-            ],
-            "loc": {
-                "start": {
-                    "line": 1,
-                    "column": 0
-                },
-                "end": {
-                    "line": 1,
-                    "column": 3
-                }
-            }
-        }
-    ],
-    "sourceType": "script",
     "range": [
         0,
         3
@@ -71,10 +13,67 @@
             "column": 3
         }
     },
+    "type": "Program",
+    "body": [
+        {
+            "range": [
+                0,
+                3
+            ],
+            "loc": {
+                "start": {
+                    "line": 1,
+                    "column": 0
+                },
+                "end": {
+                    "line": 1,
+                    "column": 3
+                }
+            },
+            "type": "ExpressionStatement",
+            "expression": {
+                "range": [
+                    0,
+                    3
+                ],
+                "loc": {
+                    "start": {
+                        "line": 1,
+                        "column": 0
+                    },
+                    "end": {
+                        "line": 1,
+                        "column": 3
+                    }
+                },
+                "type": "UpdateExpression",
+                "operator": "++",
+                "argument": {
+                    "range": [
+                        2,
+                        3
+                    ],
+                    "loc": {
+                        "start": {
+                            "line": 1,
+                            "column": 2
+                        },
+                        "end": {
+                            "line": 1,
+                            "column": 3
+                        }
+                    },
+                    "type": "Identifier",
+                    "name": "x"
+                },
+                "prefix": true
+            }
+        }
+    ],
+    "sourceType": "script",
+    "comments": [],
     "tokens": [
         {
-            "type": "Punctuator",
-            "value": "++",
             "range": [
                 0,
                 2
@@ -88,11 +87,11 @@
                     "line": 1,
                     "column": 2
                 }
-            }
+            },
+            "type": "Punctuator",
+            "value": "++"
         },
         {
-            "type": "Identifier",
-            "value": "x",
             "range": [
                 2,
                 3
@@ -106,7 +105,10 @@
                     "line": 1,
                     "column": 3
                 }
-            }
+            },
+            "type": "Identifier",
+            "value": "x"
         }
-    ]
+    ],
+    "errors": []
 }

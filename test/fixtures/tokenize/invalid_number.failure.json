@@ -3,5 +3,6 @@
     "lineNumber": 1,
     "column": 3,
     "message": "Error: Line 1: Unexpected token ILLEGAL",
-    "description": "Unexpected token ILLEGAL"
+    "description": "Unexpected token ILLEGAL",
+    "tokenize": true
 }

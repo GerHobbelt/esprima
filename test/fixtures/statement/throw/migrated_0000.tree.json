@@ -1,43 +1,4 @@
 {
-    "type": "Program",
-    "body": [
-        {
-            "type": "ThrowStatement",
-            "argument": {
-                "type": "Identifier",
-                "name": "x",
-                "range": [
-                    6,
-                    7
-                ],
-                "loc": {
-                    "start": {
-                        "line": 1,
-                        "column": 6
-                    },
-                    "end": {
-                        "line": 1,
-                        "column": 7
-                    }
-                }
-            },
-            "range": [
-                0,
-                8
-            ],
-            "loc": {
-                "start": {
-                    "line": 1,
-                    "column": 0
-                },
-                "end": {
-                    "line": 1,
-                    "column": 8
-                }
-            }
-        }
-    ],
-    "sourceType": "script",
     "range": [
         0,
         8
@@ -52,10 +13,48 @@
             "column": 8
         }
     },
+    "type": "Program",
+    "body": [
+        {
+            "range": [
+                0,
+                8
+            ],
+            "loc": {
+                "start": {
+                    "line": 1,
+                    "column": 0
+                },
+                "end": {
+                    "line": 1,
+                    "column": 8
+                }
+            },
+            "type": "ThrowStatement",
+            "argument": {
+                "range": [
+                    6,
+                    7
+                ],
+                "loc": {
+                    "start": {
+                        "line": 1,
+                        "column": 6
+                    },
+                    "end": {
+                        "line": 1,
+                        "column": 7
+                    }
+                },
+                "type": "Identifier",
+                "name": "x"
+            }
+        }
+    ],
+    "sourceType": "script",
+    "comments": [],
     "tokens": [
         {
-            "type": "Keyword",
-            "value": "throw",
             "range": [
                 0,
                 5
@@ -69,11 +68,11 @@
                     "line": 1,
                     "column": 5
                 }
-            }
+            },
+            "type": "Keyword",
+            "value": "throw"
         },
         {
-            "type": "Identifier",
-            "value": "x",
             "range": [
                 6,
                 7
@@ -87,11 +86,11 @@
                     "line": 1,
                     "column": 7
                 }
-            }
+            },
+            "type": "Identifier",
+            "value": "x"
         },
         {
-            "type": "Punctuator",
-            "value": ";",
             "range": [
                 7,
                 8
@@ -105,7 +104,10 @@
                     "line": 1,
                     "column": 8
                 }
-            }
+            },
+            "type": "Punctuator",
+            "value": ";"
         }
-    ]
+    ],
+    "errors": []
 }

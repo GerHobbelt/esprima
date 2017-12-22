@@ -1,0 +1,474 @@
+{
+    "range": [
+        0,
+        24
+    ],
+    "loc": {
+        "start": {
+            "line": 1,
+            "column": 0
+        },
+        "end": {
+            "line": 1,
+            "column": 24
+        }
+    },
+    "type": "Program",
+    "body": [
+        {
+            "range": [
+                0,
+                24
+            ],
+            "loc": {
+                "start": {
+                    "line": 1,
+                    "column": 0
+                },
+                "end": {
+                    "line": 1,
+                    "column": 24
+                }
+            },
+            "type": "ExpressionStatement",
+            "expression": {
+                "range": [
+                    0,
+                    24
+                ],
+                "loc": {
+                    "start": {
+                        "line": 1,
+                        "column": 0
+                    },
+                    "end": {
+                        "line": 1,
+                        "column": 24
+                    }
+                },
+                "type": "AssignmentExpression",
+                "operator": "=",
+                "left": {
+                    "range": [
+                        0,
+                        1
+                    ],
+                    "loc": {
+                        "start": {
+                            "line": 1,
+                            "column": 0
+                        },
+                        "end": {
+                            "line": 1,
+                            "column": 1
+                        }
+                    },
+                    "type": "Identifier",
+                    "name": "x"
+                },
+                "right": {
+                    "range": [
+                        4,
+                        24
+                    ],
+                    "loc": {
+                        "start": {
+                            "line": 1,
+                            "column": 4
+                        },
+                        "end": {
+                            "line": 1,
+                            "column": 24
+                        }
+                    },
+                    "type": "ObjectExpression",
+                    "properties": [
+                        {
+                            "range": [
+                                5,
+                                14
+                            ],
+                            "loc": {
+                                "start": {
+                                    "line": 1,
+                                    "column": 5
+                                },
+                                "end": {
+                                    "line": 1,
+                                    "column": 14
+                                }
+                            },
+                            "type": "Property",
+                            "key": {
+                                "range": [
+                                    11,
+                                    14
+                                ],
+                                "loc": {
+                                    "start": {
+                                        "line": 1,
+                                        "column": 11
+                                    },
+                                    "end": {
+                                        "line": 1,
+                                        "column": 14
+                                    }
+                                },
+                                "type": "Identifier",
+                                "name": "set"
+                            },
+                            "computed": false,
+                            "value": {
+                                "range": [
+                                    5,
+                                    14
+                                ],
+                                "loc": {
+                                    "start": {
+                                        "line": 1,
+                                        "column": 5
+                                    },
+                                    "end": {
+                                        "line": 1,
+                                        "column": 14
+                                    }
+                                },
+                                "type": "Identifier",
+                                "name": "async"
+                            },
+                            "kind": "init",
+                            "method": false,
+                            "shorthand": true
+                        },
+                        {
+                            "range": [
+                                15,
+                                22
+                            ],
+                            "loc": {
+                                "start": {
+                                    "line": 1,
+                                    "column": 15
+                                },
+                                "end": {
+                                    "line": 1,
+                                    "column": 22
+                                }
+                            },
+                            "type": "Property",
+                            "key": {
+                                "range": [
+                                    15,
+                                    16
+                                ],
+                                "loc": {
+                                    "start": {
+                                        "line": 1,
+                                        "column": 15
+                                    },
+                                    "end": {
+                                        "line": 1,
+                                        "column": 16
+                                    }
+                                },
+                                "type": "Identifier",
+                                "name": "s"
+                            },
+                            "computed": false,
+                            "value": {
+                                "range": [
+                                    16,
+                                    22
+                                ],
+                                "loc": {
+                                    "start": {
+                                        "line": 1,
+                                        "column": 16
+                                    },
+                                    "end": {
+                                        "line": 1,
+                                        "column": 22
+                                    }
+                                },
+                                "type": "FunctionExpression",
+                                "id": null,
+                                "params": [
+                                    {
+                                        "range": [
+                                            17,
+                                            18
+                                        ],
+                                        "loc": {
+                                            "start": {
+                                                "line": 1,
+                                                "column": 17
+                                            },
+                                            "end": {
+                                                "line": 1,
+                                                "column": 18
+                                            }
+                                        },
+                                        "type": "Identifier",
+                                        "name": "i"
+                                    }
+                                ],
+                                "body": {
+                                    "range": [
+                                        20,
+                                        22
+                                    ],
+                                    "loc": {
+                                        "start": {
+                                            "line": 1,
+                                            "column": 20
+                                        },
+                                        "end": {
+                                            "line": 1,
+                                            "column": 22
+                                        }
+                                    },
+                                    "type": "BlockStatement",
+                                    "body": []
+                                },
+                                "generator": false,
+                                "expression": false,
+                                "async": false
+                            },
+                            "kind": "init",
+                            "method": true,
+                            "shorthand": false
+                        }
+                    ]
+                }
+            }
+        }
+    ],
+    "sourceType": "script",
+    "comments": [],
+    "tokens": [
+        {
+            "range": [
+                0,
+                1
+            ],
+            "loc": {
+                "start": {
+                    "line": 1,
+                    "column": 0
+                },
+                "end": {
+                    "line": 1,
+                    "column": 1
+                }
+            },
+            "type": "Identifier",
+            "value": "x"
+        },
+        {
+            "range": [
+                2,
+                3
+            ],
+            "loc": {
+                "start": {
+                    "line": 1,
+                    "column": 2
+                },
+                "end": {
+                    "line": 1,
+                    "column": 3
+                }
+            },
+            "type": "Punctuator",
+            "value": "="
+        },
+        {
+            "range": [
+                4,
+                5
+            ],
+            "loc": {
+                "start": {
+                    "line": 1,
+                    "column": 4
+                },
+                "end": {
+                    "line": 1,
+                    "column": 5
+                }
+            },
+            "type": "Punctuator",
+            "value": "{"
+        },
+        {
+            "range": [
+                5,
+                10
+            ],
+            "loc": {
+                "start": {
+                    "line": 1,
+                    "column": 5
+                },
+                "end": {
+                    "line": 1,
+                    "column": 10
+                }
+            },
+            "type": "Identifier",
+            "value": "async"
+        },
+        {
+            "range": [
+                11,
+                14
+            ],
+            "loc": {
+                "start": {
+                    "line": 1,
+                    "column": 11
+                },
+                "end": {
+                    "line": 1,
+                    "column": 14
+                }
+            },
+            "type": "Identifier",
+            "value": "set"
+        },
+        {
+            "range": [
+                15,
+                16
+            ],
+            "loc": {
+                "start": {
+                    "line": 1,
+                    "column": 15
+                },
+                "end": {
+                    "line": 1,
+                    "column": 16
+                }
+            },
+            "type": "Identifier",
+            "value": "s"
+        },
+        {
+            "range": [
+                16,
+                17
+            ],
+            "loc": {
+                "start": {
+                    "line": 1,
+                    "column": 16
+                },
+                "end": {
+                    "line": 1,
+                    "column": 17
+                }
+            },
+            "type": "Punctuator",
+            "value": "("
+        },
+        {
+            "range": [
+                17,
+                18
+            ],
+            "loc": {
+                "start": {
+                    "line": 1,
+                    "column": 17
+                },
+                "end": {
+                    "line": 1,
+                    "column": 18
+                }
+            },
+            "type": "Identifier",
+            "value": "i"
+        },
+        {
+            "range": [
+                18,
+                19
+            ],
+            "loc": {
+                "start": {
+                    "line": 1,
+                    "column": 18
+                },
+                "end": {
+                    "line": 1,
+                    "column": 19
+                }
+            },
+            "type": "Punctuator",
+            "value": ")"
+        },
+        {
+            "range": [
+                20,
+                21
+            ],
+            "loc": {
+                "start": {
+                    "line": 1,
+                    "column": 20
+                },
+                "end": {
+                    "line": 1,
+                    "column": 21
+                }
+            },
+            "type": "Punctuator",
+            "value": "{"
+        },
+        {
+            "range": [
+                21,
+                22
+            ],
+            "loc": {
+                "start": {
+                    "line": 1,
+                    "column": 21
+                },
+                "end": {
+                    "line": 1,
+                    "column": 22
+                }
+            },
+            "type": "Punctuator",
+            "value": "}"
+        },
+        {
+            "range": [
+                23,
+                24
+            ],
+            "loc": {
+                "start": {
+                    "line": 1,
+                    "column": 23
+                },
+                "end": {
+                    "line": 1,
+                    "column": 24
+                }
+            },
+            "type": "Punctuator",
+            "value": "}"
+        }
+    ],
+    "errors": [
+        {
+            "index": 15,
+            "lineNumber": 1,
+            "column": 16,
+            "message": "Error: Line 1: Unexpected token s"
+        }
+    ]
+}

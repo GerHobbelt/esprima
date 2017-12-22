@@ -1,61 +1,4 @@
 {
-    "type": "Program",
-    "body": [
-        {
-            "type": "ExpressionStatement",
-            "expression": {
-                "type": "CallExpression",
-                "callee": {
-                    "type": "Identifier",
-                    "name": "foo",
-                    "range": [
-                        5,
-                        8
-                    ],
-                    "loc": {
-                        "start": {
-                            "line": 1,
-                            "column": 5
-                        },
-                        "end": {
-                            "line": 1,
-                            "column": 8
-                        }
-                    }
-                },
-                "arguments": [],
-                "range": [
-                    0,
-                    13
-                ],
-                "loc": {
-                    "start": {
-                        "line": 1,
-                        "column": 0
-                    },
-                    "end": {
-                        "line": 1,
-                        "column": 13
-                    }
-                }
-            },
-            "range": [
-                0,
-                13
-            ],
-            "loc": {
-                "start": {
-                    "line": 1,
-                    "column": 0
-                },
-                "end": {
-                    "line": 1,
-                    "column": 13
-                }
-            }
-        }
-    ],
-    "sourceType": "script",
     "range": [
         0,
         13
@@ -70,10 +13,66 @@
             "column": 13
         }
     },
+    "type": "Program",
+    "body": [
+        {
+            "range": [
+                0,
+                13
+            ],
+            "loc": {
+                "start": {
+                    "line": 1,
+                    "column": 0
+                },
+                "end": {
+                    "line": 1,
+                    "column": 13
+                }
+            },
+            "type": "ExpressionStatement",
+            "expression": {
+                "range": [
+                    0,
+                    13
+                ],
+                "loc": {
+                    "start": {
+                        "line": 1,
+                        "column": 0
+                    },
+                    "end": {
+                        "line": 1,
+                        "column": 13
+                    }
+                },
+                "type": "CallExpression",
+                "callee": {
+                    "range": [
+                        5,
+                        8
+                    ],
+                    "loc": {
+                        "start": {
+                            "line": 1,
+                            "column": 5
+                        },
+                        "end": {
+                            "line": 1,
+                            "column": 8
+                        }
+                    },
+                    "type": "Identifier",
+                    "name": "foo"
+                },
+                "arguments": []
+            }
+        }
+    ],
+    "sourceType": "script",
+    "comments": [],
     "tokens": [
         {
-            "type": "Punctuator",
-            "value": "(",
             "range": [
                 0,
                 1
@@ -87,11 +86,11 @@
                     "line": 1,
                     "column": 1
                 }
-            }
+            },
+            "type": "Punctuator",
+            "value": "("
         },
         {
-            "type": "Identifier",
-            "value": "foo",
             "range": [
                 5,
                 8
@@ -105,11 +104,11 @@
                     "line": 1,
                     "column": 8
                 }
-            }
+            },
+            "type": "Identifier",
+            "value": "foo"
         },
         {
-            "type": "Punctuator",
-            "value": ")",
             "range": [
                 10,
                 11
@@ -123,11 +122,11 @@
                     "line": 1,
                     "column": 11
                 }
-            }
+            },
+            "type": "Punctuator",
+            "value": ")"
         },
         {
-            "type": "Punctuator",
-            "value": "(",
             "range": [
                 11,
                 12
@@ -141,11 +140,11 @@
                     "line": 1,
                     "column": 12
                 }
-            }
+            },
+            "type": "Punctuator",
+            "value": "("
         },
         {
-            "type": "Punctuator",
-            "value": ")",
             "range": [
                 12,
                 13
@@ -159,7 +158,10 @@
                     "line": 1,
                     "column": 13
                 }
-            }
+            },
+            "type": "Punctuator",
+            "value": ")"
         }
-    ]
+    ],
+    "errors": []
 }

@@ -1,67 +1,4 @@
 {
-    "type": "Program",
-    "body": [
-        {
-            "type": "ExpressionStatement",
-            "expression": {
-                "type": "TemplateLiteral",
-                "quasis": [
-                    {
-                        "type": "TemplateElement",
-                        "value": {
-                            "raw": "\n\r\n",
-                            "cooked": "\n\n"
-                        },
-                        "tail": true,
-                        "range": [
-                            0,
-                            5
-                        ],
-                        "loc": {
-                            "start": {
-                                "line": 1,
-                                "column": 0
-                            },
-                            "end": {
-                                "line": 3,
-                                "column": 1
-                            }
-                        }
-                    }
-                ],
-                "expressions": [],
-                "range": [
-                    0,
-                    5
-                ],
-                "loc": {
-                    "start": {
-                        "line": 1,
-                        "column": 0
-                    },
-                    "end": {
-                        "line": 3,
-                        "column": 1
-                    }
-                }
-            },
-            "range": [
-                0,
-                5
-            ],
-            "loc": {
-                "start": {
-                    "line": 1,
-                    "column": 0
-                },
-                "end": {
-                    "line": 3,
-                    "column": 1
-                }
-            }
-        }
-    ],
-    "sourceType": "script",
     "range": [
         0,
         5
@@ -76,10 +13,9 @@
             "column": 1
         }
     },
-    "tokens": [
+    "type": "Program",
+    "body": [
         {
-            "type": "Template",
-            "value": "`\n\r\n`",
             "range": [
                 0,
                 5
@@ -93,7 +29,73 @@
                     "line": 3,
                     "column": 1
                 }
+            },
+            "type": "ExpressionStatement",
+            "expression": {
+                "range": [
+                    0,
+                    5
+                ],
+                "loc": {
+                    "start": {
+                        "line": 1,
+                        "column": 0
+                    },
+                    "end": {
+                        "line": 3,
+                        "column": 1
+                    }
+                },
+                "type": "TemplateLiteral",
+                "quasis": [
+                    {
+                        "range": [
+                            0,
+                            5
+                        ],
+                        "loc": {
+                            "start": {
+                                "line": 1,
+                                "column": 0
+                            },
+                            "end": {
+                                "line": 3,
+                                "column": 1
+                            }
+                        },
+                        "type": "TemplateElement",
+                        "value": {
+                            "raw": "\n\r\n",
+                            "cooked": "\n\n"
+                        },
+                        "tail": true
+                    }
+                ],
+                "expressions": []
             }
         }
-    ]
+    ],
+    "sourceType": "script",
+    "comments": [],
+    "tokens": [
+        {
+            "range": [
+                0,
+                5
+            ],
+            "loc": {
+                "start": {
+                    "line": 1,
+                    "column": 0
+                },
+                "end": {
+                    "line": 3,
+                    "column": 1
+                }
+            },
+            "type": "Template",
+            "value": "`\n\r\n`"
+        }
+    ],
+    "errors": []
 }

@@ -1,81 +1,4 @@
 {
-    "type": "Program",
-    "body": [
-        {
-            "type": "WhileStatement",
-            "test": {
-                "type": "Literal",
-                "value": true,
-                "raw": "true",
-                "range": [
-                    7,
-                    11
-                ],
-                "loc": {
-                    "start": {
-                        "line": 1,
-                        "column": 7
-                    },
-                    "end": {
-                        "line": 1,
-                        "column": 11
-                    }
-                }
-            },
-            "body": {
-                "type": "BlockStatement",
-                "body": [
-                    {
-                        "type": "ContinueStatement",
-                        "label": null,
-                        "range": [
-                            15,
-                            24
-                        ],
-                        "loc": {
-                            "start": {
-                                "line": 1,
-                                "column": 15
-                            },
-                            "end": {
-                                "line": 1,
-                                "column": 24
-                            }
-                        }
-                    }
-                ],
-                "range": [
-                    13,
-                    26
-                ],
-                "loc": {
-                    "start": {
-                        "line": 1,
-                        "column": 13
-                    },
-                    "end": {
-                        "line": 1,
-                        "column": 26
-                    }
-                }
-            },
-            "range": [
-                0,
-                26
-            ],
-            "loc": {
-                "start": {
-                    "line": 1,
-                    "column": 0
-                },
-                "end": {
-                    "line": 1,
-                    "column": 26
-                }
-            }
-        }
-    ],
-    "sourceType": "script",
     "range": [
         0,
         26
@@ -90,10 +13,86 @@
             "column": 26
         }
     },
+    "type": "Program",
+    "body": [
+        {
+            "range": [
+                0,
+                26
+            ],
+            "loc": {
+                "start": {
+                    "line": 1,
+                    "column": 0
+                },
+                "end": {
+                    "line": 1,
+                    "column": 26
+                }
+            },
+            "type": "WhileStatement",
+            "test": {
+                "range": [
+                    7,
+                    11
+                ],
+                "loc": {
+                    "start": {
+                        "line": 1,
+                        "column": 7
+                    },
+                    "end": {
+                        "line": 1,
+                        "column": 11
+                    }
+                },
+                "type": "Literal",
+                "value": true,
+                "raw": "true"
+            },
+            "body": {
+                "range": [
+                    13,
+                    26
+                ],
+                "loc": {
+                    "start": {
+                        "line": 1,
+                        "column": 13
+                    },
+                    "end": {
+                        "line": 1,
+                        "column": 26
+                    }
+                },
+                "type": "BlockStatement",
+                "body": [
+                    {
+                        "range": [
+                            15,
+                            24
+                        ],
+                        "loc": {
+                            "start": {
+                                "line": 1,
+                                "column": 15
+                            },
+                            "end": {
+                                "line": 1,
+                                "column": 24
+                            }
+                        },
+                        "type": "ContinueStatement",
+                        "label": null
+                    }
+                ]
+            }
+        }
+    ],
+    "sourceType": "script",
+    "comments": [],
     "tokens": [
         {
-            "type": "Keyword",
-            "value": "while",
             "range": [
                 0,
                 5
@@ -107,11 +106,11 @@
                     "line": 1,
                     "column": 5
                 }
-            }
+            },
+            "type": "Keyword",
+            "value": "while"
         },
         {
-            "type": "Punctuator",
-            "value": "(",
             "range": [
                 6,
                 7
@@ -125,11 +124,11 @@
                     "line": 1,
                     "column": 7
                 }
-            }
+            },
+            "type": "Punctuator",
+            "value": "("
         },
         {
-            "type": "Boolean",
-            "value": "true",
             "range": [
                 7,
                 11
@@ -143,11 +142,11 @@
                     "line": 1,
                     "column": 11
                 }
-            }
+            },
+            "type": "Boolean",
+            "value": "true"
         },
         {
-            "type": "Punctuator",
-            "value": ")",
             "range": [
                 11,
                 12
@@ -161,11 +160,11 @@
                     "line": 1,
                     "column": 12
                 }
-            }
+            },
+            "type": "Punctuator",
+            "value": ")"
         },
         {
-            "type": "Punctuator",
-            "value": "{",
             "range": [
                 13,
                 14
@@ -179,11 +178,11 @@
                     "line": 1,
                     "column": 14
                 }
-            }
+            },
+            "type": "Punctuator",
+            "value": "{"
         },
         {
-            "type": "Keyword",
-            "value": "continue",
             "range": [
                 15,
                 23
@@ -197,11 +196,11 @@
                     "line": 1,
                     "column": 23
                 }
-            }
+            },
+            "type": "Keyword",
+            "value": "continue"
         },
         {
-            "type": "Punctuator",
-            "value": ";",
             "range": [
                 23,
                 24
@@ -215,11 +214,11 @@
                     "line": 1,
                     "column": 24
                 }
-            }
+            },
+            "type": "Punctuator",
+            "value": ";"
         },
         {
-            "type": "Punctuator",
-            "value": "}",
             "range": [
                 25,
                 26
@@ -233,7 +232,10 @@
                     "line": 1,
                     "column": 26
                 }
-            }
+            },
+            "type": "Punctuator",
+            "value": "}"
         }
-    ]
+    ],
+    "errors": []
 }

@@ -1,79 +1,4 @@
 {
-    "type": "Program",
-    "body": [
-        {
-            "type": "ThrowStatement",
-            "argument": {
-                "type": "BinaryExpression",
-                "operator": "*",
-                "left": {
-                    "type": "Identifier",
-                    "name": "x",
-                    "range": [
-                        6,
-                        7
-                    ],
-                    "loc": {
-                        "start": {
-                            "line": 1,
-                            "column": 6
-                        },
-                        "end": {
-                            "line": 1,
-                            "column": 7
-                        }
-                    }
-                },
-                "right": {
-                    "type": "Identifier",
-                    "name": "y",
-                    "range": [
-                        10,
-                        11
-                    ],
-                    "loc": {
-                        "start": {
-                            "line": 1,
-                            "column": 10
-                        },
-                        "end": {
-                            "line": 1,
-                            "column": 11
-                        }
-                    }
-                },
-                "range": [
-                    6,
-                    11
-                ],
-                "loc": {
-                    "start": {
-                        "line": 1,
-                        "column": 6
-                    },
-                    "end": {
-                        "line": 1,
-                        "column": 11
-                    }
-                }
-            },
-            "range": [
-                0,
-                11
-            ],
-            "loc": {
-                "start": {
-                    "line": 1,
-                    "column": 0
-                },
-                "end": {
-                    "line": 1,
-                    "column": 11
-                }
-            }
-        }
-    ],
-    "sourceType": "script",
     "range": [
         0,
         11
@@ -88,10 +13,84 @@
             "column": 11
         }
     },
+    "type": "Program",
+    "body": [
+        {
+            "range": [
+                0,
+                11
+            ],
+            "loc": {
+                "start": {
+                    "line": 1,
+                    "column": 0
+                },
+                "end": {
+                    "line": 1,
+                    "column": 11
+                }
+            },
+            "type": "ThrowStatement",
+            "argument": {
+                "range": [
+                    6,
+                    11
+                ],
+                "loc": {
+                    "start": {
+                        "line": 1,
+                        "column": 6
+                    },
+                    "end": {
+                        "line": 1,
+                        "column": 11
+                    }
+                },
+                "type": "BinaryExpression",
+                "operator": "*",
+                "left": {
+                    "range": [
+                        6,
+                        7
+                    ],
+                    "loc": {
+                        "start": {
+                            "line": 1,
+                            "column": 6
+                        },
+                        "end": {
+                            "line": 1,
+                            "column": 7
+                        }
+                    },
+                    "type": "Identifier",
+                    "name": "x"
+                },
+                "right": {
+                    "range": [
+                        10,
+                        11
+                    ],
+                    "loc": {
+                        "start": {
+                            "line": 1,
+                            "column": 10
+                        },
+                        "end": {
+                            "line": 1,
+                            "column": 11
+                        }
+                    },
+                    "type": "Identifier",
+                    "name": "y"
+                }
+            }
+        }
+    ],
+    "sourceType": "script",
+    "comments": [],
     "tokens": [
         {
-            "type": "Keyword",
-            "value": "throw",
             "range": [
                 0,
                 5
@@ -105,11 +104,11 @@
                     "line": 1,
                     "column": 5
                 }
-            }
+            },
+            "type": "Keyword",
+            "value": "throw"
         },
         {
-            "type": "Identifier",
-            "value": "x",
             "range": [
                 6,
                 7
@@ -123,11 +122,11 @@
                     "line": 1,
                     "column": 7
                 }
-            }
+            },
+            "type": "Identifier",
+            "value": "x"
         },
         {
-            "type": "Punctuator",
-            "value": "*",
             "range": [
                 8,
                 9
@@ -141,11 +140,11 @@
                     "line": 1,
                     "column": 9
                 }
-            }
+            },
+            "type": "Punctuator",
+            "value": "*"
         },
         {
-            "type": "Identifier",
-            "value": "y",
             "range": [
                 10,
                 11
@@ -159,7 +158,10 @@
                     "line": 1,
                     "column": 11
                 }
-            }
+            },
+            "type": "Identifier",
+            "value": "y"
         }
-    ]
+    ],
+    "errors": []
 }

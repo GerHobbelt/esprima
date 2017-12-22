@@ -1,65 +1,4 @@
 {
-    "type": "Program",
-    "body": [
-        {
-            "type": "FunctionDeclaration",
-            "id": {
-                "type": "Identifier",
-                "name": "eval",
-                "range": [
-                    9,
-                    13
-                ],
-                "loc": {
-                    "start": {
-                        "line": 1,
-                        "column": 9
-                    },
-                    "end": {
-                        "line": 1,
-                        "column": 13
-                    }
-                }
-            },
-            "params": [],
-            "body": {
-                "type": "BlockStatement",
-                "body": [],
-                "range": [
-                    16,
-                    19
-                ],
-                "loc": {
-                    "start": {
-                        "line": 1,
-                        "column": 16
-                    },
-                    "end": {
-                        "line": 1,
-                        "column": 19
-                    }
-                }
-            },
-            "generator": false,
-            "expression": false,
-            "async": false,
-            "range": [
-                0,
-                19
-            ],
-            "loc": {
-                "start": {
-                    "line": 1,
-                    "column": 0
-                },
-                "end": {
-                    "line": 1,
-                    "column": 19
-                }
-            }
-        }
-    ],
-    "sourceType": "script",
     "range": [
         0,
         19
@@ -74,10 +13,70 @@
             "column": 19
         }
     },
+    "type": "Program",
+    "body": [
+        {
+            "range": [
+                0,
+                19
+            ],
+            "loc": {
+                "start": {
+                    "line": 1,
+                    "column": 0
+                },
+                "end": {
+                    "line": 1,
+                    "column": 19
+                }
+            },
+            "type": "FunctionDeclaration",
+            "id": {
+                "range": [
+                    9,
+                    13
+                ],
+                "loc": {
+                    "start": {
+                        "line": 1,
+                        "column": 9
+                    },
+                    "end": {
+                        "line": 1,
+                        "column": 13
+                    }
+                },
+                "type": "Identifier",
+                "name": "eval"
+            },
+            "params": [],
+            "body": {
+                "range": [
+                    16,
+                    19
+                ],
+                "loc": {
+                    "start": {
+                        "line": 1,
+                        "column": 16
+                    },
+                    "end": {
+                        "line": 1,
+                        "column": 19
+                    }
+                },
+                "type": "BlockStatement",
+                "body": []
+            },
+            "generator": false,
+            "expression": false,
+            "async": false
+        }
+    ],
+    "sourceType": "script",
+    "comments": [],
     "tokens": [
         {
-            "type": "Keyword",
-            "value": "function",
             "range": [
                 0,
                 8
@@ -91,11 +90,11 @@
                     "line": 1,
                     "column": 8
                 }
-            }
+            },
+            "type": "Keyword",
+            "value": "function"
         },
         {
-            "type": "Identifier",
-            "value": "eval",
             "range": [
                 9,
                 13
@@ -109,11 +108,11 @@
                     "line": 1,
                     "column": 13
                 }
-            }
+            },
+            "type": "Identifier",
+            "value": "eval"
         },
         {
-            "type": "Punctuator",
-            "value": "(",
             "range": [
                 13,
                 14
@@ -127,11 +126,11 @@
                     "line": 1,
                     "column": 14
                 }
-            }
+            },
+            "type": "Punctuator",
+            "value": "("
         },
         {
-            "type": "Punctuator",
-            "value": ")",
             "range": [
                 14,
                 15
@@ -145,11 +144,11 @@
                     "line": 1,
                     "column": 15
                 }
-            }
+            },
+            "type": "Punctuator",
+            "value": ")"
         },
         {
-            "type": "Punctuator",
-            "value": "{",
             "range": [
                 16,
                 17
@@ -163,11 +162,11 @@
                     "line": 1,
                     "column": 17
                 }
-            }
+            },
+            "type": "Punctuator",
+            "value": "{"
         },
         {
-            "type": "Punctuator",
-            "value": "}",
             "range": [
                 18,
                 19
@@ -181,7 +180,10 @@
                     "line": 1,
                     "column": 19
                 }
-            }
+            },
+            "type": "Punctuator",
+            "value": "}"
         }
-    ]
+    ],
+    "errors": []
 }

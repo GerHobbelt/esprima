@@ -1,44 +1,4 @@
 {
-    "type": "Program",
-    "body": [
-        {
-            "type": "ExpressionStatement",
-            "expression": {
-                "type": "Literal",
-                "value": 1.49241783e-10,
-                "raw": "1.492417830e-10",
-                "range": [
-                    0,
-                    15
-                ],
-                "loc": {
-                    "start": {
-                        "line": 1,
-                        "column": 0
-                    },
-                    "end": {
-                        "line": 1,
-                        "column": 15
-                    }
-                }
-            },
-            "range": [
-                0,
-                15
-            ],
-            "loc": {
-                "start": {
-                    "line": 1,
-                    "column": 0
-                },
-                "end": {
-                    "line": 1,
-                    "column": 15
-                }
-            }
-        }
-    ],
-    "sourceType": "script",
     "range": [
         0,
         15
@@ -53,10 +13,9 @@
             "column": 15
         }
     },
-    "tokens": [
+    "type": "Program",
+    "body": [
         {
-            "type": "Numeric",
-            "value": "1.492417830e-10",
             "range": [
                 0,
                 15
@@ -70,7 +29,50 @@
                     "line": 1,
                     "column": 15
                 }
+            },
+            "type": "ExpressionStatement",
+            "expression": {
+                "range": [
+                    0,
+                    15
+                ],
+                "loc": {
+                    "start": {
+                        "line": 1,
+                        "column": 0
+                    },
+                    "end": {
+                        "line": 1,
+                        "column": 15
+                    }
+                },
+                "type": "Literal",
+                "value": 1.49241783e-10,
+                "raw": "1.492417830e-10"
             }
         }
-    ]
+    ],
+    "sourceType": "script",
+    "comments": [],
+    "tokens": [
+        {
+            "range": [
+                0,
+                15
+            ],
+            "loc": {
+                "start": {
+                    "line": 1,
+                    "column": 0
+                },
+                "end": {
+                    "line": 1,
+                    "column": 15
+                }
+            },
+            "type": "Numeric",
+            "value": "1.492417830e-10"
+        }
+    ],
+    "errors": []
 }

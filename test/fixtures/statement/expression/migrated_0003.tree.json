@@ -1,43 +1,4 @@
 {
-    "type": "Program",
-    "body": [
-        {
-            "type": "ExpressionStatement",
-            "expression": {
-                "type": "Identifier",
-                "name": "aa",
-                "range": [
-                    0,
-                    7
-                ],
-                "loc": {
-                    "start": {
-                        "line": 1,
-                        "column": 0
-                    },
-                    "end": {
-                        "line": 1,
-                        "column": 7
-                    }
-                }
-            },
-            "range": [
-                0,
-                7
-            ],
-            "loc": {
-                "start": {
-                    "line": 1,
-                    "column": 0
-                },
-                "end": {
-                    "line": 1,
-                    "column": 7
-                }
-            }
-        }
-    ],
-    "sourceType": "script",
     "range": [
         0,
         7
@@ -52,10 +13,9 @@
             "column": 7
         }
     },
-    "tokens": [
+    "type": "Program",
+    "body": [
         {
-            "type": "Identifier",
-            "value": "a\\u0061",
             "range": [
                 0,
                 7
@@ -69,7 +29,49 @@
                     "line": 1,
                     "column": 7
                 }
+            },
+            "type": "ExpressionStatement",
+            "expression": {
+                "range": [
+                    0,
+                    7
+                ],
+                "loc": {
+                    "start": {
+                        "line": 1,
+                        "column": 0
+                    },
+                    "end": {
+                        "line": 1,
+                        "column": 7
+                    }
+                },
+                "type": "Identifier",
+                "name": "aa"
             }
         }
-    ]
+    ],
+    "sourceType": "script",
+    "comments": [],
+    "tokens": [
+        {
+            "range": [
+                0,
+                7
+            ],
+            "loc": {
+                "start": {
+                    "line": 1,
+                    "column": 0
+                },
+                "end": {
+                    "line": 1,
+                    "column": 7
+                }
+            },
+            "type": "Identifier",
+            "value": "a\\u0061"
+        }
+    ],
+    "errors": []
 }

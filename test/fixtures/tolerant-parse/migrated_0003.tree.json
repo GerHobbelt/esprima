@@ -1,7 +1,4 @@
 {
-    "type": "Program",
-    "body": [],
-    "sourceType": "script",
     "range": [
         16,
         16
@@ -16,10 +13,11 @@
             "column": 16
         }
     },
+    "type": "Program",
+    "body": [],
+    "sourceType": "script",
     "comments": [
         {
-            "type": "Block",
-            "value": " /* if(foo) {}",
             "range": [
                 0,
                 16
@@ -33,7 +31,9 @@
                     "line": 1,
                     "column": 16
                 }
-            }
+            },
+            "type": "Block",
+            "value": " /* if(foo) {}"
         }
     ],
     "tokens": [],

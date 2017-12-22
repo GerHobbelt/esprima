@@ -1,0 +1,267 @@
+{
+    "range": [
+        0,
+        35
+    ],
+    "loc": {
+        "start": {
+            "line": 1,
+            "column": 0
+        },
+        "end": {
+            "line": 1,
+            "column": 35
+        }
+    },
+    "type": "Program",
+    "body": [
+        {
+            "range": [
+                0,
+                35
+            ],
+            "loc": {
+                "start": {
+                    "line": 1,
+                    "column": 0
+                },
+                "end": {
+                    "line": 1,
+                    "column": 35
+                }
+            },
+            "type": "ExportDefaultDeclaration",
+            "declaration": {
+                "range": [
+                    15,
+                    35
+                ],
+                "loc": {
+                    "start": {
+                        "line": 1,
+                        "column": 15
+                    },
+                    "end": {
+                        "line": 1,
+                        "column": 35
+                    }
+                },
+                "type": "FunctionDeclaration",
+                "id": {
+                    "range": [
+                        25,
+                        30
+                    ],
+                    "loc": {
+                        "start": {
+                            "line": 1,
+                            "column": 25
+                        },
+                        "end": {
+                            "line": 1,
+                            "column": 30
+                        }
+                    },
+                    "type": "Identifier",
+                    "name": "yield"
+                },
+                "params": [],
+                "body": {
+                    "range": [
+                        33,
+                        35
+                    ],
+                    "loc": {
+                        "start": {
+                            "line": 1,
+                            "column": 33
+                        },
+                        "end": {
+                            "line": 1,
+                            "column": 35
+                        }
+                    },
+                    "type": "BlockStatement",
+                    "body": []
+                },
+                "generator": true,
+                "expression": false,
+                "async": false
+            }
+        }
+    ],
+    "sourceType": "module",
+    "comments": [],
+    "tokens": [
+        {
+            "range": [
+                0,
+                6
+            ],
+            "loc": {
+                "start": {
+                    "line": 1,
+                    "column": 0
+                },
+                "end": {
+                    "line": 1,
+                    "column": 6
+                }
+            },
+            "type": "Keyword",
+            "value": "export"
+        },
+        {
+            "range": [
+                7,
+                14
+            ],
+            "loc": {
+                "start": {
+                    "line": 1,
+                    "column": 7
+                },
+                "end": {
+                    "line": 1,
+                    "column": 14
+                }
+            },
+            "type": "Keyword",
+            "value": "default"
+        },
+        {
+            "range": [
+                15,
+                23
+            ],
+            "loc": {
+                "start": {
+                    "line": 1,
+                    "column": 15
+                },
+                "end": {
+                    "line": 1,
+                    "column": 23
+                }
+            },
+            "type": "Keyword",
+            "value": "function"
+        },
+        {
+            "range": [
+                24,
+                25
+            ],
+            "loc": {
+                "start": {
+                    "line": 1,
+                    "column": 24
+                },
+                "end": {
+                    "line": 1,
+                    "column": 25
+                }
+            },
+            "type": "Punctuator",
+            "value": "*"
+        },
+        {
+            "range": [
+                25,
+                30
+            ],
+            "loc": {
+                "start": {
+                    "line": 1,
+                    "column": 25
+                },
+                "end": {
+                    "line": 1,
+                    "column": 30
+                }
+            },
+            "type": "Keyword",
+            "value": "yield"
+        },
+        {
+            "range": [
+                30,
+                31
+            ],
+            "loc": {
+                "start": {
+                    "line": 1,
+                    "column": 30
+                },
+                "end": {
+                    "line": 1,
+                    "column": 31
+                }
+            },
+            "type": "Punctuator",
+            "value": "("
+        },
+        {
+            "range": [
+                31,
+                32
+            ],
+            "loc": {
+                "start": {
+                    "line": 1,
+                    "column": 31
+                },
+                "end": {
+                    "line": 1,
+                    "column": 32
+                }
+            },
+            "type": "Punctuator",
+            "value": ")"
+        },
+        {
+            "range": [
+                33,
+                34
+            ],
+            "loc": {
+                "start": {
+                    "line": 1,
+                    "column": 33
+                },
+                "end": {
+                    "line": 1,
+                    "column": 34
+                }
+            },
+            "type": "Punctuator",
+            "value": "{"
+        },
+        {
+            "range": [
+                34,
+                35
+            ],
+            "loc": {
+                "start": {
+                    "line": 1,
+                    "column": 34
+                },
+                "end": {
+                    "line": 1,
+                    "column": 35
+                }
+            },
+            "type": "Punctuator",
+            "value": "}"
+        }
+    ],
+    "errors": [
+        {
+            "index": 25,
+            "lineNumber": 1,
+            "column": 26,
+            "message": "Error: Line 1: Use of future reserved word in strict mode"
+        }
+    ]
+}

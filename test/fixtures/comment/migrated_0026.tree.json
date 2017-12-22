@@ -1,44 +1,4 @@
 {
-    "type": "Program",
-    "body": [
-        {
-            "type": "ExpressionStatement",
-            "expression": {
-                "type": "Literal",
-                "value": 42,
-                "raw": "42",
-                "range": [
-                    37,
-                    39
-                ],
-                "loc": {
-                    "start": {
-                        "line": 4,
-                        "column": 0
-                    },
-                    "end": {
-                        "line": 4,
-                        "column": 2
-                    }
-                }
-            },
-            "range": [
-                37,
-                39
-            ],
-            "loc": {
-                "start": {
-                    "line": 4,
-                    "column": 0
-                },
-                "end": {
-                    "line": 4,
-                    "column": 2
-                }
-            }
-        }
-    ],
-    "sourceType": "script",
     "range": [
         37,
         39
@@ -53,10 +13,9 @@
             "column": 2
         }
     },
-    "tokens": [
+    "type": "Program",
+    "body": [
         {
-            "type": "Numeric",
-            "value": "42",
             "range": [
                 37,
                 39
@@ -70,7 +29,87 @@
                     "line": 4,
                     "column": 2
                 }
+            },
+            "type": "ExpressionStatement",
+            "expression": {
+                "range": [
+                    37,
+                    39
+                ],
+                "loc": {
+                    "start": {
+                        "line": 4,
+                        "column": 0
+                    },
+                    "end": {
+                        "line": 4,
+                        "column": 2
+                    }
+                },
+                "type": "Literal",
+                "value": 42,
+                "raw": "42"
             }
         }
-    ]
+    ],
+    "sourceType": "script",
+    "comments": [
+        {
+            "range": [
+                0,
+                16
+            ],
+            "loc": {
+                "start": {
+                    "line": 1,
+                    "column": 0
+                },
+                "end": {
+                    "line": 1,
+                    "column": 16
+                }
+            },
+            "type": "Line",
+            "value": " Hello, world!"
+        },
+        {
+            "range": [
+                18,
+                36
+            ],
+            "loc": {
+                "start": {
+                    "line": 3,
+                    "column": 0
+                },
+                "end": {
+                    "line": 3,
+                    "column": 18
+                }
+            },
+            "type": "Line",
+            "value": "   Another hello"
+        }
+    ],
+    "tokens": [
+        {
+            "range": [
+                37,
+                39
+            ],
+            "loc": {
+                "start": {
+                    "line": 4,
+                    "column": 0
+                },
+                "end": {
+                    "line": 4,
+                    "column": 2
+                }
+            },
+            "type": "Numeric",
+            "value": "42"
+        }
+    ],
+    "errors": []
 }

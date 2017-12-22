@@ -1,225 +1,4 @@
 {
-    "type": "Program",
-    "body": [
-        {
-            "type": "IfStatement",
-            "test": {
-                "type": "BinaryExpression",
-                "operator": ">",
-                "left": {
-                    "type": "Identifier",
-                    "name": "$1",
-                    "range": [
-                        4,
-                        6
-                    ],
-                    "loc": {
-                        "start": {
-                            "line": 1,
-                            "column": 4
-                        },
-                        "end": {
-                            "line": 1,
-                            "column": 6
-                        }
-                    }
-                },
-                "right": {
-                    "type": "Literal",
-                    "value": 0,
-                    "raw": "0",
-                    "range": [
-                        9,
-                        10
-                    ],
-                    "loc": {
-                        "start": {
-                            "line": 1,
-                            "column": 9
-                        },
-                        "end": {
-                            "line": 1,
-                            "column": 10
-                        }
-                    }
-                },
-                "range": [
-                    4,
-                    10
-                ],
-                "loc": {
-                    "start": {
-                        "line": 1,
-                        "column": 4
-                    },
-                    "end": {
-                        "line": 1,
-                        "column": 10
-                    }
-                }
-            },
-            "consequent": {
-                "type": "ExpressionStatement",
-                "expression": {
-                    "type": "Identifier",
-                    "name": "YYCONTINUE",
-                    "range": [
-                        12,
-                        22
-                    ],
-                    "loc": {
-                        "start": {
-                            "line": 1,
-                            "column": 12
-                        },
-                        "end": {
-                            "line": 1,
-                            "column": 22
-                        }
-                    }
-                },
-                "range": [
-                    12,
-                    22
-                ],
-                "loc": {
-                    "start": {
-                        "line": 1,
-                        "column": 12
-                    },
-                    "end": {
-                        "line": 1,
-                        "column": 22
-                    }
-                }
-            },
-            "alternate": null,
-            "range": [
-                0,
-                22
-            ],
-            "loc": {
-                "start": {
-                    "line": 1,
-                    "column": 0
-                },
-                "end": {
-                    "line": 1,
-                    "column": 22
-                }
-            }
-        },
-        {
-            "type": "ExpressionStatement",
-            "expression": {
-                "type": "CallExpression",
-                "callee": {
-                    "type": "Identifier",
-                    "name": "yyerror",
-                    "range": [
-                        23,
-                        30
-                    ],
-                    "loc": {
-                        "start": {
-                            "line": 2,
-                            "column": 0
-                        },
-                        "end": {
-                            "line": 2,
-                            "column": 7
-                        }
-                    }
-                },
-                "arguments": [
-                    {
-                        "type": "BinaryExpression",
-                        "operator": "+",
-                        "left": {
-                            "type": "Literal",
-                            "value": "B0rk @ ",
-                            "raw": "\"B0rk @ \"",
-                            "range": [
-                                31,
-                                40
-                            ],
-                            "loc": {
-                                "start": {
-                                    "line": 2,
-                                    "column": 8
-                                },
-                                "end": {
-                                    "line": 2,
-                                    "column": 17
-                                }
-                            }
-                        },
-                        "right": {
-                            "type": "Identifier",
-                            "name": "#STMT",
-                            "range": [
-                                43,
-                                48
-                            ],
-                            "loc": {
-                                "start": {
-                                    "line": 2,
-                                    "column": 20
-                                },
-                                "end": {
-                                    "line": 2,
-                                    "column": 25
-                                }
-                            }
-                        },
-                        "range": [
-                            31,
-                            48
-                        ],
-                        "loc": {
-                            "start": {
-                                "line": 2,
-                                "column": 8
-                            },
-                            "end": {
-                                "line": 2,
-                                "column": 25
-                            }
-                        }
-                    }
-                ],
-                "range": [
-                    23,
-                    49
-                ],
-                "loc": {
-                    "start": {
-                        "line": 2,
-                        "column": 0
-                    },
-                    "end": {
-                        "line": 2,
-                        "column": 26
-                    }
-                }
-            },
-            "range": [
-                23,
-                49
-            ],
-            "loc": {
-                "start": {
-                    "line": 2,
-                    "column": 0
-                },
-                "end": {
-                    "line": 2,
-                    "column": 26
-                }
-            }
-        }
-    ],
-    "sourceType": "script",
     "range": [
         0,
         49
@@ -234,10 +13,230 @@
             "column": 26
         }
     },
+    "type": "Program",
+    "body": [
+        {
+            "range": [
+                0,
+                22
+            ],
+            "loc": {
+                "start": {
+                    "line": 1,
+                    "column": 0
+                },
+                "end": {
+                    "line": 1,
+                    "column": 22
+                }
+            },
+            "type": "IfStatement",
+            "test": {
+                "range": [
+                    4,
+                    10
+                ],
+                "loc": {
+                    "start": {
+                        "line": 1,
+                        "column": 4
+                    },
+                    "end": {
+                        "line": 1,
+                        "column": 10
+                    }
+                },
+                "type": "BinaryExpression",
+                "operator": ">",
+                "left": {
+                    "range": [
+                        4,
+                        6
+                    ],
+                    "loc": {
+                        "start": {
+                            "line": 1,
+                            "column": 4
+                        },
+                        "end": {
+                            "line": 1,
+                            "column": 6
+                        }
+                    },
+                    "type": "Identifier",
+                    "name": "$1"
+                },
+                "right": {
+                    "range": [
+                        9,
+                        10
+                    ],
+                    "loc": {
+                        "start": {
+                            "line": 1,
+                            "column": 9
+                        },
+                        "end": {
+                            "line": 1,
+                            "column": 10
+                        }
+                    },
+                    "type": "Literal",
+                    "value": 0,
+                    "raw": "0"
+                }
+            },
+            "consequent": {
+                "range": [
+                    12,
+                    22
+                ],
+                "loc": {
+                    "start": {
+                        "line": 1,
+                        "column": 12
+                    },
+                    "end": {
+                        "line": 1,
+                        "column": 22
+                    }
+                },
+                "type": "ExpressionStatement",
+                "expression": {
+                    "range": [
+                        12,
+                        22
+                    ],
+                    "loc": {
+                        "start": {
+                            "line": 1,
+                            "column": 12
+                        },
+                        "end": {
+                            "line": 1,
+                            "column": 22
+                        }
+                    },
+                    "type": "Identifier",
+                    "name": "YYCONTINUE"
+                }
+            },
+            "alternate": null
+        },
+        {
+            "range": [
+                23,
+                49
+            ],
+            "loc": {
+                "start": {
+                    "line": 2,
+                    "column": 0
+                },
+                "end": {
+                    "line": 2,
+                    "column": 26
+                }
+            },
+            "type": "ExpressionStatement",
+            "expression": {
+                "range": [
+                    23,
+                    49
+                ],
+                "loc": {
+                    "start": {
+                        "line": 2,
+                        "column": 0
+                    },
+                    "end": {
+                        "line": 2,
+                        "column": 26
+                    }
+                },
+                "type": "CallExpression",
+                "callee": {
+                    "range": [
+                        23,
+                        30
+                    ],
+                    "loc": {
+                        "start": {
+                            "line": 2,
+                            "column": 0
+                        },
+                        "end": {
+                            "line": 2,
+                            "column": 7
+                        }
+                    },
+                    "type": "Identifier",
+                    "name": "yyerror"
+                },
+                "arguments": [
+                    {
+                        "range": [
+                            31,
+                            48
+                        ],
+                        "loc": {
+                            "start": {
+                                "line": 2,
+                                "column": 8
+                            },
+                            "end": {
+                                "line": 2,
+                                "column": 25
+                            }
+                        },
+                        "type": "BinaryExpression",
+                        "operator": "+",
+                        "left": {
+                            "range": [
+                                31,
+                                40
+                            ],
+                            "loc": {
+                                "start": {
+                                    "line": 2,
+                                    "column": 8
+                                },
+                                "end": {
+                                    "line": 2,
+                                    "column": 17
+                                }
+                            },
+                            "type": "Literal",
+                            "value": "B0rk @ ",
+                            "raw": "\"B0rk @ \""
+                        },
+                        "right": {
+                            "range": [
+                                43,
+                                48
+                            ],
+                            "loc": {
+                                "start": {
+                                    "line": 2,
+                                    "column": 20
+                                },
+                                "end": {
+                                    "line": 2,
+                                    "column": 25
+                                }
+                            },
+                            "type": "Identifier",
+                            "name": "#STMT"
+                        }
+                    }
+                ]
+            }
+        }
+    ],
+    "sourceType": "script",
+    "comments": [],
     "tokens": [
         {
-            "type": "Keyword",
-            "value": "if",
             "range": [
                 0,
                 2
@@ -251,11 +250,11 @@
                     "line": 1,
                     "column": 2
                 }
-            }
+            },
+            "type": "Keyword",
+            "value": "if"
         },
         {
-            "type": "Punctuator",
-            "value": "(",
             "range": [
                 3,
                 4
@@ -269,11 +268,11 @@
                     "line": 1,
                     "column": 4
                 }
-            }
+            },
+            "type": "Punctuator",
+            "value": "("
         },
         {
-            "type": "Identifier",
-            "value": "$1",
             "range": [
                 4,
                 6
@@ -287,11 +286,11 @@
                     "line": 1,
                     "column": 6
                 }
-            }
+            },
+            "type": "Identifier",
+            "value": "$1"
         },
         {
-            "type": "Punctuator",
-            "value": ">",
             "range": [
                 7,
                 8
@@ -305,11 +304,11 @@
                     "line": 1,
                     "column": 8
                 }
-            }
+            },
+            "type": "Punctuator",
+            "value": ">"
         },
         {
-            "type": "Numeric",
-            "value": "0",
             "range": [
                 9,
                 10
@@ -323,11 +322,11 @@
                     "line": 1,
                     "column": 10
                 }
-            }
+            },
+            "type": "Numeric",
+            "value": "0"
         },
         {
-            "type": "Punctuator",
-            "value": ")",
             "range": [
                 10,
                 11
@@ -341,11 +340,11 @@
                     "line": 1,
                     "column": 11
                 }
-            }
+            },
+            "type": "Punctuator",
+            "value": ")"
         },
         {
-            "type": "Identifier",
-            "value": "YYCONTINUE",
             "range": [
                 12,
                 22
@@ -359,11 +358,11 @@
                     "line": 1,
                     "column": 22
                 }
-            }
+            },
+            "type": "Identifier",
+            "value": "YYCONTINUE"
         },
         {
-            "type": "Identifier",
-            "value": "yyerror",
             "range": [
                 23,
                 30
@@ -377,11 +376,11 @@
                     "line": 2,
                     "column": 7
                 }
-            }
+            },
+            "type": "Identifier",
+            "value": "yyerror"
         },
         {
-            "type": "Punctuator",
-            "value": "(",
             "range": [
                 30,
                 31
@@ -395,11 +394,11 @@
                     "line": 2,
                     "column": 8
                 }
-            }
+            },
+            "type": "Punctuator",
+            "value": "("
         },
         {
-            "type": "String",
-            "value": "\"B0rk @ \"",
             "range": [
                 31,
                 40
@@ -413,11 +412,11 @@
                     "line": 2,
                     "column": 17
                 }
-            }
+            },
+            "type": "String",
+            "value": "\"B0rk @ \""
         },
         {
-            "type": "Punctuator",
-            "value": "+",
             "range": [
                 41,
                 42
@@ -431,11 +430,11 @@
                     "line": 2,
                     "column": 19
                 }
-            }
+            },
+            "type": "Punctuator",
+            "value": "+"
         },
         {
-            "type": "Identifier",
-            "value": "#STMT",
             "range": [
                 43,
                 48
@@ -449,11 +448,11 @@
                     "line": 2,
                     "column": 25
                 }
-            }
+            },
+            "type": "Identifier",
+            "value": "#STMT"
         },
         {
-            "type": "Punctuator",
-            "value": ")",
             "range": [
                 48,
                 49
@@ -467,7 +466,10 @@
                     "line": 2,
                     "column": 26
                 }
-            }
+            },
+            "type": "Punctuator",
+            "value": ")"
         }
-    ]
+    ],
+    "errors": []
 }

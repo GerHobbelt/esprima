@@ -1,64 +1,4 @@
 {
-    "type": "Program",
-    "body": [
-        {
-            "type": "VariableDeclaration",
-            "declarations": [
-                {
-                    "type": "VariableDeclarator",
-                    "id": {
-                        "type": "Identifier",
-                        "name": "let",
-                        "range": [
-                            4,
-                            7
-                        ],
-                        "loc": {
-                            "start": {
-                                "line": 1,
-                                "column": 4
-                            },
-                            "end": {
-                                "line": 1,
-                                "column": 7
-                            }
-                        }
-                    },
-                    "init": null,
-                    "range": [
-                        4,
-                        7
-                    ],
-                    "loc": {
-                        "start": {
-                            "line": 1,
-                            "column": 4
-                        },
-                        "end": {
-                            "line": 1,
-                            "column": 7
-                        }
-                    }
-                }
-            ],
-            "kind": "var",
-            "range": [
-                0,
-                8
-            ],
-            "loc": {
-                "start": {
-                    "line": 1,
-                    "column": 0
-                },
-                "end": {
-                    "line": 1,
-                    "column": 8
-                }
-            }
-        }
-    ],
-    "sourceType": "script",
     "range": [
         0,
         8
@@ -73,10 +13,69 @@
             "column": 8
         }
     },
+    "type": "Program",
+    "body": [
+        {
+            "range": [
+                0,
+                8
+            ],
+            "loc": {
+                "start": {
+                    "line": 1,
+                    "column": 0
+                },
+                "end": {
+                    "line": 1,
+                    "column": 8
+                }
+            },
+            "type": "VariableDeclaration",
+            "declarations": [
+                {
+                    "range": [
+                        4,
+                        7
+                    ],
+                    "loc": {
+                        "start": {
+                            "line": 1,
+                            "column": 4
+                        },
+                        "end": {
+                            "line": 1,
+                            "column": 7
+                        }
+                    },
+                    "type": "VariableDeclarator",
+                    "id": {
+                        "range": [
+                            4,
+                            7
+                        ],
+                        "loc": {
+                            "start": {
+                                "line": 1,
+                                "column": 4
+                            },
+                            "end": {
+                                "line": 1,
+                                "column": 7
+                            }
+                        },
+                        "type": "Identifier",
+                        "name": "let"
+                    },
+                    "init": null
+                }
+            ],
+            "kind": "var"
+        }
+    ],
+    "sourceType": "script",
+    "comments": [],
     "tokens": [
         {
-            "type": "Keyword",
-            "value": "var",
             "range": [
                 0,
                 3
@@ -90,11 +89,11 @@
                     "line": 1,
                     "column": 3
                 }
-            }
+            },
+            "type": "Keyword",
+            "value": "var"
         },
         {
-            "type": "Keyword",
-            "value": "let",
             "range": [
                 4,
                 7
@@ -108,11 +107,11 @@
                     "line": 1,
                     "column": 7
                 }
-            }
+            },
+            "type": "Keyword",
+            "value": "let"
         },
         {
-            "type": "Punctuator",
-            "value": ";",
             "range": [
                 7,
                 8
@@ -126,7 +125,10 @@
                     "line": 1,
                     "column": 8
                 }
-            }
+            },
+            "type": "Punctuator",
+            "value": ";"
         }
-    ]
+    ],
+    "errors": []
 }

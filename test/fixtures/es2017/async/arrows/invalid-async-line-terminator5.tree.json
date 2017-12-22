@@ -1,0 +1,214 @@
+{
+    "range": [
+        0,
+        18
+    ],
+    "loc": {
+        "start": {
+            "line": 1,
+            "column": 0
+        },
+        "end": {
+            "line": 2,
+            "column": 10
+        }
+    },
+    "type": "Program",
+    "body": [
+        {
+            "range": [
+                0,
+                18
+            ],
+            "loc": {
+                "start": {
+                    "line": 1,
+                    "column": 0
+                },
+                "end": {
+                    "line": 2,
+                    "column": 10
+                }
+            },
+            "type": "ExpressionStatement",
+            "expression": {
+                "range": [
+                    0,
+                    18
+                ],
+                "loc": {
+                    "start": {
+                        "line": 1,
+                        "column": 0
+                    },
+                    "end": {
+                        "line": 2,
+                        "column": 10
+                    }
+                },
+                "type": "ArrowFunctionExpression",
+                "id": null,
+                "params": [
+                    {
+                        "range": [
+                            6,
+                            7
+                        ],
+                        "loc": {
+                            "start": {
+                                "line": 1,
+                                "column": 6
+                            },
+                            "end": {
+                                "line": 1,
+                                "column": 7
+                            }
+                        },
+                        "type": "Identifier",
+                        "name": "a"
+                    }
+                ],
+                "body": {
+                    "range": [
+                        11,
+                        18
+                    ],
+                    "loc": {
+                        "start": {
+                            "line": 2,
+                            "column": 3
+                        },
+                        "end": {
+                            "line": 2,
+                            "column": 10
+                        }
+                    },
+                    "type": "AwaitExpression",
+                    "argument": {
+                        "range": [
+                            17,
+                            18
+                        ],
+                        "loc": {
+                            "start": {
+                                "line": 2,
+                                "column": 9
+                            },
+                            "end": {
+                                "line": 2,
+                                "column": 10
+                            }
+                        },
+                        "type": "Identifier",
+                        "name": "a"
+                    }
+                },
+                "generator": false,
+                "expression": true,
+                "async": true
+            }
+        }
+    ],
+    "sourceType": "script",
+    "comments": [],
+    "tokens": [
+        {
+            "range": [
+                0,
+                5
+            ],
+            "loc": {
+                "start": {
+                    "line": 1,
+                    "column": 0
+                },
+                "end": {
+                    "line": 1,
+                    "column": 5
+                }
+            },
+            "type": "Identifier",
+            "value": "async"
+        },
+        {
+            "range": [
+                6,
+                7
+            ],
+            "loc": {
+                "start": {
+                    "line": 1,
+                    "column": 6
+                },
+                "end": {
+                    "line": 1,
+                    "column": 7
+                }
+            },
+            "type": "Identifier",
+            "value": "a"
+        },
+        {
+            "range": [
+                8,
+                10
+            ],
+            "loc": {
+                "start": {
+                    "line": 2,
+                    "column": 0
+                },
+                "end": {
+                    "line": 2,
+                    "column": 2
+                }
+            },
+            "type": "Punctuator",
+            "value": "=>"
+        },
+        {
+            "range": [
+                11,
+                16
+            ],
+            "loc": {
+                "start": {
+                    "line": 2,
+                    "column": 3
+                },
+                "end": {
+                    "line": 2,
+                    "column": 8
+                }
+            },
+            "type": "Identifier",
+            "value": "await"
+        },
+        {
+            "range": [
+                17,
+                18
+            ],
+            "loc": {
+                "start": {
+                    "line": 2,
+                    "column": 9
+                },
+                "end": {
+                    "line": 2,
+                    "column": 10
+                }
+            },
+            "type": "Identifier",
+            "value": "a"
+        }
+    ],
+    "errors": [
+        {
+            "index": 8,
+            "lineNumber": 2,
+            "column": 9,
+            "message": "Error: Line 2: Unexpected token =>"
+        }
+    ]
+}

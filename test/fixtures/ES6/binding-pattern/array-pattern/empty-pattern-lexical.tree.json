@@ -1,81 +1,4 @@
 {
-    "type": "Program",
-    "body": [
-        {
-            "type": "VariableDeclaration",
-            "declarations": [
-                {
-                    "type": "VariableDeclarator",
-                    "id": {
-                        "type": "ArrayPattern",
-                        "elements": [],
-                        "range": [
-                            4,
-                            6
-                        ],
-                        "loc": {
-                            "start": {
-                                "line": 1,
-                                "column": 4
-                            },
-                            "end": {
-                                "line": 1,
-                                "column": 6
-                            }
-                        }
-                    },
-                    "init": {
-                        "type": "ArrayExpression",
-                        "elements": [],
-                        "range": [
-                            9,
-                            11
-                        ],
-                        "loc": {
-                            "start": {
-                                "line": 1,
-                                "column": 9
-                            },
-                            "end": {
-                                "line": 1,
-                                "column": 11
-                            }
-                        }
-                    },
-                    "range": [
-                        4,
-                        11
-                    ],
-                    "loc": {
-                        "start": {
-                            "line": 1,
-                            "column": 4
-                        },
-                        "end": {
-                            "line": 1,
-                            "column": 11
-                        }
-                    }
-                }
-            ],
-            "kind": "let",
-            "range": [
-                0,
-                12
-            ],
-            "loc": {
-                "start": {
-                    "line": 1,
-                    "column": 0
-                },
-                "end": {
-                    "line": 1,
-                    "column": 12
-                }
-            }
-        }
-    ],
-    "sourceType": "script",
     "range": [
         0,
         12
@@ -90,10 +13,86 @@
             "column": 12
         }
     },
+    "type": "Program",
+    "body": [
+        {
+            "range": [
+                0,
+                12
+            ],
+            "loc": {
+                "start": {
+                    "line": 1,
+                    "column": 0
+                },
+                "end": {
+                    "line": 1,
+                    "column": 12
+                }
+            },
+            "type": "VariableDeclaration",
+            "declarations": [
+                {
+                    "range": [
+                        4,
+                        11
+                    ],
+                    "loc": {
+                        "start": {
+                            "line": 1,
+                            "column": 4
+                        },
+                        "end": {
+                            "line": 1,
+                            "column": 11
+                        }
+                    },
+                    "type": "VariableDeclarator",
+                    "id": {
+                        "range": [
+                            4,
+                            6
+                        ],
+                        "loc": {
+                            "start": {
+                                "line": 1,
+                                "column": 4
+                            },
+                            "end": {
+                                "line": 1,
+                                "column": 6
+                            }
+                        },
+                        "type": "ArrayPattern",
+                        "elements": []
+                    },
+                    "init": {
+                        "range": [
+                            9,
+                            11
+                        ],
+                        "loc": {
+                            "start": {
+                                "line": 1,
+                                "column": 9
+                            },
+                            "end": {
+                                "line": 1,
+                                "column": 11
+                            }
+                        },
+                        "type": "ArrayExpression",
+                        "elements": []
+                    }
+                }
+            ],
+            "kind": "let"
+        }
+    ],
+    "sourceType": "script",
+    "comments": [],
     "tokens": [
         {
-            "type": "Keyword",
-            "value": "let",
             "range": [
                 0,
                 3
@@ -107,11 +106,11 @@
                     "line": 1,
                     "column": 3
                 }
-            }
+            },
+            "type": "Keyword",
+            "value": "let"
         },
         {
-            "type": "Punctuator",
-            "value": "[",
             "range": [
                 4,
                 5
@@ -125,11 +124,11 @@
                     "line": 1,
                     "column": 5
                 }
-            }
+            },
+            "type": "Punctuator",
+            "value": "["
         },
         {
-            "type": "Punctuator",
-            "value": "]",
             "range": [
                 5,
                 6
@@ -143,11 +142,11 @@
                     "line": 1,
                     "column": 6
                 }
-            }
+            },
+            "type": "Punctuator",
+            "value": "]"
         },
         {
-            "type": "Punctuator",
-            "value": "=",
             "range": [
                 7,
                 8
@@ -161,11 +160,11 @@
                     "line": 1,
                     "column": 8
                 }
-            }
+            },
+            "type": "Punctuator",
+            "value": "="
         },
         {
-            "type": "Punctuator",
-            "value": "[",
             "range": [
                 9,
                 10
@@ -179,11 +178,11 @@
                     "line": 1,
                     "column": 10
                 }
-            }
+            },
+            "type": "Punctuator",
+            "value": "["
         },
         {
-            "type": "Punctuator",
-            "value": "]",
             "range": [
                 10,
                 11
@@ -197,11 +196,11 @@
                     "line": 1,
                     "column": 11
                 }
-            }
+            },
+            "type": "Punctuator",
+            "value": "]"
         },
         {
-            "type": "Punctuator",
-            "value": ";",
             "range": [
                 11,
                 12
@@ -215,7 +214,10 @@
                     "line": 1,
                     "column": 12
                 }
-            }
+            },
+            "type": "Punctuator",
+            "value": ";"
         }
-    ]
+    ],
+    "errors": []
 }

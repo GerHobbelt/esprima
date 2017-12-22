@@ -1,44 +1,4 @@
 {
-    "type": "Program",
-    "body": [
-        {
-            "type": "ExportAllDeclaration",
-            "source": {
-                "type": "Literal",
-                "value": "foo",
-                "raw": "\"foo\"",
-                "range": [
-                    14,
-                    19
-                ],
-                "loc": {
-                    "start": {
-                        "line": 1,
-                        "column": 14
-                    },
-                    "end": {
-                        "line": 1,
-                        "column": 19
-                    }
-                }
-            },
-            "range": [
-                0,
-                20
-            ],
-            "loc": {
-                "start": {
-                    "line": 1,
-                    "column": 0
-                },
-                "end": {
-                    "line": 1,
-                    "column": 20
-                }
-            }
-        }
-    ],
-    "sourceType": "script",
     "range": [
         0,
         20
@@ -53,11 +13,49 @@
             "column": 20
         }
     },
+    "type": "Program",
+    "body": [
+        {
+            "range": [
+                0,
+                20
+            ],
+            "loc": {
+                "start": {
+                    "line": 1,
+                    "column": 0
+                },
+                "end": {
+                    "line": 1,
+                    "column": 20
+                }
+            },
+            "type": "ExportAllDeclaration",
+            "source": {
+                "range": [
+                    14,
+                    19
+                ],
+                "loc": {
+                    "start": {
+                        "line": 1,
+                        "column": 14
+                    },
+                    "end": {
+                        "line": 1,
+                        "column": 19
+                    }
+                },
+                "type": "Literal",
+                "value": "foo",
+                "raw": "\"foo\""
+            }
+        }
+    ],
+    "sourceType": "script",
     "comments": [],
     "tokens": [
         {
-            "type": "Keyword",
-            "value": "export",
             "range": [
                 0,
                 6
@@ -71,11 +69,11 @@
                     "line": 1,
                     "column": 6
                 }
-            }
+            },
+            "type": "Keyword",
+            "value": "export"
         },
         {
-            "type": "Punctuator",
-            "value": "*",
             "range": [
                 7,
                 8
@@ -89,11 +87,11 @@
                     "line": 1,
                     "column": 8
                 }
-            }
+            },
+            "type": "Punctuator",
+            "value": "*"
         },
         {
-            "type": "Identifier",
-            "value": "from",
             "range": [
                 9,
                 13
@@ -107,11 +105,11 @@
                     "line": 1,
                     "column": 13
                 }
-            }
+            },
+            "type": "Identifier",
+            "value": "from"
         },
         {
-            "type": "String",
-            "value": "\"foo\"",
             "range": [
                 14,
                 19
@@ -125,11 +123,11 @@
                     "line": 1,
                     "column": 19
                 }
-            }
+            },
+            "type": "String",
+            "value": "\"foo\""
         },
         {
-            "type": "Punctuator",
-            "value": ";",
             "range": [
                 19,
                 20
@@ -143,7 +141,9 @@
                     "line": 1,
                     "column": 20
                 }
-            }
+            },
+            "type": "Punctuator",
+            "value": ";"
         }
     ],
     "errors": [

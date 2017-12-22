@@ -1,67 +1,4 @@
 {
-    "type": "Program",
-    "body": [
-        {
-            "type": "ExpressionStatement",
-            "expression": {
-                "type": "TemplateLiteral",
-                "quasis": [
-                    {
-                        "type": "TemplateElement",
-                        "value": {
-                            "raw": "42",
-                            "cooked": "42"
-                        },
-                        "tail": true,
-                        "range": [
-                            0,
-                            4
-                        ],
-                        "loc": {
-                            "start": {
-                                "line": 1,
-                                "column": 0
-                            },
-                            "end": {
-                                "line": 1,
-                                "column": 4
-                            }
-                        }
-                    }
-                ],
-                "expressions": [],
-                "range": [
-                    0,
-                    4
-                ],
-                "loc": {
-                    "start": {
-                        "line": 1,
-                        "column": 0
-                    },
-                    "end": {
-                        "line": 1,
-                        "column": 4
-                    }
-                }
-            },
-            "range": [
-                0,
-                4
-            ],
-            "loc": {
-                "start": {
-                    "line": 1,
-                    "column": 0
-                },
-                "end": {
-                    "line": 1,
-                    "column": 4
-                }
-            }
-        }
-    ],
-    "sourceType": "script",
     "range": [
         0,
         4
@@ -76,10 +13,9 @@
             "column": 4
         }
     },
-    "tokens": [
+    "type": "Program",
+    "body": [
         {
-            "type": "Template",
-            "value": "`42`",
             "range": [
                 0,
                 4
@@ -93,7 +29,73 @@
                     "line": 1,
                     "column": 4
                 }
+            },
+            "type": "ExpressionStatement",
+            "expression": {
+                "range": [
+                    0,
+                    4
+                ],
+                "loc": {
+                    "start": {
+                        "line": 1,
+                        "column": 0
+                    },
+                    "end": {
+                        "line": 1,
+                        "column": 4
+                    }
+                },
+                "type": "TemplateLiteral",
+                "quasis": [
+                    {
+                        "range": [
+                            0,
+                            4
+                        ],
+                        "loc": {
+                            "start": {
+                                "line": 1,
+                                "column": 0
+                            },
+                            "end": {
+                                "line": 1,
+                                "column": 4
+                            }
+                        },
+                        "type": "TemplateElement",
+                        "value": {
+                            "raw": "42",
+                            "cooked": "42"
+                        },
+                        "tail": true
+                    }
+                ],
+                "expressions": []
             }
         }
-    ]
+    ],
+    "sourceType": "script",
+    "comments": [],
+    "tokens": [
+        {
+            "range": [
+                0,
+                4
+            ],
+            "loc": {
+                "start": {
+                    "line": 1,
+                    "column": 0
+                },
+                "end": {
+                    "line": 1,
+                    "column": 4
+                }
+            },
+            "type": "Template",
+            "value": "`42`"
+        }
+    ],
+    "errors": []
 }

@@ -1,133 +1,4 @@
 {
-    "type": "Program",
-    "body": [
-        {
-            "type": "ExpressionStatement",
-            "expression": {
-                "type": "CallExpression",
-                "callee": {
-                    "type": "MemberExpression",
-                    "computed": false,
-                    "object": {
-                        "type": "CallExpression",
-                        "callee": {
-                            "type": "Import",
-                            "range": [
-                                0,
-                                6
-                            ],
-                            "loc": {
-                                "start": {
-                                    "line": 1,
-                                    "column": 0
-                                },
-                                "end": {
-                                    "line": 1,
-                                    "column": 6
-                                }
-                            }
-                        },
-                        "arguments": [],
-                        "range": [
-                            0,
-                            8
-                        ],
-                        "loc": {
-                            "start": {
-                                "line": 1,
-                                "column": 0
-                            },
-                            "end": {
-                                "line": 1,
-                                "column": 8
-                            }
-                        }
-                    },
-                    "property": {
-                        "type": "Identifier",
-                        "name": "then",
-                        "range": [
-                            9,
-                            13
-                        ],
-                        "loc": {
-                            "start": {
-                                "line": 1,
-                                "column": 9
-                            },
-                            "end": {
-                                "line": 1,
-                                "column": 13
-                            }
-                        }
-                    },
-                    "range": [
-                        0,
-                        13
-                    ],
-                    "loc": {
-                        "start": {
-                            "line": 1,
-                            "column": 0
-                        },
-                        "end": {
-                            "line": 1,
-                            "column": 13
-                        }
-                    }
-                },
-                "arguments": [
-                    {
-                        "type": "Identifier",
-                        "name": "doThat",
-                        "range": [
-                            14,
-                            20
-                        ],
-                        "loc": {
-                            "start": {
-                                "line": 1,
-                                "column": 14
-                            },
-                            "end": {
-                                "line": 1,
-                                "column": 20
-                            }
-                        }
-                    }
-                ],
-                "range": [
-                    0,
-                    21
-                ],
-                "loc": {
-                    "start": {
-                        "line": 1,
-                        "column": 0
-                    },
-                    "end": {
-                        "line": 1,
-                        "column": 21
-                    }
-                }
-            },
-            "range": [
-                0,
-                22
-            ],
-            "loc": {
-                "start": {
-                    "line": 1,
-                    "column": 0
-                },
-                "end": {
-                    "line": 1,
-                    "column": 22
-                }
-            }
-        }
-    ],
-    "sourceType": "script",
     "range": [
         0,
         22
@@ -142,11 +13,138 @@
             "column": 22
         }
     },
+    "type": "Program",
+    "body": [
+        {
+            "range": [
+                0,
+                22
+            ],
+            "loc": {
+                "start": {
+                    "line": 1,
+                    "column": 0
+                },
+                "end": {
+                    "line": 1,
+                    "column": 22
+                }
+            },
+            "type": "ExpressionStatement",
+            "expression": {
+                "range": [
+                    0,
+                    21
+                ],
+                "loc": {
+                    "start": {
+                        "line": 1,
+                        "column": 0
+                    },
+                    "end": {
+                        "line": 1,
+                        "column": 21
+                    }
+                },
+                "type": "CallExpression",
+                "callee": {
+                    "range": [
+                        0,
+                        13
+                    ],
+                    "loc": {
+                        "start": {
+                            "line": 1,
+                            "column": 0
+                        },
+                        "end": {
+                            "line": 1,
+                            "column": 13
+                        }
+                    },
+                    "type": "MemberExpression",
+                    "computed": false,
+                    "object": {
+                        "range": [
+                            0,
+                            8
+                        ],
+                        "loc": {
+                            "start": {
+                                "line": 1,
+                                "column": 0
+                            },
+                            "end": {
+                                "line": 1,
+                                "column": 8
+                            }
+                        },
+                        "type": "CallExpression",
+                        "callee": {
+                            "range": [
+                                0,
+                                6
+                            ],
+                            "loc": {
+                                "start": {
+                                    "line": 1,
+                                    "column": 0
+                                },
+                                "end": {
+                                    "line": 1,
+                                    "column": 6
+                                }
+                            },
+                            "type": "Import"
+                        },
+                        "arguments": []
+                    },
+                    "property": {
+                        "range": [
+                            9,
+                            13
+                        ],
+                        "loc": {
+                            "start": {
+                                "line": 1,
+                                "column": 9
+                            },
+                            "end": {
+                                "line": 1,
+                                "column": 13
+                            }
+                        },
+                        "type": "Identifier",
+                        "name": "then"
+                    }
+                },
+                "arguments": [
+                    {
+                        "range": [
+                            14,
+                            20
+                        ],
+                        "loc": {
+                            "start": {
+                                "line": 1,
+                                "column": 14
+                            },
+                            "end": {
+                                "line": 1,
+                                "column": 20
+                            }
+                        },
+                        "type": "Identifier",
+                        "name": "doThat"
+                    }
+                ]
+            }
+        }
+    ],
+    "sourceType": "script",
     "comments": [],
     "tokens": [
         {
-            "type": "Keyword",
-            "value": "import",
             "range": [
                 0,
                 6
@@ -160,11 +158,11 @@
                     "line": 1,
                     "column": 6
                 }
-            }
+            },
+            "type": "Keyword",
+            "value": "import"
         },
         {
-            "type": "Punctuator",
-            "value": "(",
             "range": [
                 6,
                 7
@@ -178,11 +176,11 @@
                     "line": 1,
                     "column": 7
                 }
-            }
+            },
+            "type": "Punctuator",
+            "value": "("
         },
         {
-            "type": "Punctuator",
-            "value": ")",
             "range": [
                 7,
                 8
@@ -196,11 +194,11 @@
                     "line": 1,
                     "column": 8
                 }
-            }
+            },
+            "type": "Punctuator",
+            "value": ")"
         },
         {
-            "type": "Punctuator",
-            "value": ".",
             "range": [
                 8,
                 9
@@ -214,11 +212,11 @@
                     "line": 1,
                     "column": 9
                 }
-            }
+            },
+            "type": "Punctuator",
+            "value": "."
         },
         {
-            "type": "Identifier",
-            "value": "then",
             "range": [
                 9,
                 13
@@ -232,11 +230,11 @@
                     "line": 1,
                     "column": 13
                 }
-            }
+            },
+            "type": "Identifier",
+            "value": "then"
         },
         {
-            "type": "Punctuator",
-            "value": "(",
             "range": [
                 13,
                 14
@@ -250,11 +248,11 @@
                     "line": 1,
                     "column": 14
                 }
-            }
+            },
+            "type": "Punctuator",
+            "value": "("
         },
         {
-            "type": "Identifier",
-            "value": "doThat",
             "range": [
                 14,
                 20
@@ -268,11 +266,11 @@
                     "line": 1,
                     "column": 20
                 }
-            }
+            },
+            "type": "Identifier",
+            "value": "doThat"
         },
         {
-            "type": "Punctuator",
-            "value": ")",
             "range": [
                 20,
                 21
@@ -286,11 +284,11 @@
                     "line": 1,
                     "column": 21
                 }
-            }
+            },
+            "type": "Punctuator",
+            "value": ")"
         },
         {
-            "type": "Punctuator",
-            "value": ";",
             "range": [
                 21,
                 22
@@ -304,7 +302,9 @@
                     "line": 1,
                     "column": 22
                 }
-            }
+            },
+            "type": "Punctuator",
+            "value": ";"
         }
     ],
     "errors": [

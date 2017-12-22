@@ -1,101 +1,4 @@
 {
-    "type": "Program",
-    "body": [
-        {
-            "type": "ExpressionStatement",
-            "expression": {
-                "type": "Literal",
-                "value": "use strict",
-                "raw": "\"use strict\"",
-                "range": [
-                    0,
-                    12
-                ],
-                "loc": {
-                    "start": {
-                        "line": 1,
-                        "column": 0
-                    },
-                    "end": {
-                        "line": 1,
-                        "column": 12
-                    }
-                }
-            },
-            "directive": "use strict",
-            "range": [
-                0,
-                13
-            ],
-            "loc": {
-                "start": {
-                    "line": 1,
-                    "column": 0
-                },
-                "end": {
-                    "line": 1,
-                    "column": 13
-                }
-            }
-        },
-        {
-            "type": "VariableDeclaration",
-            "declarations": [
-                {
-                    "type": "VariableDeclarator",
-                    "id": {
-                        "type": "Identifier",
-                        "name": "arguments",
-                        "range": [
-                            18,
-                            27
-                        ],
-                        "loc": {
-                            "start": {
-                                "line": 1,
-                                "column": 18
-                            },
-                            "end": {
-                                "line": 1,
-                                "column": 27
-                            }
-                        }
-                    },
-                    "init": null,
-                    "range": [
-                        18,
-                        27
-                    ],
-                    "loc": {
-                        "start": {
-                            "line": 1,
-                            "column": 18
-                        },
-                        "end": {
-                            "line": 1,
-                            "column": 27
-                        }
-                    }
-                }
-            ],
-            "kind": "var",
-            "range": [
-                14,
-                28
-            ],
-            "loc": {
-                "start": {
-                    "line": 1,
-                    "column": 14
-                },
-                "end": {
-                    "line": 1,
-                    "column": 28
-                }
-            }
-        }
-    ],
-    "sourceType": "script",
     "range": [
         0,
         28
@@ -110,11 +13,106 @@
             "column": 28
         }
     },
+    "type": "Program",
+    "body": [
+        {
+            "range": [
+                0,
+                13
+            ],
+            "loc": {
+                "start": {
+                    "line": 1,
+                    "column": 0
+                },
+                "end": {
+                    "line": 1,
+                    "column": 13
+                }
+            },
+            "type": "ExpressionStatement",
+            "expression": {
+                "range": [
+                    0,
+                    12
+                ],
+                "loc": {
+                    "start": {
+                        "line": 1,
+                        "column": 0
+                    },
+                    "end": {
+                        "line": 1,
+                        "column": 12
+                    }
+                },
+                "type": "Literal",
+                "value": "use strict",
+                "raw": "\"use strict\""
+            },
+            "directive": "use strict"
+        },
+        {
+            "range": [
+                14,
+                28
+            ],
+            "loc": {
+                "start": {
+                    "line": 1,
+                    "column": 14
+                },
+                "end": {
+                    "line": 1,
+                    "column": 28
+                }
+            },
+            "type": "VariableDeclaration",
+            "declarations": [
+                {
+                    "range": [
+                        18,
+                        27
+                    ],
+                    "loc": {
+                        "start": {
+                            "line": 1,
+                            "column": 18
+                        },
+                        "end": {
+                            "line": 1,
+                            "column": 27
+                        }
+                    },
+                    "type": "VariableDeclarator",
+                    "id": {
+                        "range": [
+                            18,
+                            27
+                        ],
+                        "loc": {
+                            "start": {
+                                "line": 1,
+                                "column": 18
+                            },
+                            "end": {
+                                "line": 1,
+                                "column": 27
+                            }
+                        },
+                        "type": "Identifier",
+                        "name": "arguments"
+                    },
+                    "init": null
+                }
+            ],
+            "kind": "var"
+        }
+    ],
+    "sourceType": "script",
     "comments": [],
     "tokens": [
         {
-            "type": "String",
-            "value": "\"use strict\"",
             "range": [
                 0,
                 12
@@ -128,11 +126,11 @@
                     "line": 1,
                     "column": 12
                 }
-            }
+            },
+            "type": "String",
+            "value": "\"use strict\""
         },
         {
-            "type": "Punctuator",
-            "value": ";",
             "range": [
                 12,
                 13
@@ -146,11 +144,11 @@
                     "line": 1,
                     "column": 13
                 }
-            }
+            },
+            "type": "Punctuator",
+            "value": ";"
         },
         {
-            "type": "Keyword",
-            "value": "var",
             "range": [
                 14,
                 17
@@ -164,11 +162,11 @@
                     "line": 1,
                     "column": 17
                 }
-            }
+            },
+            "type": "Keyword",
+            "value": "var"
         },
         {
-            "type": "Identifier",
-            "value": "arguments",
             "range": [
                 18,
                 27
@@ -182,11 +180,11 @@
                     "line": 1,
                     "column": 27
                 }
-            }
+            },
+            "type": "Identifier",
+            "value": "arguments"
         },
         {
-            "type": "Punctuator",
-            "value": ";",
             "range": [
                 27,
                 28
@@ -200,7 +198,9 @@
                     "line": 1,
                     "column": 28
                 }
-            }
+            },
+            "type": "Punctuator",
+            "value": ";"
         }
     ],
     "errors": [

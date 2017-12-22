@@ -1,44 +1,4 @@
 {
-    "type": "Program",
-    "body": [
-        {
-            "type": "ExpressionStatement",
-            "expression": {
-                "type": "Literal",
-                "value": 42,
-                "raw": "42",
-                "range": [
-                    5,
-                    7
-                ],
-                "loc": {
-                    "start": {
-                        "line": 2,
-                        "column": 4
-                    },
-                    "end": {
-                        "line": 2,
-                        "column": 6
-                    }
-                }
-            },
-            "range": [
-                5,
-                7
-            ],
-            "loc": {
-                "start": {
-                    "line": 2,
-                    "column": 4
-                },
-                "end": {
-                    "line": 2,
-                    "column": 6
-                }
-            }
-        }
-    ],
-    "sourceType": "script",
     "range": [
         5,
         7
@@ -53,10 +13,9 @@
             "column": 6
         }
     },
-    "tokens": [
+    "type": "Program",
+    "body": [
         {
-            "type": "Numeric",
-            "value": "42",
             "range": [
                 5,
                 7
@@ -70,7 +29,50 @@
                     "line": 2,
                     "column": 6
                 }
+            },
+            "type": "ExpressionStatement",
+            "expression": {
+                "range": [
+                    5,
+                    7
+                ],
+                "loc": {
+                    "start": {
+                        "line": 2,
+                        "column": 4
+                    },
+                    "end": {
+                        "line": 2,
+                        "column": 6
+                    }
+                },
+                "type": "Literal",
+                "value": 42,
+                "raw": "42"
             }
         }
-    ]
+    ],
+    "sourceType": "script",
+    "comments": [],
+    "tokens": [
+        {
+            "range": [
+                5,
+                7
+            ],
+            "loc": {
+                "start": {
+                    "line": 2,
+                    "column": 4
+                },
+                "end": {
+                    "line": 2,
+                    "column": 6
+                }
+            },
+            "type": "Numeric",
+            "value": "42"
+        }
+    ],
+    "errors": []
 }

@@ -1,7 +1,4 @@
 {
-    "type": "Program",
-    "body": [],
-    "sourceType": "script",
     "range": [
         8,
         8
@@ -16,5 +13,29 @@
             "column": 8
         }
     },
-    "tokens": []
+    "type": "Program",
+    "body": [],
+    "sourceType": "script",
+    "comments": [
+        {
+            "range": [
+                0,
+                8
+            ],
+            "loc": {
+                "start": {
+                    "line": 1,
+                    "column": 0
+                },
+                "end": {
+                    "line": 1,
+                    "column": 8
+                }
+            },
+            "type": "Line",
+            "value": " one\\n"
+        }
+    ],
+    "tokens": [],
+    "errors": []
 }

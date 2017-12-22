@@ -1,0 +1,341 @@
+{
+    "range": [
+        0,
+        37
+    ],
+    "loc": {
+        "start": {
+            "line": 1,
+            "column": 0
+        },
+        "end": {
+            "line": 1,
+            "column": 37
+        }
+    },
+    "type": "Program",
+    "body": [
+        {
+            "range": [
+                0,
+                13
+            ],
+            "loc": {
+                "start": {
+                    "line": 1,
+                    "column": 0
+                },
+                "end": {
+                    "line": 1,
+                    "column": 13
+                }
+            },
+            "type": "ExpressionStatement",
+            "expression": {
+                "range": [
+                    0,
+                    12
+                ],
+                "loc": {
+                    "start": {
+                        "line": 1,
+                        "column": 0
+                    },
+                    "end": {
+                        "line": 1,
+                        "column": 12
+                    }
+                },
+                "type": "Literal",
+                "value": "use strict",
+                "raw": "\"use strict\""
+            },
+            "directive": "use strict"
+        },
+        {
+            "range": [
+                14,
+                37
+            ],
+            "loc": {
+                "start": {
+                    "line": 1,
+                    "column": 14
+                },
+                "end": {
+                    "line": 1,
+                    "column": 37
+                }
+            },
+            "type": "FunctionDeclaration",
+            "id": {
+                "range": [
+                    23,
+                    24
+                ],
+                "loc": {
+                    "start": {
+                        "line": 1,
+                        "column": 23
+                    },
+                    "end": {
+                        "line": 1,
+                        "column": 24
+                    }
+                },
+                "type": "Identifier",
+                "name": "f"
+            },
+            "params": [
+                {
+                    "range": [
+                        25,
+                        33
+                    ],
+                    "loc": {
+                        "start": {
+                            "line": 1,
+                            "column": 25
+                        },
+                        "end": {
+                            "line": 1,
+                            "column": 33
+                        }
+                    },
+                    "type": "RestElement",
+                    "argument": {
+                        "range": [
+                            28,
+                            33
+                        ],
+                        "loc": {
+                            "start": {
+                                "line": 1,
+                                "column": 28
+                            },
+                            "end": {
+                                "line": 1,
+                                "column": 33
+                            }
+                        },
+                        "type": "Identifier",
+                        "name": "yield"
+                    }
+                }
+            ],
+            "body": {
+                "range": [
+                    35,
+                    37
+                ],
+                "loc": {
+                    "start": {
+                        "line": 1,
+                        "column": 35
+                    },
+                    "end": {
+                        "line": 1,
+                        "column": 37
+                    }
+                },
+                "type": "BlockStatement",
+                "body": []
+            },
+            "generator": false,
+            "expression": false,
+            "async": false
+        }
+    ],
+    "sourceType": "script",
+    "comments": [],
+    "tokens": [
+        {
+            "range": [
+                0,
+                12
+            ],
+            "loc": {
+                "start": {
+                    "line": 1,
+                    "column": 0
+                },
+                "end": {
+                    "line": 1,
+                    "column": 12
+                }
+            },
+            "type": "String",
+            "value": "\"use strict\""
+        },
+        {
+            "range": [
+                12,
+                13
+            ],
+            "loc": {
+                "start": {
+                    "line": 1,
+                    "column": 12
+                },
+                "end": {
+                    "line": 1,
+                    "column": 13
+                }
+            },
+            "type": "Punctuator",
+            "value": ";"
+        },
+        {
+            "range": [
+                14,
+                22
+            ],
+            "loc": {
+                "start": {
+                    "line": 1,
+                    "column": 14
+                },
+                "end": {
+                    "line": 1,
+                    "column": 22
+                }
+            },
+            "type": "Keyword",
+            "value": "function"
+        },
+        {
+            "range": [
+                23,
+                24
+            ],
+            "loc": {
+                "start": {
+                    "line": 1,
+                    "column": 23
+                },
+                "end": {
+                    "line": 1,
+                    "column": 24
+                }
+            },
+            "type": "Identifier",
+            "value": "f"
+        },
+        {
+            "range": [
+                24,
+                25
+            ],
+            "loc": {
+                "start": {
+                    "line": 1,
+                    "column": 24
+                },
+                "end": {
+                    "line": 1,
+                    "column": 25
+                }
+            },
+            "type": "Punctuator",
+            "value": "("
+        },
+        {
+            "range": [
+                25,
+                28
+            ],
+            "loc": {
+                "start": {
+                    "line": 1,
+                    "column": 25
+                },
+                "end": {
+                    "line": 1,
+                    "column": 28
+                }
+            },
+            "type": "Punctuator",
+            "value": "..."
+        },
+        {
+            "range": [
+                28,
+                33
+            ],
+            "loc": {
+                "start": {
+                    "line": 1,
+                    "column": 28
+                },
+                "end": {
+                    "line": 1,
+                    "column": 33
+                }
+            },
+            "type": "Keyword",
+            "value": "yield"
+        },
+        {
+            "range": [
+                33,
+                34
+            ],
+            "loc": {
+                "start": {
+                    "line": 1,
+                    "column": 33
+                },
+                "end": {
+                    "line": 1,
+                    "column": 34
+                }
+            },
+            "type": "Punctuator",
+            "value": ")"
+        },
+        {
+            "range": [
+                35,
+                36
+            ],
+            "loc": {
+                "start": {
+                    "line": 1,
+                    "column": 35
+                },
+                "end": {
+                    "line": 1,
+                    "column": 36
+                }
+            },
+            "type": "Punctuator",
+            "value": "{"
+        },
+        {
+            "range": [
+                36,
+                37
+            ],
+            "loc": {
+                "start": {
+                    "line": 1,
+                    "column": 36
+                },
+                "end": {
+                    "line": 1,
+                    "column": 37
+                }
+            },
+            "type": "Punctuator",
+            "value": "}"
+        }
+    ],
+    "errors": [
+        {
+            "index": 28,
+            "lineNumber": 1,
+            "column": 29,
+            "message": "Error: Line 1: Use of future reserved word in strict mode"
+        }
+    ]
+}

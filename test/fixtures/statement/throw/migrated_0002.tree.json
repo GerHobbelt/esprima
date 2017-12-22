@@ -1,102 +1,4 @@
 {
-    "type": "Program",
-    "body": [
-        {
-            "type": "ThrowStatement",
-            "argument": {
-                "type": "ObjectExpression",
-                "properties": [
-                    {
-                        "type": "Property",
-                        "key": {
-                            "type": "Identifier",
-                            "name": "message",
-                            "range": [
-                                8,
-                                15
-                            ],
-                            "loc": {
-                                "start": {
-                                    "line": 1,
-                                    "column": 8
-                                },
-                                "end": {
-                                    "line": 1,
-                                    "column": 15
-                                }
-                            }
-                        },
-                        "computed": false,
-                        "value": {
-                            "type": "Literal",
-                            "value": "Error",
-                            "raw": "\"Error\"",
-                            "range": [
-                                17,
-                                24
-                            ],
-                            "loc": {
-                                "start": {
-                                    "line": 1,
-                                    "column": 17
-                                },
-                                "end": {
-                                    "line": 1,
-                                    "column": 24
-                                }
-                            }
-                        },
-                        "kind": "init",
-                        "method": false,
-                        "shorthand": false,
-                        "range": [
-                            8,
-                            24
-                        ],
-                        "loc": {
-                            "start": {
-                                "line": 1,
-                                "column": 8
-                            },
-                            "end": {
-                                "line": 1,
-                                "column": 24
-                            }
-                        }
-                    }
-                ],
-                "range": [
-                    6,
-                    26
-                ],
-                "loc": {
-                    "start": {
-                        "line": 1,
-                        "column": 6
-                    },
-                    "end": {
-                        "line": 1,
-                        "column": 26
-                    }
-                }
-            },
-            "range": [
-                0,
-                26
-            ],
-            "loc": {
-                "start": {
-                    "line": 1,
-                    "column": 0
-                },
-                "end": {
-                    "line": 1,
-                    "column": 26
-                }
-            }
-        }
-    ],
-    "sourceType": "script",
     "range": [
         0,
         26
@@ -111,10 +13,107 @@
             "column": 26
         }
     },
+    "type": "Program",
+    "body": [
+        {
+            "range": [
+                0,
+                26
+            ],
+            "loc": {
+                "start": {
+                    "line": 1,
+                    "column": 0
+                },
+                "end": {
+                    "line": 1,
+                    "column": 26
+                }
+            },
+            "type": "ThrowStatement",
+            "argument": {
+                "range": [
+                    6,
+                    26
+                ],
+                "loc": {
+                    "start": {
+                        "line": 1,
+                        "column": 6
+                    },
+                    "end": {
+                        "line": 1,
+                        "column": 26
+                    }
+                },
+                "type": "ObjectExpression",
+                "properties": [
+                    {
+                        "range": [
+                            8,
+                            24
+                        ],
+                        "loc": {
+                            "start": {
+                                "line": 1,
+                                "column": 8
+                            },
+                            "end": {
+                                "line": 1,
+                                "column": 24
+                            }
+                        },
+                        "type": "Property",
+                        "key": {
+                            "range": [
+                                8,
+                                15
+                            ],
+                            "loc": {
+                                "start": {
+                                    "line": 1,
+                                    "column": 8
+                                },
+                                "end": {
+                                    "line": 1,
+                                    "column": 15
+                                }
+                            },
+                            "type": "Identifier",
+                            "name": "message"
+                        },
+                        "computed": false,
+                        "value": {
+                            "range": [
+                                17,
+                                24
+                            ],
+                            "loc": {
+                                "start": {
+                                    "line": 1,
+                                    "column": 17
+                                },
+                                "end": {
+                                    "line": 1,
+                                    "column": 24
+                                }
+                            },
+                            "type": "Literal",
+                            "value": "Error",
+                            "raw": "\"Error\""
+                        },
+                        "kind": "init",
+                        "method": false,
+                        "shorthand": false
+                    }
+                ]
+            }
+        }
+    ],
+    "sourceType": "script",
+    "comments": [],
     "tokens": [
         {
-            "type": "Keyword",
-            "value": "throw",
             "range": [
                 0,
                 5
@@ -128,11 +127,11 @@
                     "line": 1,
                     "column": 5
                 }
-            }
+            },
+            "type": "Keyword",
+            "value": "throw"
         },
         {
-            "type": "Punctuator",
-            "value": "{",
             "range": [
                 6,
                 7
@@ -146,11 +145,11 @@
                     "line": 1,
                     "column": 7
                 }
-            }
+            },
+            "type": "Punctuator",
+            "value": "{"
         },
         {
-            "type": "Identifier",
-            "value": "message",
             "range": [
                 8,
                 15
@@ -164,11 +163,11 @@
                     "line": 1,
                     "column": 15
                 }
-            }
+            },
+            "type": "Identifier",
+            "value": "message"
         },
         {
-            "type": "Punctuator",
-            "value": ":",
             "range": [
                 15,
                 16
@@ -182,11 +181,11 @@
                     "line": 1,
                     "column": 16
                 }
-            }
+            },
+            "type": "Punctuator",
+            "value": ":"
         },
         {
-            "type": "String",
-            "value": "\"Error\"",
             "range": [
                 17,
                 24
@@ -200,11 +199,11 @@
                     "line": 1,
                     "column": 24
                 }
-            }
+            },
+            "type": "String",
+            "value": "\"Error\""
         },
         {
-            "type": "Punctuator",
-            "value": "}",
             "range": [
                 25,
                 26
@@ -218,7 +217,10 @@
                     "line": 1,
                     "column": 26
                 }
-            }
+            },
+            "type": "Punctuator",
+            "value": "}"
         }
-    ]
+    ],
+    "errors": []
 }

@@ -1,97 +1,4 @@
 {
-    "type": "Program",
-    "body": [
-        {
-            "type": "BlockStatement",
-            "body": [
-                {
-                    "type": "ThrowStatement",
-                    "argument": {
-                        "type": "Identifier",
-                        "name": "error",
-                        "range": [
-                            8,
-                            13
-                        ],
-                        "loc": {
-                            "start": {
-                                "line": 1,
-                                "column": 8
-                            },
-                            "end": {
-                                "line": 1,
-                                "column": 13
-                            }
-                        }
-                    },
-                    "range": [
-                        2,
-                        13
-                    ],
-                    "loc": {
-                        "start": {
-                            "line": 1,
-                            "column": 2
-                        },
-                        "end": {
-                            "line": 1,
-                            "column": 13
-                        }
-                    }
-                },
-                {
-                    "type": "ExpressionStatement",
-                    "expression": {
-                        "type": "Identifier",
-                        "name": "error",
-                        "range": [
-                            36,
-                            41
-                        ],
-                        "loc": {
-                            "start": {
-                                "line": 2,
-                                "column": 10
-                            },
-                            "end": {
-                                "line": 2,
-                                "column": 15
-                            }
-                        }
-                    },
-                    "range": [
-                        36,
-                        42
-                    ],
-                    "loc": {
-                        "start": {
-                            "line": 2,
-                            "column": 10
-                        },
-                        "end": {
-                            "line": 2,
-                            "column": 16
-                        }
-                    }
-                }
-            ],
-            "range": [
-                0,
-                44
-            ],
-            "loc": {
-                "start": {
-                    "line": 1,
-                    "column": 0
-                },
-                "end": {
-                    "line": 2,
-                    "column": 18
-                }
-            }
-        }
-    ],
-    "sourceType": "script",
     "range": [
         0,
         44
@@ -106,10 +13,121 @@
             "column": 18
         }
     },
+    "type": "Program",
+    "body": [
+        {
+            "range": [
+                0,
+                44
+            ],
+            "loc": {
+                "start": {
+                    "line": 1,
+                    "column": 0
+                },
+                "end": {
+                    "line": 2,
+                    "column": 18
+                }
+            },
+            "type": "BlockStatement",
+            "body": [
+                {
+                    "range": [
+                        2,
+                        13
+                    ],
+                    "loc": {
+                        "start": {
+                            "line": 1,
+                            "column": 2
+                        },
+                        "end": {
+                            "line": 1,
+                            "column": 13
+                        }
+                    },
+                    "type": "ThrowStatement",
+                    "argument": {
+                        "range": [
+                            8,
+                            13
+                        ],
+                        "loc": {
+                            "start": {
+                                "line": 1,
+                                "column": 8
+                            },
+                            "end": {
+                                "line": 1,
+                                "column": 13
+                            }
+                        },
+                        "type": "Identifier",
+                        "name": "error"
+                    }
+                },
+                {
+                    "range": [
+                        36,
+                        42
+                    ],
+                    "loc": {
+                        "start": {
+                            "line": 2,
+                            "column": 10
+                        },
+                        "end": {
+                            "line": 2,
+                            "column": 16
+                        }
+                    },
+                    "type": "ExpressionStatement",
+                    "expression": {
+                        "range": [
+                            36,
+                            41
+                        ],
+                        "loc": {
+                            "start": {
+                                "line": 2,
+                                "column": 10
+                            },
+                            "end": {
+                                "line": 2,
+                                "column": 15
+                            }
+                        },
+                        "type": "Identifier",
+                        "name": "error"
+                    }
+                }
+            ]
+        }
+    ],
+    "sourceType": "script",
+    "comments": [
+        {
+            "range": [
+                13,
+                36
+            ],
+            "loc": {
+                "start": {
+                    "line": 1,
+                    "column": 13
+                },
+                "end": {
+                    "line": 2,
+                    "column": 10
+                }
+            },
+            "type": "Block",
+            "value": " Multiline\nComment "
+        }
+    ],
     "tokens": [
         {
-            "type": "Punctuator",
-            "value": "{",
             "range": [
                 0,
                 1
@@ -123,11 +141,11 @@
                     "line": 1,
                     "column": 1
                 }
-            }
+            },
+            "type": "Punctuator",
+            "value": "{"
         },
         {
-            "type": "Keyword",
-            "value": "throw",
             "range": [
                 2,
                 7
@@ -141,11 +159,11 @@
                     "line": 1,
                     "column": 7
                 }
-            }
+            },
+            "type": "Keyword",
+            "value": "throw"
         },
         {
-            "type": "Identifier",
-            "value": "error",
             "range": [
                 8,
                 13
@@ -159,11 +177,11 @@
                     "line": 1,
                     "column": 13
                 }
-            }
+            },
+            "type": "Identifier",
+            "value": "error"
         },
         {
-            "type": "Identifier",
-            "value": "error",
             "range": [
                 36,
                 41
@@ -177,11 +195,11 @@
                     "line": 2,
                     "column": 15
                 }
-            }
+            },
+            "type": "Identifier",
+            "value": "error"
         },
         {
-            "type": "Punctuator",
-            "value": ";",
             "range": [
                 41,
                 42
@@ -195,11 +213,11 @@
                     "line": 2,
                     "column": 16
                 }
-            }
+            },
+            "type": "Punctuator",
+            "value": ";"
         },
         {
-            "type": "Punctuator",
-            "value": "}",
             "range": [
                 43,
                 44
@@ -213,7 +231,10 @@
                     "line": 2,
                     "column": 18
                 }
-            }
+            },
+            "type": "Punctuator",
+            "value": "}"
         }
-    ]
+    ],
+    "errors": []
 }

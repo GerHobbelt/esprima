@@ -1,82 +1,4 @@
 {
-    "type": "Program",
-    "body": [
-        {
-            "type": "VariableDeclaration",
-            "declarations": [
-                {
-                    "type": "VariableDeclarator",
-                    "id": {
-                        "type": "Identifier",
-                        "name": "yield",
-                        "range": [
-                            4,
-                            9
-                        ],
-                        "loc": {
-                            "start": {
-                                "line": 1,
-                                "column": 4
-                            },
-                            "end": {
-                                "line": 1,
-                                "column": 9
-                            }
-                        }
-                    },
-                    "init": {
-                        "type": "Literal",
-                        "value": 42,
-                        "raw": "42",
-                        "range": [
-                            12,
-                            14
-                        ],
-                        "loc": {
-                            "start": {
-                                "line": 1,
-                                "column": 12
-                            },
-                            "end": {
-                                "line": 1,
-                                "column": 14
-                            }
-                        }
-                    },
-                    "range": [
-                        4,
-                        14
-                    ],
-                    "loc": {
-                        "start": {
-                            "line": 1,
-                            "column": 4
-                        },
-                        "end": {
-                            "line": 1,
-                            "column": 14
-                        }
-                    }
-                }
-            ],
-            "kind": "let",
-            "range": [
-                0,
-                15
-            ],
-            "loc": {
-                "start": {
-                    "line": 1,
-                    "column": 0
-                },
-                "end": {
-                    "line": 1,
-                    "column": 15
-                }
-            }
-        }
-    ],
-    "sourceType": "script",
     "range": [
         0,
         15
@@ -91,10 +13,87 @@
             "column": 15
         }
     },
+    "type": "Program",
+    "body": [
+        {
+            "range": [
+                0,
+                15
+            ],
+            "loc": {
+                "start": {
+                    "line": 1,
+                    "column": 0
+                },
+                "end": {
+                    "line": 1,
+                    "column": 15
+                }
+            },
+            "type": "VariableDeclaration",
+            "declarations": [
+                {
+                    "range": [
+                        4,
+                        14
+                    ],
+                    "loc": {
+                        "start": {
+                            "line": 1,
+                            "column": 4
+                        },
+                        "end": {
+                            "line": 1,
+                            "column": 14
+                        }
+                    },
+                    "type": "VariableDeclarator",
+                    "id": {
+                        "range": [
+                            4,
+                            9
+                        ],
+                        "loc": {
+                            "start": {
+                                "line": 1,
+                                "column": 4
+                            },
+                            "end": {
+                                "line": 1,
+                                "column": 9
+                            }
+                        },
+                        "type": "Identifier",
+                        "name": "yield"
+                    },
+                    "init": {
+                        "range": [
+                            12,
+                            14
+                        ],
+                        "loc": {
+                            "start": {
+                                "line": 1,
+                                "column": 12
+                            },
+                            "end": {
+                                "line": 1,
+                                "column": 14
+                            }
+                        },
+                        "type": "Literal",
+                        "value": 42,
+                        "raw": "42"
+                    }
+                }
+            ],
+            "kind": "let"
+        }
+    ],
+    "sourceType": "script",
+    "comments": [],
     "tokens": [
         {
-            "type": "Keyword",
-            "value": "let",
             "range": [
                 0,
                 3
@@ -108,11 +107,11 @@
                     "line": 1,
                     "column": 3
                 }
-            }
+            },
+            "type": "Keyword",
+            "value": "let"
         },
         {
-            "type": "Keyword",
-            "value": "yield",
             "range": [
                 4,
                 9
@@ -126,11 +125,11 @@
                     "line": 1,
                     "column": 9
                 }
-            }
+            },
+            "type": "Keyword",
+            "value": "yield"
         },
         {
-            "type": "Punctuator",
-            "value": "=",
             "range": [
                 10,
                 11
@@ -144,11 +143,11 @@
                     "line": 1,
                     "column": 11
                 }
-            }
+            },
+            "type": "Punctuator",
+            "value": "="
         },
         {
-            "type": "Numeric",
-            "value": "42",
             "range": [
                 12,
                 14
@@ -162,11 +161,11 @@
                     "line": 1,
                     "column": 14
                 }
-            }
+            },
+            "type": "Numeric",
+            "value": "42"
         },
         {
-            "type": "Punctuator",
-            "value": ";",
             "range": [
                 14,
                 15
@@ -180,7 +179,10 @@
                     "line": 1,
                     "column": 15
                 }
-            }
+            },
+            "type": "Punctuator",
+            "value": ";"
         }
-    ]
+    ],
+    "errors": []
 }

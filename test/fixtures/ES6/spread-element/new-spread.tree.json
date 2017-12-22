@@ -1,97 +1,4 @@
 {
-    "type": "Program",
-    "body": [
-        {
-            "type": "ExpressionStatement",
-            "expression": {
-                "type": "NewExpression",
-                "callee": {
-                    "type": "Identifier",
-                    "name": "f",
-                    "range": [
-                        4,
-                        5
-                    ],
-                    "loc": {
-                        "start": {
-                            "line": 1,
-                            "column": 4
-                        },
-                        "end": {
-                            "line": 1,
-                            "column": 5
-                        }
-                    }
-                },
-                "arguments": [
-                    {
-                        "type": "SpreadElement",
-                        "argument": {
-                            "type": "Identifier",
-                            "name": "g",
-                            "range": [
-                                9,
-                                10
-                            ],
-                            "loc": {
-                                "start": {
-                                    "line": 1,
-                                    "column": 9
-                                },
-                                "end": {
-                                    "line": 1,
-                                    "column": 10
-                                }
-                            }
-                        },
-                        "range": [
-                            6,
-                            10
-                        ],
-                        "loc": {
-                            "start": {
-                                "line": 1,
-                                "column": 6
-                            },
-                            "end": {
-                                "line": 1,
-                                "column": 10
-                            }
-                        }
-                    }
-                ],
-                "range": [
-                    0,
-                    11
-                ],
-                "loc": {
-                    "start": {
-                        "line": 1,
-                        "column": 0
-                    },
-                    "end": {
-                        "line": 1,
-                        "column": 11
-                    }
-                }
-            },
-            "range": [
-                0,
-                12
-            ],
-            "loc": {
-                "start": {
-                    "line": 1,
-                    "column": 0
-                },
-                "end": {
-                    "line": 1,
-                    "column": 12
-                }
-            }
-        }
-    ],
-    "sourceType": "script",
     "range": [
         0,
         12
@@ -106,10 +13,102 @@
             "column": 12
         }
     },
+    "type": "Program",
+    "body": [
+        {
+            "range": [
+                0,
+                12
+            ],
+            "loc": {
+                "start": {
+                    "line": 1,
+                    "column": 0
+                },
+                "end": {
+                    "line": 1,
+                    "column": 12
+                }
+            },
+            "type": "ExpressionStatement",
+            "expression": {
+                "range": [
+                    0,
+                    11
+                ],
+                "loc": {
+                    "start": {
+                        "line": 1,
+                        "column": 0
+                    },
+                    "end": {
+                        "line": 1,
+                        "column": 11
+                    }
+                },
+                "type": "NewExpression",
+                "callee": {
+                    "range": [
+                        4,
+                        5
+                    ],
+                    "loc": {
+                        "start": {
+                            "line": 1,
+                            "column": 4
+                        },
+                        "end": {
+                            "line": 1,
+                            "column": 5
+                        }
+                    },
+                    "type": "Identifier",
+                    "name": "f"
+                },
+                "arguments": [
+                    {
+                        "range": [
+                            6,
+                            10
+                        ],
+                        "loc": {
+                            "start": {
+                                "line": 1,
+                                "column": 6
+                            },
+                            "end": {
+                                "line": 1,
+                                "column": 10
+                            }
+                        },
+                        "type": "SpreadElement",
+                        "argument": {
+                            "range": [
+                                9,
+                                10
+                            ],
+                            "loc": {
+                                "start": {
+                                    "line": 1,
+                                    "column": 9
+                                },
+                                "end": {
+                                    "line": 1,
+                                    "column": 10
+                                }
+                            },
+                            "type": "Identifier",
+                            "name": "g"
+                        }
+                    }
+                ]
+            }
+        }
+    ],
+    "sourceType": "script",
+    "comments": [],
     "tokens": [
         {
-            "type": "Keyword",
-            "value": "new",
             "range": [
                 0,
                 3
@@ -123,11 +122,11 @@
                     "line": 1,
                     "column": 3
                 }
-            }
+            },
+            "type": "Keyword",
+            "value": "new"
         },
         {
-            "type": "Identifier",
-            "value": "f",
             "range": [
                 4,
                 5
@@ -141,11 +140,11 @@
                     "line": 1,
                     "column": 5
                 }
-            }
+            },
+            "type": "Identifier",
+            "value": "f"
         },
         {
-            "type": "Punctuator",
-            "value": "(",
             "range": [
                 5,
                 6
@@ -159,11 +158,11 @@
                     "line": 1,
                     "column": 6
                 }
-            }
+            },
+            "type": "Punctuator",
+            "value": "("
         },
         {
-            "type": "Punctuator",
-            "value": "...",
             "range": [
                 6,
                 9
@@ -177,11 +176,11 @@
                     "line": 1,
                     "column": 9
                 }
-            }
+            },
+            "type": "Punctuator",
+            "value": "..."
         },
         {
-            "type": "Identifier",
-            "value": "g",
             "range": [
                 9,
                 10
@@ -195,11 +194,11 @@
                     "line": 1,
                     "column": 10
                 }
-            }
+            },
+            "type": "Identifier",
+            "value": "g"
         },
         {
-            "type": "Punctuator",
-            "value": ")",
             "range": [
                 10,
                 11
@@ -213,11 +212,11 @@
                     "line": 1,
                     "column": 11
                 }
-            }
+            },
+            "type": "Punctuator",
+            "value": ")"
         },
         {
-            "type": "Punctuator",
-            "value": ";",
             "range": [
                 11,
                 12
@@ -231,7 +230,10 @@
                     "line": 1,
                     "column": 12
                 }
-            }
+            },
+            "type": "Punctuator",
+            "value": ";"
         }
-    ]
+    ],
+    "errors": []
 }

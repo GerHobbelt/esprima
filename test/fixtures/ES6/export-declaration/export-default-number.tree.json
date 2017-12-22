@@ -1,44 +1,4 @@
 {
-    "type": "Program",
-    "body": [
-        {
-            "type": "ExportDefaultDeclaration",
-            "declaration": {
-                "type": "Literal",
-                "value": 42,
-                "raw": "42",
-                "range": [
-                    15,
-                    17
-                ],
-                "loc": {
-                    "start": {
-                        "line": 1,
-                        "column": 15
-                    },
-                    "end": {
-                        "line": 1,
-                        "column": 17
-                    }
-                }
-            },
-            "range": [
-                0,
-                18
-            ],
-            "loc": {
-                "start": {
-                    "line": 1,
-                    "column": 0
-                },
-                "end": {
-                    "line": 1,
-                    "column": 18
-                }
-            }
-        }
-    ],
-    "sourceType": "script",
     "range": [
         0,
         18
@@ -53,11 +13,49 @@
             "column": 18
         }
     },
+    "type": "Program",
+    "body": [
+        {
+            "range": [
+                0,
+                18
+            ],
+            "loc": {
+                "start": {
+                    "line": 1,
+                    "column": 0
+                },
+                "end": {
+                    "line": 1,
+                    "column": 18
+                }
+            },
+            "type": "ExportDefaultDeclaration",
+            "declaration": {
+                "range": [
+                    15,
+                    17
+                ],
+                "loc": {
+                    "start": {
+                        "line": 1,
+                        "column": 15
+                    },
+                    "end": {
+                        "line": 1,
+                        "column": 17
+                    }
+                },
+                "type": "Literal",
+                "value": 42,
+                "raw": "42"
+            }
+        }
+    ],
+    "sourceType": "script",
     "comments": [],
     "tokens": [
         {
-            "type": "Keyword",
-            "value": "export",
             "range": [
                 0,
                 6
@@ -71,11 +69,11 @@
                     "line": 1,
                     "column": 6
                 }
-            }
+            },
+            "type": "Keyword",
+            "value": "export"
         },
         {
-            "type": "Keyword",
-            "value": "default",
             "range": [
                 7,
                 14
@@ -89,11 +87,11 @@
                     "line": 1,
                     "column": 14
                 }
-            }
+            },
+            "type": "Keyword",
+            "value": "default"
         },
         {
-            "type": "Numeric",
-            "value": "42",
             "range": [
                 15,
                 17
@@ -107,11 +105,11 @@
                     "line": 1,
                     "column": 17
                 }
-            }
+            },
+            "type": "Numeric",
+            "value": "42"
         },
         {
-            "type": "Punctuator",
-            "value": ";",
             "range": [
                 17,
                 18
@@ -125,7 +123,9 @@
                     "line": 1,
                     "column": 18
                 }
-            }
+            },
+            "type": "Punctuator",
+            "value": ";"
         }
     ],
     "errors": [

@@ -1,45 +1,4 @@
 {
-    "type": "Program",
-    "body": [
-        {
-            "type": "ExpressionStatement",
-            "expression": {
-                "type": "Literal",
-                "value": "Hello\n2World",
-                "raw": "\"Hello\\0122World\"",
-                "range": [
-                    0,
-                    17
-                ],
-                "loc": {
-                    "start": {
-                        "line": 1,
-                        "column": 0
-                    },
-                    "end": {
-                        "line": 1,
-                        "column": 17
-                    }
-                }
-            },
-            "directive": "Hello\\0122World",
-            "range": [
-                0,
-                17
-            ],
-            "loc": {
-                "start": {
-                    "line": 1,
-                    "column": 0
-                },
-                "end": {
-                    "line": 1,
-                    "column": 17
-                }
-            }
-        }
-    ],
-    "sourceType": "script",
     "range": [
         0,
         17
@@ -54,10 +13,9 @@
             "column": 17
         }
     },
-    "tokens": [
+    "type": "Program",
+    "body": [
         {
-            "type": "String",
-            "value": "\"Hello\\0122World\"",
             "range": [
                 0,
                 17
@@ -71,7 +29,51 @@
                     "line": 1,
                     "column": 17
                 }
-            }
+            },
+            "type": "ExpressionStatement",
+            "expression": {
+                "range": [
+                    0,
+                    17
+                ],
+                "loc": {
+                    "start": {
+                        "line": 1,
+                        "column": 0
+                    },
+                    "end": {
+                        "line": 1,
+                        "column": 17
+                    }
+                },
+                "type": "Literal",
+                "value": "Hello\n2World",
+                "raw": "\"Hello\\0122World\""
+            },
+            "directive": "Hello\\0122World"
         }
-    ]
+    ],
+    "sourceType": "script",
+    "comments": [],
+    "tokens": [
+        {
+            "range": [
+                0,
+                17
+            ],
+            "loc": {
+                "start": {
+                    "line": 1,
+                    "column": 0
+                },
+                "end": {
+                    "line": 1,
+                    "column": 17
+                }
+            },
+            "type": "String",
+            "value": "\"Hello\\0122World\""
+        }
+    ],
+    "errors": []
 }

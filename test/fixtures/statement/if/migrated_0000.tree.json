@@ -1,97 +1,4 @@
 {
-    "type": "Program",
-    "body": [
-        {
-            "type": "IfStatement",
-            "test": {
-                "type": "Identifier",
-                "name": "morning",
-                "range": [
-                    4,
-                    11
-                ],
-                "loc": {
-                    "start": {
-                        "line": 1,
-                        "column": 4
-                    },
-                    "end": {
-                        "line": 1,
-                        "column": 11
-                    }
-                }
-            },
-            "consequent": {
-                "type": "ExpressionStatement",
-                "expression": {
-                    "type": "CallExpression",
-                    "callee": {
-                        "type": "Identifier",
-                        "name": "goodMorning",
-                        "range": [
-                            13,
-                            24
-                        ],
-                        "loc": {
-                            "start": {
-                                "line": 1,
-                                "column": 13
-                            },
-                            "end": {
-                                "line": 1,
-                                "column": 24
-                            }
-                        }
-                    },
-                    "arguments": [],
-                    "range": [
-                        13,
-                        26
-                    ],
-                    "loc": {
-                        "start": {
-                            "line": 1,
-                            "column": 13
-                        },
-                        "end": {
-                            "line": 1,
-                            "column": 26
-                        }
-                    }
-                },
-                "range": [
-                    13,
-                    26
-                ],
-                "loc": {
-                    "start": {
-                        "line": 1,
-                        "column": 13
-                    },
-                    "end": {
-                        "line": 1,
-                        "column": 26
-                    }
-                }
-            },
-            "alternate": null,
-            "range": [
-                0,
-                26
-            ],
-            "loc": {
-                "start": {
-                    "line": 1,
-                    "column": 0
-                },
-                "end": {
-                    "line": 1,
-                    "column": 26
-                }
-            }
-        }
-    ],
-    "sourceType": "script",
     "range": [
         0,
         26
@@ -106,10 +13,102 @@
             "column": 26
         }
     },
+    "type": "Program",
+    "body": [
+        {
+            "range": [
+                0,
+                26
+            ],
+            "loc": {
+                "start": {
+                    "line": 1,
+                    "column": 0
+                },
+                "end": {
+                    "line": 1,
+                    "column": 26
+                }
+            },
+            "type": "IfStatement",
+            "test": {
+                "range": [
+                    4,
+                    11
+                ],
+                "loc": {
+                    "start": {
+                        "line": 1,
+                        "column": 4
+                    },
+                    "end": {
+                        "line": 1,
+                        "column": 11
+                    }
+                },
+                "type": "Identifier",
+                "name": "morning"
+            },
+            "consequent": {
+                "range": [
+                    13,
+                    26
+                ],
+                "loc": {
+                    "start": {
+                        "line": 1,
+                        "column": 13
+                    },
+                    "end": {
+                        "line": 1,
+                        "column": 26
+                    }
+                },
+                "type": "ExpressionStatement",
+                "expression": {
+                    "range": [
+                        13,
+                        26
+                    ],
+                    "loc": {
+                        "start": {
+                            "line": 1,
+                            "column": 13
+                        },
+                        "end": {
+                            "line": 1,
+                            "column": 26
+                        }
+                    },
+                    "type": "CallExpression",
+                    "callee": {
+                        "range": [
+                            13,
+                            24
+                        ],
+                        "loc": {
+                            "start": {
+                                "line": 1,
+                                "column": 13
+                            },
+                            "end": {
+                                "line": 1,
+                                "column": 24
+                            }
+                        },
+                        "type": "Identifier",
+                        "name": "goodMorning"
+                    },
+                    "arguments": []
+                }
+            },
+            "alternate": null
+        }
+    ],
+    "sourceType": "script",
+    "comments": [],
     "tokens": [
         {
-            "type": "Keyword",
-            "value": "if",
             "range": [
                 0,
                 2
@@ -123,11 +122,11 @@
                     "line": 1,
                     "column": 2
                 }
-            }
+            },
+            "type": "Keyword",
+            "value": "if"
         },
         {
-            "type": "Punctuator",
-            "value": "(",
             "range": [
                 3,
                 4
@@ -141,11 +140,11 @@
                     "line": 1,
                     "column": 4
                 }
-            }
+            },
+            "type": "Punctuator",
+            "value": "("
         },
         {
-            "type": "Identifier",
-            "value": "morning",
             "range": [
                 4,
                 11
@@ -159,11 +158,11 @@
                     "line": 1,
                     "column": 11
                 }
-            }
+            },
+            "type": "Identifier",
+            "value": "morning"
         },
         {
-            "type": "Punctuator",
-            "value": ")",
             "range": [
                 11,
                 12
@@ -177,11 +176,11 @@
                     "line": 1,
                     "column": 12
                 }
-            }
+            },
+            "type": "Punctuator",
+            "value": ")"
         },
         {
-            "type": "Identifier",
-            "value": "goodMorning",
             "range": [
                 13,
                 24
@@ -195,11 +194,11 @@
                     "line": 1,
                     "column": 24
                 }
-            }
+            },
+            "type": "Identifier",
+            "value": "goodMorning"
         },
         {
-            "type": "Punctuator",
-            "value": "(",
             "range": [
                 24,
                 25
@@ -213,11 +212,11 @@
                     "line": 1,
                     "column": 25
                 }
-            }
+            },
+            "type": "Punctuator",
+            "value": "("
         },
         {
-            "type": "Punctuator",
-            "value": ")",
             "range": [
                 25,
                 26
@@ -231,7 +230,10 @@
                     "line": 1,
                     "column": 26
                 }
-            }
+            },
+            "type": "Punctuator",
+            "value": ")"
         }
-    ]
+    ],
+    "errors": []
 }

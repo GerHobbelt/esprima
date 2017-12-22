@@ -1,7 +1,4 @@
 {
-    "type": "Program",
-    "body": [],
-    "sourceType": "script",
     "range": [
         15,
         15
@@ -16,10 +13,11 @@
             "column": 15
         }
     },
+    "type": "Program",
+    "body": [],
+    "sourceType": "script",
     "comments": [
         {
-            "type": "Block",
-            "value": " var fo0 = 1;",
             "range": [
                 0,
                 15
@@ -33,7 +31,9 @@
                     "line": 1,
                     "column": 15
                 }
-            }
+            },
+            "type": "Block",
+            "value": " var fo0 = 1;"
         }
     ],
     "tokens": [],

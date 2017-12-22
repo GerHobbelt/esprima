@@ -1,0 +1,302 @@
+{
+    "range": [
+        0,
+        28
+    ],
+    "loc": {
+        "start": {
+            "line": 1,
+            "column": 0
+        },
+        "end": {
+            "line": 2,
+            "column": 9
+        }
+    },
+    "type": "Program",
+    "body": [
+        {
+            "range": [
+                0,
+                18
+            ],
+            "loc": {
+                "start": {
+                    "line": 1,
+                    "column": 0
+                },
+                "end": {
+                    "line": 1,
+                    "column": 18
+                }
+            },
+            "type": "ImportDeclaration",
+            "specifiers": [
+                {
+                    "range": [
+                        7,
+                        8
+                    ],
+                    "loc": {
+                        "start": {
+                            "line": 1,
+                            "column": 7
+                        },
+                        "end": {
+                            "line": 1,
+                            "column": 8
+                        }
+                    },
+                    "type": "ImportDefaultSpecifier",
+                    "local": {
+                        "range": [
+                            7,
+                            8
+                        ],
+                        "loc": {
+                            "start": {
+                                "line": 1,
+                                "column": 7
+                            },
+                            "end": {
+                                "line": 1,
+                                "column": 8
+                            }
+                        },
+                        "type": "Identifier",
+                        "name": "x"
+                    }
+                }
+            ],
+            "source": {
+                "range": [
+                    14,
+                    17
+                ],
+                "loc": {
+                    "start": {
+                        "line": 1,
+                        "column": 14
+                    },
+                    "end": {
+                        "line": 1,
+                        "column": 17
+                    }
+                },
+                "type": "Literal",
+                "value": "x",
+                "raw": "\"x\""
+            }
+        },
+        {
+            "range": [
+                19,
+                28
+            ],
+            "loc": {
+                "start": {
+                    "line": 2,
+                    "column": 0
+                },
+                "end": {
+                    "line": 2,
+                    "column": 9
+                }
+            },
+            "type": "ExpressionStatement",
+            "expression": {
+                "range": [
+                    19,
+                    27
+                ],
+                "loc": {
+                    "start": {
+                        "line": 2,
+                        "column": 0
+                    },
+                    "end": {
+                        "line": 2,
+                        "column": 8
+                    }
+                },
+                "type": "UnaryExpression",
+                "operator": "delete",
+                "argument": {
+                    "range": [
+                        26,
+                        27
+                    ],
+                    "loc": {
+                        "start": {
+                            "line": 2,
+                            "column": 7
+                        },
+                        "end": {
+                            "line": 2,
+                            "column": 8
+                        }
+                    },
+                    "type": "Identifier",
+                    "name": "x"
+                },
+                "prefix": true
+            }
+        }
+    ],
+    "sourceType": "module",
+    "comments": [],
+    "tokens": [
+        {
+            "range": [
+                0,
+                6
+            ],
+            "loc": {
+                "start": {
+                    "line": 1,
+                    "column": 0
+                },
+                "end": {
+                    "line": 1,
+                    "column": 6
+                }
+            },
+            "type": "Keyword",
+            "value": "import"
+        },
+        {
+            "range": [
+                7,
+                8
+            ],
+            "loc": {
+                "start": {
+                    "line": 1,
+                    "column": 7
+                },
+                "end": {
+                    "line": 1,
+                    "column": 8
+                }
+            },
+            "type": "Identifier",
+            "value": "x"
+        },
+        {
+            "range": [
+                9,
+                13
+            ],
+            "loc": {
+                "start": {
+                    "line": 1,
+                    "column": 9
+                },
+                "end": {
+                    "line": 1,
+                    "column": 13
+                }
+            },
+            "type": "Identifier",
+            "value": "from"
+        },
+        {
+            "range": [
+                14,
+                17
+            ],
+            "loc": {
+                "start": {
+                    "line": 1,
+                    "column": 14
+                },
+                "end": {
+                    "line": 1,
+                    "column": 17
+                }
+            },
+            "type": "String",
+            "value": "\"x\""
+        },
+        {
+            "range": [
+                17,
+                18
+            ],
+            "loc": {
+                "start": {
+                    "line": 1,
+                    "column": 17
+                },
+                "end": {
+                    "line": 1,
+                    "column": 18
+                }
+            },
+            "type": "Punctuator",
+            "value": ";"
+        },
+        {
+            "range": [
+                19,
+                25
+            ],
+            "loc": {
+                "start": {
+                    "line": 2,
+                    "column": 0
+                },
+                "end": {
+                    "line": 2,
+                    "column": 6
+                }
+            },
+            "type": "Keyword",
+            "value": "delete"
+        },
+        {
+            "range": [
+                26,
+                27
+            ],
+            "loc": {
+                "start": {
+                    "line": 2,
+                    "column": 7
+                },
+                "end": {
+                    "line": 2,
+                    "column": 8
+                }
+            },
+            "type": "Identifier",
+            "value": "x"
+        },
+        {
+            "range": [
+                27,
+                28
+            ],
+            "loc": {
+                "start": {
+                    "line": 2,
+                    "column": 8
+                },
+                "end": {
+                    "line": 2,
+                    "column": 9
+                }
+            },
+            "type": "Punctuator",
+            "value": ";"
+        }
+    ],
+    "errors": [
+        {
+            "index": 27,
+            "lineNumber": 2,
+            "column": 9,
+            "message": "Error: Line 2: Delete of an unqualified identifier in strict mode."
+        }
+    ]
+}

@@ -1,0 +1,48 @@
+{
+    "range": [
+        2,
+        2
+    ],
+    "loc": {
+        "start": {
+            "line": 1,
+            "column": 2
+        },
+        "end": {
+            "line": 1,
+            "column": 2
+        }
+    },
+    "type": "Program",
+    "body": [],
+    "sourceType": "script",
+    "comments": [
+        {
+            "range": [
+                0,
+                2
+            ],
+            "loc": {
+                "start": {
+                    "line": 1,
+                    "column": 0
+                },
+                "end": {
+                    "line": 1,
+                    "column": 2
+                }
+            },
+            "type": "Block",
+            "value": ""
+        }
+    ],
+    "tokens": [],
+    "errors": [
+        {
+            "index": 2,
+            "lineNumber": 1,
+            "column": 3,
+            "message": "Error: Line 1: Unexpected token ILLEGAL"
+        }
+    ]
+}

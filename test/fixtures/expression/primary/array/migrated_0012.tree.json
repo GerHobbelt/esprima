@@ -1,79 +1,4 @@
 {
-    "type": "Program",
-    "body": [
-        {
-            "type": "ExpressionStatement",
-            "expression": {
-                "type": "AssignmentExpression",
-                "operator": "=",
-                "left": {
-                    "type": "Identifier",
-                    "name": "ⅣⅡ",
-                    "range": [
-                        0,
-                        2
-                    ],
-                    "loc": {
-                        "start": {
-                            "line": 1,
-                            "column": 0
-                        },
-                        "end": {
-                            "line": 1,
-                            "column": 2
-                        }
-                    }
-                },
-                "right": {
-                    "type": "ArrayExpression",
-                    "elements": [],
-                    "range": [
-                        5,
-                        7
-                    ],
-                    "loc": {
-                        "start": {
-                            "line": 1,
-                            "column": 5
-                        },
-                        "end": {
-                            "line": 1,
-                            "column": 7
-                        }
-                    }
-                },
-                "range": [
-                    0,
-                    7
-                ],
-                "loc": {
-                    "start": {
-                        "line": 1,
-                        "column": 0
-                    },
-                    "end": {
-                        "line": 1,
-                        "column": 7
-                    }
-                }
-            },
-            "range": [
-                0,
-                7
-            ],
-            "loc": {
-                "start": {
-                    "line": 1,
-                    "column": 0
-                },
-                "end": {
-                    "line": 1,
-                    "column": 7
-                }
-            }
-        }
-    ],
-    "sourceType": "script",
     "range": [
         0,
         7
@@ -88,10 +13,84 @@
             "column": 7
         }
     },
+    "type": "Program",
+    "body": [
+        {
+            "range": [
+                0,
+                7
+            ],
+            "loc": {
+                "start": {
+                    "line": 1,
+                    "column": 0
+                },
+                "end": {
+                    "line": 1,
+                    "column": 7
+                }
+            },
+            "type": "ExpressionStatement",
+            "expression": {
+                "range": [
+                    0,
+                    7
+                ],
+                "loc": {
+                    "start": {
+                        "line": 1,
+                        "column": 0
+                    },
+                    "end": {
+                        "line": 1,
+                        "column": 7
+                    }
+                },
+                "type": "AssignmentExpression",
+                "operator": "=",
+                "left": {
+                    "range": [
+                        0,
+                        2
+                    ],
+                    "loc": {
+                        "start": {
+                            "line": 1,
+                            "column": 0
+                        },
+                        "end": {
+                            "line": 1,
+                            "column": 2
+                        }
+                    },
+                    "type": "Identifier",
+                    "name": "ⅣⅡ"
+                },
+                "right": {
+                    "range": [
+                        5,
+                        7
+                    ],
+                    "loc": {
+                        "start": {
+                            "line": 1,
+                            "column": 5
+                        },
+                        "end": {
+                            "line": 1,
+                            "column": 7
+                        }
+                    },
+                    "type": "ArrayExpression",
+                    "elements": []
+                }
+            }
+        }
+    ],
+    "sourceType": "script",
+    "comments": [],
     "tokens": [
         {
-            "type": "Identifier",
-            "value": "ⅣⅡ",
             "range": [
                 0,
                 2
@@ -105,11 +104,11 @@
                     "line": 1,
                     "column": 2
                 }
-            }
+            },
+            "type": "Identifier",
+            "value": "ⅣⅡ"
         },
         {
-            "type": "Punctuator",
-            "value": "=",
             "range": [
                 3,
                 4
@@ -123,11 +122,11 @@
                     "line": 1,
                     "column": 4
                 }
-            }
+            },
+            "type": "Punctuator",
+            "value": "="
         },
         {
-            "type": "Punctuator",
-            "value": "[",
             "range": [
                 5,
                 6
@@ -141,11 +140,11 @@
                     "line": 1,
                     "column": 6
                 }
-            }
+            },
+            "type": "Punctuator",
+            "value": "["
         },
         {
-            "type": "Punctuator",
-            "value": "]",
             "range": [
                 6,
                 7
@@ -159,7 +158,10 @@
                     "line": 1,
                     "column": 7
                 }
-            }
+            },
+            "type": "Punctuator",
+            "value": "]"
         }
-    ]
+    ],
+    "errors": []
 }

@@ -1,7 +1,0 @@
-{
-    "index": 11,
-    "lineNumber": 1,
-    "column": 12,
-    "message": "Error: Line 1: Illegal 'use strict' directive in function with non-simple parameter list",
-    "description": "Illegal 'use strict' directive in function with non-simple parameter list"
-}

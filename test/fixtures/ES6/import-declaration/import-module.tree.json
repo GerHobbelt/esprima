@@ -1,45 +1,4 @@
 {
-    "type": "Program",
-    "body": [
-        {
-            "type": "ImportDeclaration",
-            "specifiers": [],
-            "source": {
-                "type": "Literal",
-                "value": "foo",
-                "raw": "\"foo\"",
-                "range": [
-                    7,
-                    12
-                ],
-                "loc": {
-                    "start": {
-                        "line": 1,
-                        "column": 7
-                    },
-                    "end": {
-                        "line": 1,
-                        "column": 12
-                    }
-                }
-            },
-            "range": [
-                0,
-                13
-            ],
-            "loc": {
-                "start": {
-                    "line": 1,
-                    "column": 0
-                },
-                "end": {
-                    "line": 1,
-                    "column": 13
-                }
-            }
-        }
-    ],
-    "sourceType": "script",
     "range": [
         0,
         13
@@ -54,11 +13,50 @@
             "column": 13
         }
     },
+    "type": "Program",
+    "body": [
+        {
+            "range": [
+                0,
+                13
+            ],
+            "loc": {
+                "start": {
+                    "line": 1,
+                    "column": 0
+                },
+                "end": {
+                    "line": 1,
+                    "column": 13
+                }
+            },
+            "type": "ImportDeclaration",
+            "specifiers": [],
+            "source": {
+                "range": [
+                    7,
+                    12
+                ],
+                "loc": {
+                    "start": {
+                        "line": 1,
+                        "column": 7
+                    },
+                    "end": {
+                        "line": 1,
+                        "column": 12
+                    }
+                },
+                "type": "Literal",
+                "value": "foo",
+                "raw": "\"foo\""
+            }
+        }
+    ],
+    "sourceType": "script",
     "comments": [],
     "tokens": [
         {
-            "type": "Keyword",
-            "value": "import",
             "range": [
                 0,
                 6
@@ -72,11 +70,11 @@
                     "line": 1,
                     "column": 6
                 }
-            }
+            },
+            "type": "Keyword",
+            "value": "import"
         },
         {
-            "type": "String",
-            "value": "\"foo\"",
             "range": [
                 7,
                 12
@@ -90,11 +88,11 @@
                     "line": 1,
                     "column": 12
                 }
-            }
+            },
+            "type": "String",
+            "value": "\"foo\""
         },
         {
-            "type": "Punctuator",
-            "value": ";",
             "range": [
                 12,
                 13
@@ -108,7 +106,9 @@
                     "line": 1,
                     "column": 13
                 }
-            }
+            },
+            "type": "Punctuator",
+            "value": ";"
         }
     ],
     "errors": [

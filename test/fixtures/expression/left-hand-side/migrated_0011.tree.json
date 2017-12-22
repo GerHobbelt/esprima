@@ -1,115 +1,4 @@
 {
-    "type": "Program",
-    "body": [
-        {
-            "type": "ExpressionStatement",
-            "expression": {
-                "type": "MemberExpression",
-                "computed": false,
-                "object": {
-                    "type": "MemberExpression",
-                    "computed": false,
-                    "object": {
-                        "type": "Identifier",
-                        "name": "universe",
-                        "range": [
-                            0,
-                            8
-                        ],
-                        "loc": {
-                            "start": {
-                                "line": 1,
-                                "column": 0
-                            },
-                            "end": {
-                                "line": 1,
-                                "column": 8
-                            }
-                        }
-                    },
-                    "property": {
-                        "type": "Identifier",
-                        "name": "milkyway",
-                        "range": [
-                            9,
-                            17
-                        ],
-                        "loc": {
-                            "start": {
-                                "line": 1,
-                                "column": 9
-                            },
-                            "end": {
-                                "line": 1,
-                                "column": 17
-                            }
-                        }
-                    },
-                    "range": [
-                        0,
-                        17
-                    ],
-                    "loc": {
-                        "start": {
-                            "line": 1,
-                            "column": 0
-                        },
-                        "end": {
-                            "line": 1,
-                            "column": 17
-                        }
-                    }
-                },
-                "property": {
-                    "type": "Identifier",
-                    "name": "solarsystem",
-                    "range": [
-                        18,
-                        29
-                    ],
-                    "loc": {
-                        "start": {
-                            "line": 1,
-                            "column": 18
-                        },
-                        "end": {
-                            "line": 1,
-                            "column": 29
-                        }
-                    }
-                },
-                "range": [
-                    0,
-                    29
-                ],
-                "loc": {
-                    "start": {
-                        "line": 1,
-                        "column": 0
-                    },
-                    "end": {
-                        "line": 1,
-                        "column": 29
-                    }
-                }
-            },
-            "range": [
-                0,
-                29
-            ],
-            "loc": {
-                "start": {
-                    "line": 1,
-                    "column": 0
-                },
-                "end": {
-                    "line": 1,
-                    "column": 29
-                }
-            }
-        }
-    ],
-    "sourceType": "script",
     "range": [
         0,
         29
@@ -124,10 +13,120 @@
             "column": 29
         }
     },
+    "type": "Program",
+    "body": [
+        {
+            "range": [
+                0,
+                29
+            ],
+            "loc": {
+                "start": {
+                    "line": 1,
+                    "column": 0
+                },
+                "end": {
+                    "line": 1,
+                    "column": 29
+                }
+            },
+            "type": "ExpressionStatement",
+            "expression": {
+                "range": [
+                    0,
+                    29
+                ],
+                "loc": {
+                    "start": {
+                        "line": 1,
+                        "column": 0
+                    },
+                    "end": {
+                        "line": 1,
+                        "column": 29
+                    }
+                },
+                "type": "MemberExpression",
+                "computed": false,
+                "object": {
+                    "range": [
+                        0,
+                        17
+                    ],
+                    "loc": {
+                        "start": {
+                            "line": 1,
+                            "column": 0
+                        },
+                        "end": {
+                            "line": 1,
+                            "column": 17
+                        }
+                    },
+                    "type": "MemberExpression",
+                    "computed": false,
+                    "object": {
+                        "range": [
+                            0,
+                            8
+                        ],
+                        "loc": {
+                            "start": {
+                                "line": 1,
+                                "column": 0
+                            },
+                            "end": {
+                                "line": 1,
+                                "column": 8
+                            }
+                        },
+                        "type": "Identifier",
+                        "name": "universe"
+                    },
+                    "property": {
+                        "range": [
+                            9,
+                            17
+                        ],
+                        "loc": {
+                            "start": {
+                                "line": 1,
+                                "column": 9
+                            },
+                            "end": {
+                                "line": 1,
+                                "column": 17
+                            }
+                        },
+                        "type": "Identifier",
+                        "name": "milkyway"
+                    }
+                },
+                "property": {
+                    "range": [
+                        18,
+                        29
+                    ],
+                    "loc": {
+                        "start": {
+                            "line": 1,
+                            "column": 18
+                        },
+                        "end": {
+                            "line": 1,
+                            "column": 29
+                        }
+                    },
+                    "type": "Identifier",
+                    "name": "solarsystem"
+                }
+            }
+        }
+    ],
+    "sourceType": "script",
+    "comments": [],
     "tokens": [
         {
-            "type": "Identifier",
-            "value": "universe",
             "range": [
                 0,
                 8
@@ -141,11 +140,11 @@
                     "line": 1,
                     "column": 8
                 }
-            }
+            },
+            "type": "Identifier",
+            "value": "universe"
         },
         {
-            "type": "Punctuator",
-            "value": ".",
             "range": [
                 8,
                 9
@@ -159,11 +158,11 @@
                     "line": 1,
                     "column": 9
                 }
-            }
+            },
+            "type": "Punctuator",
+            "value": "."
         },
         {
-            "type": "Identifier",
-            "value": "milkyway",
             "range": [
                 9,
                 17
@@ -177,11 +176,11 @@
                     "line": 1,
                     "column": 17
                 }
-            }
+            },
+            "type": "Identifier",
+            "value": "milkyway"
         },
         {
-            "type": "Punctuator",
-            "value": ".",
             "range": [
                 17,
                 18
@@ -195,11 +194,11 @@
                     "line": 1,
                     "column": 18
                 }
-            }
+            },
+            "type": "Punctuator",
+            "value": "."
         },
         {
-            "type": "Identifier",
-            "value": "solarsystem",
             "range": [
                 18,
                 29
@@ -213,7 +212,10 @@
                     "line": 1,
                     "column": 29
                 }
-            }
+            },
+            "type": "Identifier",
+            "value": "solarsystem"
         }
-    ]
+    ],
+    "errors": []
 }
