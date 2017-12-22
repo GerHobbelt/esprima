@@ -45,7 +45,7 @@ function renderFixturesFile(ext, stringify) {
         relativeFilePath = relativeFilePath.split(path.sep).join('/');
 
         key = relativeFilePath.substring(0, relativeFilePath.length - ext.length - 1);
-        value = stringify ? JSON.stringify(content) : content;
+        value = stringify ? JSON.stringify(content, null, 4) : content;
 
         return "fixtures_" + ext + "['" + key + "'] = " + value + ";";
     };

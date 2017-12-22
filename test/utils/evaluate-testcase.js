@@ -35,11 +35,12 @@
     }
 }(this, function (esprima, errorToObject) {
     function NotMatchingError(expected, actual) {
-        Error.call(this, 'Expected ');
-        this.expected = expected;
-        this.actual = actual;
+        var rv = new Error('Expected ');
+        rv.expected = expected;
+        rv.actual = actual;
+        return rv;
     }
-    NotMatchingError.prototype = new Error();
+    // NotMatchingError.prototype = new Error();
 
     function assertEquality(expected, actual) {
         if (expected !== actual) {
@@ -96,9 +97,15 @@
         return false;
     }
 
-    function testParse(code, syntax) {
+    function testParse(code, testCase) {
         'use strict';
         var expected, tree, actual, options, i, len, nodes;
+        var syntax = testCase.tree;
+
+        // when the expected `syntax` value is an error/exception, we flag tolerance!
+        var tolerant = (typeof syntax.message === 'string');
+        // we're also tolerant when the parse AST/tree has errors:
+        tolerant = tolerant || (typeof syntax.errors !== 'undefined');
 
         options = {
             jsx: true,
@@ -107,9 +114,9 @@
             loc: true,
             tokens: true,
             raw: true,
-            tolerant: (typeof syntax.errors !== 'undefined'),
+            tolerant: tolerant,
             source: null,
-            sourceType: syntax.sourceType
+            sourceType: syntax.sourceType || (testCase.key.match(/\.module$/) ? 'module' : 'script')
         };
 
         if (options.comment) {
@@ -157,7 +164,19 @@
             esprima.parse(new String(code), options);
 
         } catch (e) {
-            throw new NotMatchingError(expected, e.toString());
+            tree = errorToObject(e);
+            tree.description = e.description;
+            actual = JSON.stringify(tree, null, 4);
+
+            // HACK: when we arrived here AND 'expected' happens to match 'actual' 
+            // in the assert below, we are sure working on an erroneous input and 
+            // all subsequent tests below WILL FAIL (intentionally).
+            // 
+            // We prevent those from throwing a spanner in the test works,
+            // we 'tweak' the options object and flag our test case as 'tolerant'
+            // so that the otherwise 'non-functional' check for that option
+            // below will catch us and terminate the (successful!) test as desired:
+            options.tolerant = true;
         }
         assertEquality(expected, actual);
 
@@ -185,7 +204,9 @@
             tree = sortedObject(tree);
             actual = JSON.stringify(tree, filter, 4);
         } catch (e) {
-            throw new NotMatchingError(expected, e.toString());
+            tree = errorToObject(e);
+            tree.description = e.description;
+            actual = JSON.stringify(tree, null, 4);
         }
         assertEquality(expected, actual);
 
@@ -204,7 +225,10 @@
             nodes = [];
             esprima.parse(code, options, collect);
         } catch (e) {
-            throw new NotMatchingError(expected, e.toString());
+            nodes = errorToObject(e);
+            nodes.description = e.description;
+            actual = JSON.stringify(nodes, null, 4);
+            throw new NotMatchingError(expected, actual);
         }
         // The last one, the most top-level node, is always a Program node.
         assertEquality('Program', nodes.pop().type);
@@ -214,7 +238,10 @@
             nodes = [];
             esprima.parse(code, options, filter);
         } catch (e) {
-            throw new NotMatchingError(expected, e.toString());
+            nodes = errorToObject(e);
+            nodes.description = e.description;
+            actual = JSON.stringify(nodes, null, 4);
+            throw new NotMatchingError(expected, actual);
         }
         // Every tree will have exactly one Program node.
         assertEquality('Program', nodes[0].type);
@@ -239,6 +266,7 @@
     function testTokenize(code, tokens) {
         'use strict';
         var options, expected, actual, list, entries, types;
+        var isErrorParse = false;
 
         options = {
             comment: true,
@@ -262,11 +290,11 @@
             list = esprima.tokenize(code, options);
             actual = JSON.stringify(list, null, 4);
         } catch (e) {
-            throw new NotMatchingError(expected, e.toString());
+            list = errorToObject(e);
+            list.description = e.description;
+            actual = JSON.stringify(list, null, 4);
         }
-        if (expected !== actual) {
-            throw new NotMatchingError(expected, actual);
-        }
+        assertEquality(expected, actual);
 
         // Use the delegate to collect the token separately.
         try {
@@ -277,11 +305,11 @@
             });
             actual = JSON.stringify(entries, null, 4);
         } catch (e) {
-            throw new NotMatchingError(expected, e.toString());
+            list = errorToObject(e);
+            list.description = e.description;
+            actual = JSON.stringify(list, null, 4);
         }
-        if (expected !== actual) {
-            throw new NotMatchingError(expected, actual);
-        }
+        assertEquality(expected, actual);
 
         // Use the delegate to filter the token type.
         try {
@@ -290,15 +318,19 @@
             });
             actual = JSON.stringify(entries, null, 4);
         } catch (e) {
-            throw new NotMatchingError(expected, e.toString());
+            list = errorToObject(e);
+            list.description = e.description;
+            actual = JSON.stringify(list, null, 4);
+           
+            isErrorParse = true;
         }
-        types = tokens.map(function (t) {
-            return t.type;
-        });
-        expected = JSON.stringify(types, null, 4);
-        if (expected !== actual) {
-            throw new NotMatchingError(expected, actual);
+        if (!isErrorParse) {
+            types = tokens.map(function (t) {
+                return t.type;
+            });
+            expected = JSON.stringify(types, null, 4);
         }
+        assertEquality(expected, actual);
 
         // Exercise more code paths
         try {
@@ -309,7 +341,7 @@
         }
     }
 
-    function testError(testCase) {
+    function testError(code, testCase) {
         'use strict';
         var sourceType, i, options, exception, expected, code, actual, err, handleInvalidRegexFlag, tokenize;
 
@@ -341,8 +373,6 @@
         }
 
         expected = JSON.stringify(exception, null, 4);
-
-        code = testCase.case || testCase.source || '';
 
         for (i = 0; i < options.length; i += 1) {
 
@@ -377,11 +407,11 @@
     return function (testCase) {
         var code = testCase.case || testCase.source || "";
         if (testCase.hasOwnProperty('tree')) {
-            testParse(code, testCase.tree);
+            testParse(code, testCase);
         } else if (testCase.hasOwnProperty('tokens')) {
-            testTokenize(testCase.case, testCase.tokens);
+            testTokenize(code, testCase.tokens);
         } else if (testCase.hasOwnProperty('failure')) {
-            testError(testCase);
+            testError(code, testCase);
         }
     }
 }));

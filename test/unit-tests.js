@@ -39,126 +39,235 @@ var esprima = require('../'),
     tick = new Date(),
     testCase,
     header,
-    regenTestCases = (process.argv && process.argv[1] === '--regenerate');      // set to TRUE to regenerate all reference test values
+    regenTestCases = (process.argv && process.argv[2] === '--regenerate'),      // set to TRUE to regenerate all reference test values
+    debug = false;              // set to TRUE if you want to see extensive logging.
 
 function generateTestCase(testCase) {
-    var options, tree, filePath, fileName, servicedType, list, code, tokens, i, len;
+    var fileName, filePath, fileContent;
 
-    fileName = testCase.key + ".tree.json";
-    try {
-        options = {
-            jsx: true,
-            loc: true,
-            range: true,
-            tokens: true,
-            sourceType: testCase.key.match(/\.module$/) ? 'module' : 'script'
-        };
-        code = testCase.case || testCase.source || "";
-        tree = esprima.parse(code, options);
-        tree = JSON.stringify(tree, null, 4);
-        servicedType = 'tree';
-    } catch (e) {
-        if (typeof e.index === 'undefined') {
-            console.error("Failed to generate test result.", e, testCase);
-            throw e;
-        }
-        tree = errorToObject(e);
-        tree.description = e.description;
-        tree = JSON.stringify(tree, null, 4);
-        fileName = testCase.key + ".failure.json";
-        servicedType = 'failure';
-    }
+    // set up testCase instance to allow `evaluateTestCase(testCase)` to produce
+    // sensible exceptions, which we can use to obtain the actual expected result:
+    //
+    // start with 'failure' mode testing...
+    testCase.failure = errorToObject(new Error('fake'));
+    delete testCase.tokens;
+    delete testCase.tree;
 
-    filePath = path.join(__dirname, 'fixtures', fileName);
-    fs.writeFileSync(filePath, tree);
+    var expected = 'fake';
+    var actual;
 
-    // when there are several test TYPES, generate them all:
+    for (;;) {
+        if (debug) console.log("testing parse failure...", expected);
 
-    // PATCH: make sure we also have a 'tokens' test for all 'tokenize' tests!
-    if (!testCase.tokens && testCase.key.match(/tokenize/)) {
-        testCase.tokens = 666;
-    }
-    // PATCH: make sure we also have a 'tree' test for all 'tolerant-parse' tests!
-    if (!testCase.tree && testCase.key.match(/tolerant/)) {
-        testCase.tree = 111;
-    }
-    // PATCH: make sure we also have a 'tree' test next to every 'failure' test!
-    if (!testCase.tree && servicedType === 'failure') {
-        testCase.tree = 666;
-    }
-
-    // type: tokens
-    if (testCase.hasOwnProperty('tokens')) {
-        fileName = testCase.key + ".tokens.json";
-
+        actual = undefined;
         try {
-            options = {
-                jsx: true,
-                tokens: true,
-                sourceType: testCase.key.match(/\.module$/) ? 'module' : 'script',
+            evaluateTestCase(testCase);
 
-                comment: true,
-                tolerant: true,
-                loc: true,
-                range: true
-            };
-            code = testCase.case || testCase.source || "";
-
-            list = esprima.tokenize(code, options);
+            // test PASSED OK
+            actual = expected;
+            break;
         } catch (e) {
-            console.warn("Failed to generate tokens test result.", e, testCase);
-
-            list = errorToObject(e);
-            list.description = e.description;
-        }
-        tree = JSON.stringify(list, null, 4);
-
-        filePath = path.join(__dirname, 'fixtures', fileName);
-        fs.writeFileSync(filePath, tree);
-    }
-
-    // type: tree    (i.e. when we found a *failure* but also want to see a *tree* output)
-    if (servicedType === 'failure' && testCase.hasOwnProperty('tree')) {
-        // also regenerate a 'tree' fixture, which includes the failure as an 'error' data chunk:
-
-        fileName = testCase.key + ".tree.json";
-        try {
-            options = {
-                sourceType: testCase.key.match(/\.module$/) ? 'module' : 'script',
-
-                jsx: true,
-                comment: true,
-                range: true,
-                loc: true,
-                tokens: true,
-                raw: true,
-                tolerant: true,
-                source: null,
-            };
-            code = testCase.case || testCase.source || "";
-            tree = esprima.parse(code, options);
-
-            for (i = 0, len = tree.errors.length; i < len; i++) {
-                tree.errors[i] = errorToObject(tree.errors[i]);
-            }
-
-            tree = JSON.stringify(tree, null, 4);
-            servicedType = 'tree';
-        } catch (e) {
-            // only terminate when we already had such a fixture type before, i.e. when we now fail to REgenerate the fixture:
-            if (testCase.tree !== 666) {
-                console.error("Failed to generate tree-on-failure test result.", e, testCase, options);
+            actual = e.actual;
+            // console.error('boink!', e, '\nstack:', e.stack, '\ntestcase:', testCase, '\nARGV:', process.argv);
+            if (!e.expected) {
                 throw e;
-            } else {
-                console.warn("Failed to generate tree-on-failure test result.", e.message);
             }
-            tree = errorToObject(e);
-            tree.description = e.description;
-            tree = JSON.stringify(tree, null, 4);
+            if (expected === actual || actual === undefined) {
+                break;
+            }
+            expected = actual;
+            testCase.failure = JSON.parse(expected);
+            continue;
         }
+    }
+
+    if (actual !== undefined) {
+        if (debug) console.log("accept parse failure...", expected);
+        fileName = testCase.key + ".failure.json";
 
         filePath = path.join(__dirname, 'fixtures', fileName);
-        fs.writeFileSync(filePath, tree);
+        fileContent = expected;
+        // fs.writeFileSync(filePath, expected);
+    } else {
+        if (debug) console.log("NO parse failure...", expected);
+        delete testCase.failure;
+    }
+
+    // then check if we need tokenization tests as well...
+    //
+    // make sure we also have a 'tokens' test for all 'tokenize' tests!
+    if (testCase.tokens || testCase.key.match(/tokenize/)) {
+        var failureBackup = testCase.failure;
+
+        // first of all, check if we have a failure for tokenization:
+        testCase.failure = errorToObject(new Error('fake'));
+        testCase.failure.tokenize = true;
+
+        expected = 'fake';
+
+        for (;;) {
+            if (debug) console.log("testing tokenize failure...", expected);
+
+            actual = undefined;
+            try {
+                evaluateTestCase(testCase);
+
+                // test PASSED OK
+                actual = expected;
+                break;
+            } catch (e) {
+                actual = e.actual;
+                // console.error('boink!', e, '\nstack:', e.stack, '\ntestcase:', testCase, '\nARGV:', process.argv);
+                if (!e.expected) {
+                    throw e;
+                }
+                if (expected === actual || actual === undefined) {
+                    break;
+                }
+                expected = actual;
+                testCase.failure = JSON.parse(expected);
+                testCase.failure.tokenize = true;
+                continue;
+            }
+        }
+
+        // overwrite the parse failure fixture: if we already have a failure in tokenization,
+        // we don't bother with the higher level failure anyway.
+        if (actual !== undefined) {
+            testCase.failure = JSON.parse(expected);
+            testCase.failure.tokenize = true;
+            expected = JSON.stringify(testCase.failure, null, 4);
+
+            if (debug) console.log("accept tokenize parse failure...", expected);
+            fileName = testCase.key + ".failure.json";
+
+            filePath = path.join(__dirname, 'fixtures', fileName);
+            fileContent = expected;
+            // fs.writeFileSync(filePath, expected);
+        } else {
+            if (debug) console.log("NO tokenize parse failure...", expected);
+            delete testCase.failure;
+
+            if (failureBackup) {
+                testCase.failure = failureBackup;
+            }
+
+
+
+            // now check if we can tokenize okay: only try it when there's no tokenize error
+            // already above.
+            testCase.tokens = ['fake'];
+
+            expected = 'fake';
+
+            for (;;) {
+                if (debug) console.log("testing tokens...", expected);
+
+                actual = undefined;
+                try {
+                    evaluateTestCase(testCase);
+
+                    // test PASSED OK
+                    break;
+                } catch (e) {
+                    actual = e.actual;
+                    // console.error('boink!', e, '\nstack:', e.stack, '\ntestcase:', testCase, '\nARGV:', process.argv);
+                    if (!e.expected) {
+                        throw e;
+                    }
+                    if (expected === actual || actual === undefined) {
+                        break;
+                    }
+                    expected = actual;
+                    testCase.tokens = JSON.parse(expected);
+                }
+            }
+
+            // when `actual` is UNDEFINED, we actually did PASS the test: then
+            // `expected` has the correct test result. In the other case where
+            // we exit the loop above, it's also `expected` which will carry
+            // the correct reference value...
+            fileName = testCase.key + ".tokens.json";
+
+            filePath = path.join(__dirname, 'fixtures', fileName);
+            fileContent = expected;
+            // fs.writeFileSync(filePath, expected);
+        }
+    }
+
+    // then check if we might exec a parse and maybe obtain an AST (tree)...
+    // but only when we didn't already do a tokenize round, for then that
+    // one would get overruled.
+    if (!testCase.tokens) {
+        testCase.tree = {
+            comments: true,
+            errors: true            // ~> options.tolerant = true
+        };
+        // PATCH: make sure we also have a 'tree' test for all 'tolerant-parse' tests!
+        //     testCase.key.match(/tolerant/)
+
+        expected = 'fake';
+
+        for (;;) {
+            if (debug) console.log("testing tree...", expected);
+
+            actual = undefined;
+            try {
+                evaluateTestCase(testCase);
+
+                // test PASSED OK
+                break;
+            } catch (e) {
+                actual = e.actual;
+                // console.error('boink!', e, '\nstack:', e.stack, '\ntestcase:', testCase, '\nARGV:', process.argv);
+                if (!e.expected) {
+                    throw e;
+                }
+                if (expected === actual || actual === undefined) {
+                    break;
+                }
+                // catch `assertEquality('Program', nodes....type);`:
+                if (e.expected === 'Program') {
+                    // do NOT nuke `expected`, but simply terminate:
+                    break;
+                }
+
+                expected = actual;
+                testCase.tree = JSON.parse(expected);
+            }
+        }
+
+        // when `actual` is UNDEFINED, we actually did PASS the test: then
+        // `expected` has the correct test result. In the other case where
+        // we exit the loop above, it's also `expected` which will carry
+        // the correct reference value...
+        //
+        // If `expected` is a plain error, there's no use running an entire
+        // parse as we'll already have a 'failure' fixture for this one surely.
+        testCase.tree = JSON.parse(expected);
+        // when the new 'expected' value still is an exception, we only
+        // save it when there's no 'failure'...
+        if (typeof testCase.tree.message === 'string') {
+            if (!testCase.failure) {
+                if (debug) console.error('Unexpected combination of NO FAILURE yet a failing PARSE test!', testCase);
+                throw new Error('Unexpected combination of NO FAILURE yet a failing PARSE test!');
+            }
+            if (debug) console.log("NO parse tree result...", fileContent);
+        } else {
+            if (debug) console.log("accept parse tree result...", expected);
+            fileName = testCase.key + ".tree.json";
+
+            filePath = path.join(__dirname, 'fixtures', fileName);
+            fileContent = expected;
+            // fs.writeFileSync(filePath, expected);
+        }
+    }
+
+    if (!fileContent) {
+        throw new Error('Unexpected: none of the three test modes delivered any reference content. Target = ' + fileName);
+    } else {
+        if (debug) console.log("dumping...", fileContent);
+        fs.writeFileSync(filePath, fileContent);
     }
 
     console.error("Done.");
@@ -180,6 +289,7 @@ Object.keys(cases).forEach(function (key) {
         try {
             evaluateTestCase(testCase);
         } catch (e) {
+            // console.error('boink!', e, '\nstack:', e.stack, '\ntestcase:', testCase, '\nARGV:', process.argv);
             if (!e.expected) {
                 throw e;
             }
@@ -189,7 +299,15 @@ Object.keys(cases).forEach(function (key) {
             failures.push(e);
         }
     } else {
-        console.error('Incomplete test case:' + testCase.key + '. Generating test result...');
+        if (debug) {
+            console.error('Incomplete test case:' + testCase.key + '. Generating test result...', {
+                regenTestCases,
+                testCase
+            });
+        } else {
+            console.error('Incomplete test case:' + testCase.key + '. Generating test result...');
+        }
+
         generateTestCase(testCase);
     }
 });
@@ -202,18 +320,24 @@ if (failures.length) {
     console.error(header);
     failures.forEach(function (failure) {
         var expectedObject, actualObject;
+        var expected = (typeof failure.expected === 'string' ? failure.expected.split('\n').join('\n    ') : failure.expected);
+        var actual = (typeof failure.actual === 'string' ? failure.actual.split('\n').join('\n    ') : failure.actual);
+
         try {
             expectedObject = JSON.parse(failure.expected);
             actualObject = JSON.parse(failure.actual);
 
             console.error('=== ' + failure.key + ' === ::\n' + failure.source + ': Expected\n    ' +
-                failure.expected.split('\n').join('\n    ') +
-                '\nto match\n    ' + failure.actual + '\nDiff:\n' +
+                expected +
+                '\nto match\n    ' +
+                actual +
+                '\nDiff:\n' +
                 diff(expectedObject, actualObject));
         } catch (ex) {
             console.error('=== ' + failure.key + ' === ::\n' + failure.source + ': Expected\n    ' +
-                failure.expected.split('\n').join('\n    ') +
-                '\nto match\n    ' + failure.actual);
+                expected +
+                '\nto match\n    ' +
+                actual);
         }
     });
 } else {
