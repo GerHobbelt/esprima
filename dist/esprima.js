@@ -5088,11 +5088,11 @@ var Scanner = /** @class */ (function () {
                                 str += this.scanUnicodeCodePointEscape();
                             }
                             else {
-                                var unescaped1 = this.scanHexEscape(ch);
-                                if (unescaped1 === null) {
+                                var unescapedChar = this.scanHexEscape(ch);
+                                if (unescapedChar === null) {
                                     this.throwUnexpectedToken();
                                 }
-                                str += unescaped1;
+                                str += unescapedChar;
                             }
                             break;
                         case 'x':
@@ -5212,9 +5212,9 @@ var Scanner = /** @class */ (function () {
                             }
                             else {
                                 var restore = this.index;
-                                var unescaped1 = this.scanHexEscape(ch);
-                                if (unescaped1 !== null) {
-                                    cooked += unescaped1;
+                                var unescapedChar = this.scanHexEscape(ch);
+                                if (unescapedChar !== null) {
+                                    cooked += unescapedChar;
                                 }
                                 else {
                                     this.index = restore;
@@ -5653,7 +5653,7 @@ exports.tokenize = tokenize;
 var syntax_1 = __webpack_require__(0);
 exports.Syntax = syntax_1.Syntax;
 // Sync with *.json manifests.
-exports.version = '4.0.1-15';
+exports.version = '4.0.1-17';
 
 
 /***/ }),
@@ -5702,12 +5702,12 @@ var CommentHandler = /** @class */ (function () {
             this.trailing.length = 0;
             return trailingComments;
         }
-        var entry = this.stack[this.stack.length - 1];
-        if (entry && entry.node.trailingComments) {
-            var firstComment = entry.node.trailingComments[0];
+        var last = this.stack[this.stack.length - 1];
+        if (last && last.node.trailingComments) {
+            var firstComment = last.node.trailingComments[0];
             if (firstComment && firstComment.range[0] >= metadata.end.offset) {
-                trailingComments = entry.node.trailingComments;
-                delete entry.node.trailingComments;
+                trailingComments = last.node.trailingComments;
+                delete last.node.trailingComments;
             }
         }
         return trailingComments;
@@ -6234,9 +6234,9 @@ var JSXParser = /** @class */ (function (_super) {
         this.expectJSX('<');
         if (this.matchJSX('/')) {
             this.expectJSX('/');
-            var name2 = this.parseJSXElementName();
+            var elementName = this.parseJSXElementName();
             this.expectJSX('>');
-            return this.finalize(node, new JSXNode.JSXClosingElement(name2));
+            return this.finalize(node, new JSXNode.JSXClosingElement(elementName));
         }
         var name = this.parseJSXElementName();
         var attributes = this.parseJSXAttributes();
