@@ -894,11 +894,11 @@ export class Scanner {
                                 ++this.index;
                                 str += this.scanUnicodeCodePointEscape();
                             } else {
-                                const unescaped1 = this.scanHexEscape(ch);
-                                if (unescaped1 === null) {
+                                const unescapedChar = this.scanHexEscape(ch);
+                                if (unescapedChar === null) {
                                     this.throwUnexpectedToken();
                                 }
-                                str += unescaped1;
+                                str += unescapedChar;
                             }
                             break;
                         case 'x':
@@ -1020,9 +1020,9 @@ export class Scanner {
                                 cooked += this.scanUnicodeCodePointEscape();
                             } else {
                                 const restore = this.index;
-                                const unescaped1 = this.scanHexEscape(ch);
-                                if (unescaped1 !== null) {
-                                    cooked += unescaped1;
+                                const unescapedChar = this.scanHexEscape(ch);
+                                if (unescapedChar !== null) {
+                                    cooked += unescapedChar;
                                 } else {
                                     this.index = restore;
                                     cooked += ch;
