@@ -56,7 +56,7 @@ function generateTestCase(testCase) {
     var expected = 'fake';
     var actual;
 
-    for (;;) {
+    for (; ;) {
         if (debug) console.log("testing parse failure...", expected);
 
         actual = undefined;
@@ -105,7 +105,7 @@ function generateTestCase(testCase) {
 
         expected = 'fake';
 
-        for (;;) {
+        for (; ;) {
             if (debug) console.log("testing tokenize failure...", expected);
 
             actual = undefined;
@@ -160,7 +160,7 @@ function generateTestCase(testCase) {
 
             expected = 'fake';
 
-            for (;;) {
+            for (; ;) {
                 if (debug) console.log("testing tokens...", expected);
 
                 actual = undefined;
@@ -208,7 +208,7 @@ function generateTestCase(testCase) {
 
         expected = 'fake';
 
-        for (;;) {
+        for (; ;) {
             if (debug) console.log("testing tree...", expected);
 
             actual = undefined;

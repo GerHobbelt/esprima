@@ -2,7 +2,7 @@
 
 var path = require('path');
 
-var testDir = path.join(__dirname, '..', 'node_modules', 'test262');
+var testDir = path.join(__dirname, '..', 'node_modules', '@gerhobbelt', 'test262');
 var whitelistFile = path.join(__dirname, 'test-262-whitelist.txt');
 var shouldUpdate = process.argv.indexOf('--update-whitelist') > -1;
 var esprima = require('..');
