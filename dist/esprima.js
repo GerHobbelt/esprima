@@ -203,7 +203,7 @@ exports.tokenize = tokenize;
 var syntax_1 = __webpack_require__(2);
 exports.Syntax = syntax_1.Syntax;
 // Sync with *.json manifests.
-exports.version = '4.0.1-20';
+exports.version = '4.0.1-21';
 
 
 /***/ }),
@@ -4006,6 +4006,7 @@ var Parser = /** @class */ (function () {
         this.expectKeyword('return');
         var hasArgument = (!this.match(';') && !this.match('}') &&
             !this.hasLineTerminator && this.lookahead.type !== 2 /* EOF */) ||
+            this.lookahead.type === 8 /* StringLiteral */ ||
             this.lookahead.type === 10 /* Template */;
         var argument = hasArgument ? this.parseExpression() : null;
         this.consumeSemicolon();
