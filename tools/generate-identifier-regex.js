@@ -3,14 +3,17 @@
 var regenerate = require('regenerate');
 
 // Which Unicode version should be used?
-var version = '8.0.0'; // note: also update `package.json` when this changes
+var pkg = require('../package.json');
+var dependencies = Object.keys(pkg.devDependencies);
+var unicodeDep = dependencies.find((name) => /^unicode-\d/.test(name));
+var version = unicodeDep.match(/[^\d]+(.+)$/)[1];
 
 // Shorthand function
 var get = function(what) {
-    return require('unicode-' + version + '/' + what + '/code-points');
+    return require(unicodeDep + '/' + what + '/code-points.js');
 };
 
-var generateES6Regex = function() { // ES 6
+var generateRegex = function() { // ES 6
     // https://mathiasbynens.be/notes/javascript-identifiers-es6
     var identifierStart = regenerate(get('Binary_Property/ID_Start'))
         .add('$', '_')
@@ -27,7 +30,7 @@ var generateES6Regex = function() { // ES 6
     };
 };
 
-var result = generateES6Regex();
+var result = generateRegex();
 
 console.log("// See also tools/generate-unicode-regex.js.");
 console.log("const Regex = {");
