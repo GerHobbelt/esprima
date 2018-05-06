@@ -40,6 +40,10 @@ function fixupbundle(filename) {
         if (line.match(/var __extends/)) {
             lines[i] = '/* istanbul ignore next */\n' + line;
         }
+
+        if (line.match(/\bwindow, function\b/)) {
+            lines[i] = line.replace(/\bwindow\b/, 'typeof window !== \'undefined\' ? window : this');
+        } 
     }
     content = lines.join('\n');
     fs.writeFileSync(filename, content, 'utf-8');
