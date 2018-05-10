@@ -122,4 +122,4 @@ export function tokenize(code: string, options, delegate) {
 export { Syntax } from './syntax';
 
 // Sync with *.json manifests.
-export const version = '4.0.1-21';
+export const version = '4.0.1-22';

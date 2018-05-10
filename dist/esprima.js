@@ -203,7 +203,7 @@ exports.tokenize = tokenize;
 var syntax_1 = __webpack_require__(2);
 exports.Syntax = syntax_1.Syntax;
 // Sync with *.json manifests.
-exports.version = '4.0.1-21';
+exports.version = '4.0.1-22';
 
 
 /***/ }),
