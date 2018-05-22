@@ -90,7 +90,7 @@
     "all-tests": "npm run verify-line-ending && npm run generate-fixtures && npm run unit-tests && npm run api-tests && npm run grammar-tests && npm run regression-tests && npm run hostile-env-tests",
     "verify-line-ending": "node test/verify-line-ending.js",
     "generate-fixtures": "node tools/generate-fixtures.js",
-    "generate-unit-tests-fixtures": "bash -c \"find test/fixtures/ -type f -iname '*.json' -delete\" && npm run generate-fixtures && node test/unit-tests.js --regenerate",
+    "regenerate-unit-tests-fixtures": "bash -c \"find test/fixtures/ -type f -iname '*.json' -delete\" && npm run generate-fixtures && node test/unit-tests.js --regenerate",
     "browser-tests": "npm run compile && npm run generate-fixtures && cd test && karma start --single-run",
     "saucelabs-evergreen": "cd test && karma start saucelabs-evergreen.conf.js",
     "saucelabs-safari": "cd test && karma start saucelabs-safari.conf.js",
