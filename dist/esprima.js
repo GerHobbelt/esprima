@@ -4005,9 +4005,17 @@ var Parser = /** @class */ (function () {
         var node = this.createNode();
         this.expectKeyword('return');
         var hasArgument = (!this.match(';') && !this.match('}') &&
-            !this.hasLineTerminator && this.lookahead.type !== 2 /* EOF */) ||
-            this.lookahead.type === 8 /* StringLiteral */ ||
-            this.lookahead.type === 10 /* Template */;
+            !this.hasLineTerminator && this.lookahead.type !== 2 /* EOF */);
+        // this.lookahead.type === Token.StringLiteral ||
+        if (this.lookahead.type === 10 /* Template */) {
+            var rvc = (!this.match(';') && !this.match('}') &&
+                !this.hasLineTerminator);
+            console.error("RETURN + TEMPLATE:", {
+                ha: hasArgument,
+                rv: rvc,
+                la: this.lookahead,
+            });
+        }
         var argument = hasArgument ? this.parseExpression() : null;
         this.consumeSemicolon();
         return this.finalize(node, new Node.ReturnStatement(argument));

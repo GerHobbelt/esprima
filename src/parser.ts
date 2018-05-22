@@ -2452,9 +2452,17 @@ export class Parser {
         this.expectKeyword('return');
 
         const hasArgument = (!this.match(';') && !this.match('}') &&
-            !this.hasLineTerminator && this.lookahead.type !== Token.EOF) ||
-            this.lookahead.type === Token.StringLiteral ||
-            this.lookahead.type === Token.Template;
+            !this.hasLineTerminator && this.lookahead.type !== Token.EOF);
+        // this.lookahead.type === Token.StringLiteral ||
+        if (this.lookahead.type === Token.Template) {
+            const rvc = (!this.match(';') && !this.match('}') &&
+                !this.hasLineTerminator);
+            console.error("RETURN + TEMPLATE:", {
+                ha: hasArgument,
+                rv: rvc,
+                la: this.lookahead,
+            });
+        }
 
         const argument = hasArgument ? this.parseExpression() : null;
         this.consumeSemicolon();
