@@ -25,6 +25,7 @@
 var esprima = require('../');
 
 function readEverythingJsProgram(type) {
+    console.log('reading: ', require.resolve('everything.js/' + type));
     return require('fs').readFileSync(require.resolve('everything.js/' + type), 'utf-8');
 }
 
@@ -32,6 +33,6 @@ try {
     esprima.parse(readEverythingJsProgram('es2015-script'));
     esprima.parse(readEverythingJsProgram('es2015-module'), { sourceType: 'module' });
 } catch (e) {
-    console.error('Error:', e.toString());
+    console.error('Error:', e.toString(), e.stack);
     process.exit(1);
 }

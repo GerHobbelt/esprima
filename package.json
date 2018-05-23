@@ -87,7 +87,7 @@
     "grammar-tests": "node test/grammar-tests.js",
     "regression-tests": "node test/regression-tests.js",
     "test-262": "node test/test-262.js",
-    "all-tests": "npm run verify-line-ending && npm run generate-fixtures && npm run unit-tests && npm run api-tests && npm run grammar-tests && npm run regression-tests && npm run hostile-env-tests",
+    "all-tests": "npm run verify-line-ending && npm run generate-fixtures && npm run unit-tests && npm run api-tests && npm run regression-tests && npm run hostile-env-tests",
     "verify-line-ending": "node test/verify-line-ending.js",
     "generate-fixtures": "node tools/generate-fixtures.js",
     "regenerate-unit-tests-fixtures": "bash -c \"find test/fixtures/ -type f -iname '*.json' -delete\" && npm run generate-fixtures && node test/unit-tests.js --regenerate",

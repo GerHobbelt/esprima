@@ -2125,12 +2125,12 @@ var Parser = /** @class */ (function () {
             this.startMarker.column = this.scanner.index - this.scanner.lineStart;
         }
         var next = this.scanner.lex();
-        //this.hasLineTerminator = (token.lineNumber !== next.lineNumber);
-        // check if the token was followed by a newline that's relevant for ASI, 
+        // :: this.hasLineTerminator = (token.lineNumber !== next.lineNumber);
+        // check if the token was followed by a newline that's relevant for ASI,
         // i.e. sits *before* the lookahead token: old `this.hasLineTerminator` did
         // not deliver as the scanner will produce a lineNumber further down when
         // the argument value has any newlines *embedded* in it, which can happen
-        // for string and template string values at least!  
+        // for string and template string values at least!
         //
         // For ASI we are only interested in newlines which sit *between* tokens!
         // That's what we check for below, using the fastest possible code to
@@ -2139,8 +2139,8 @@ var Parser = /** @class */ (function () {
         // have walked over the bit of input we are actually interested in now:
         // `scanner.source[token.end .. next.start]`.
         //
-        //const ws = this.scanner.source.slice(token.end, next.start);
-        //const idxAsiNL = (ws.indexOf('\n') >= 0);
+        // :: const ws = this.scanner.source.slice(token.end, next.start);
+        // :: const idxAsiNL = (ws.indexOf('\n') >= 0);
         var idxAsiNL = this.scanner.source.indexOf('\n', token.end);
         this.hasLineTerminator = (idxAsiNL >= 0 && idxAsiNL < next.start);
         if (this.context.strict && next.type === 3 /* Identifier */) {
