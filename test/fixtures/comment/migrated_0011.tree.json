@@ -1,7 +1,7 @@
 {
     "range": [
-        8,
-        10
+        9,
+        11
     ],
     "loc": {
         "start": {
@@ -17,8 +17,8 @@
     "body": [
         {
             "range": [
-                8,
-                10
+                9,
+                11
             ],
             "loc": {
                 "start": {
@@ -33,8 +33,8 @@
             "type": "ExpressionStatement",
             "expression": {
                 "range": [
-                    8,
-                    10
+                    9,
+                    11
                 ],
                 "loc": {
                     "start": {
@@ -57,7 +57,7 @@
         {
             "range": [
                 0,
-                7
+                8
             ],
             "loc": {
                 "start": {
@@ -70,14 +70,14 @@
                 }
             },
             "type": "Block",
-            "value": "a\nb"
+            "value": "a\r\nb"
         }
     ],
     "tokens": [
         {
             "range": [
-                8,
-                10
+                9,
+                11
             ],
             "loc": {
                 "start": {

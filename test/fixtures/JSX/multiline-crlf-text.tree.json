@@ -1,7 +1,7 @@
 {
     "range": [
         0,
-        24
+        28
     ],
     "loc": {
         "start": {
@@ -18,7 +18,7 @@
         {
             "range": [
                 0,
-                24
+                28
             ],
             "loc": {
                 "start": {
@@ -34,7 +34,7 @@
             "expression": {
                 "range": [
                     0,
-                    24
+                    28
                 ],
                 "loc": {
                     "start": {
@@ -88,7 +88,7 @@
                     {
                         "range": [
                             4,
-                            19
+                            23
                         ],
                         "loc": {
                             "start": {
@@ -101,14 +101,14 @@
                             }
                         },
                         "type": "JSXText",
-                        "value": "\nOne\nTwo\nThree\n",
-                        "raw": "\nOne\nTwo\nThree\n"
+                        "value": "\rOne\rTwo\rThree\r",
+                        "raw": "\r\nOne\r\nTwo\r\nThree\r\n"
                     }
                 ],
                 "closingElement": {
                     "range": [
-                        19,
-                        24
+                        23,
+                        28
                     ],
                     "loc": {
                         "start": {
@@ -123,8 +123,8 @@
                     "type": "JSXClosingElement",
                     "name": {
                         "range": [
-                            21,
-                            23
+                            25,
+                            27
                         ],
                         "loc": {
                             "start": {
@@ -203,7 +203,7 @@
         {
             "range": [
                 4,
-                19
+                23
             ],
             "loc": {
                 "start": {
@@ -216,12 +216,12 @@
                 }
             },
             "type": "JSXText",
-            "value": "\nOne\nTwo\nThree\n"
+            "value": "\r\nOne\r\nTwo\r\nThree\r\n"
         },
         {
             "range": [
-                19,
-                20
+                23,
+                24
             ],
             "loc": {
                 "start": {
@@ -238,8 +238,8 @@
         },
         {
             "range": [
-                20,
-                21
+                24,
+                25
             ],
             "loc": {
                 "start": {
@@ -256,8 +256,8 @@
         },
         {
             "range": [
-                21,
-                23
+                25,
+                27
             ],
             "loc": {
                 "start": {
@@ -274,8 +274,8 @@
         },
         {
             "range": [
-                23,
-                24
+                27,
+                28
             ],
             "loc": {
                 "start": {
