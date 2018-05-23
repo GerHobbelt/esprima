@@ -2131,8 +2131,16 @@ var Parser = /** @class */ (function () {
         // not deliver as the scanner will produce a lineNumber further down when
         // the argument value has any newlines *embedded* in it, which can happen
         // for string and template string values at least!  
+        //
+        // For ASI we are only interested in newlines which sit *between* tokens!
+        // That's what we check for below, using the fastest possible code to
+        // prevent the parser from slowing down (performance considerations).
+        // Alternatively this should be taken up by the scanner as that one will
+        // have walked over the bit of input we are actually interested in now:
+        // `scanner.source[token.end .. next.start]`.
+        //
         //const ws = this.scanner.source.slice(token.end, next.start);
-        //const nl = (ws.indexOf('\n') >= 0);
+        //const idxAsiNL = (ws.indexOf('\n') >= 0);
         var idxAsiNL = this.scanner.source.indexOf('\n', token.end);
         this.hasLineTerminator = (idxAsiNL >= 0 && idxAsiNL < next.start);
         if (this.context.strict && next.type === 3 /* Identifier */) {
@@ -4011,46 +4019,10 @@ var Parser = /** @class */ (function () {
         if (!this.context.inFunctionBody) {
             this.tolerateError(messages_1.Messages.IllegalReturn);
         }
-        var token = this.lookahead;
         var node = this.createNode();
         this.expectKeyword('return');
-        var next = this.lookahead;
-        var lineTerm = (token.lineNumber !== next.lineNumber);
-        // check if the `return` is followed by a newline that's relevant for ASI, 
-        // i.e. sits *before* the lookahead token: `this.hasLineTerminator` does
-        // not deliver as the scanner will produce a lineNumber further down when
-        // the argument value has any newlines *embedded* in it, which can happen
-        // for string and template string values at least!  
-        var ws = this.scanner.source.slice(token.end, next.start);
-        var nl = (ws.indexOf('\n') >= 0);
-        var idxnl = this.scanner.source.indexOf('\n', token.end);
-        var nl2 = (idxnl >= 0 && idxnl < next.start);
         var hasArgument = (!this.match(';') && !this.match('}') &&
             !this.hasLineTerminator && this.lookahead.type !== 2 /* EOF */);
-        // this.lookahead.type === Token.StringLiteral ||
-        if (this.lookahead.type === 10 /* Template */) {
-            var rvc = (!this.match(';') && !this.match('}') &&
-                !this.hasLineTerminator);
-            console.error("RETURN + TEMPLATE:", {
-                ha: hasArgument,
-                rv: rvc,
-                la: this.lookahead,
-                latype: this.lookahead.type,
-                eof: 2 /* EOF */,
-                tmpl: 10 /* Template */,
-                strlit: 8 /* StringLiteral */,
-                lineterm: this.hasLineTerminator,
-                lineterm2: lineTerm,
-                nl: nl,
-                nl2: nl2,
-                idxnl: idxnl,
-                token: token,
-                next: next,
-                ws: ws,
-                semi: this.match(';'),
-                brace: this.match('}'),
-            });
-        }
         var argument = hasArgument ? this.parseExpression() : null;
         this.consumeSemicolon();
         return this.finalize(node, new Node.ReturnStatement(argument));
@@ -4170,27 +4142,10 @@ var Parser = /** @class */ (function () {
     Parser.prototype.parseThrowStatement = function () {
         var node = this.createNode();
         this.expectKeyword('throw');
-        var hasLineTerminator = this.hasLineTerminator;
-        var source = this.scanner.source;
-        var argument;
-        try {
-            argument = this.parseExpression();
+        if (this.hasLineTerminator) {
+            this.throwError(messages_1.Messages.NewlineAfterThrow);
         }
-        catch (e) {
-            if (!hasLineTerminator) {
-                throw e;
-            }
-        }
-        if (hasLineTerminator) {
-            var isTemplateLiteral = argument && argument.type === 'TemplateLiteral';
-            var hasLineTerminatorBeforeTemplate = isTemplateLiteral &&
-                source.trim().indexOf('\n') < source.trim().indexOf('`');
-            if (!argument ||
-                !isTemplateLiteral ||
-                hasLineTerminatorBeforeTemplate) {
-                this.throwError(messages_1.Messages.NewlineAfterThrow);
-            }
-        }
+        var argument = this.parseExpression();
         this.consumeSemicolon();
         return this.finalize(node, new Node.ThrowStatement(argument));
     };

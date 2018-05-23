@@ -1,0 +1,7 @@
+{
+    "index": 131,
+    "lineNumber": 2,
+    "column": 6,
+    "message": "Error: Line 2: Illegal newline after throw",
+    "description": "Illegal newline after throw"
+}
