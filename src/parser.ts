@@ -337,9 +337,20 @@ export class Parser {
         }
 
         const next = this.scanner.lex();
-        this.hasLineTerminator = (token.lineNumber !== next.lineNumber);
 
-        if (next && this.context.strict && next.type === Token.Identifier) {
+        //this.hasLineTerminator = (token.lineNumber !== next.lineNumber);
+
+        // check if the token was followed by a newline that's relevant for ASI, 
+        // i.e. sits *before* the lookahead token: old `this.hasLineTerminator` did
+        // not deliver as the scanner will produce a lineNumber further down when
+        // the argument value has any newlines *embedded* in it, which can happen
+        // for string and template string values at least!  
+        //const ws = this.scanner.source.slice(token.end, next.start);
+        //const nl = (ws.indexOf('\n') >= 0);
+        const idxAsiNL = this.scanner.source.indexOf('\n', token.end);
+        this.hasLineTerminator = (idxAsiNL >= 0 && idxAsiNL < next.start);
+
+        if (this.context.strict && next.type === Token.Identifier) {
             if (this.scanner.isStrictModeReservedWord(next.value as string)) {
                 next.type = Token.Keyword;
             }
@@ -2448,8 +2459,23 @@ export class Parser {
             this.tolerateError(Messages.IllegalReturn);
         }
 
+        const token = this.lookahead;
+
         const node = this.createNode();
         this.expectKeyword('return');
+
+        const next = this.lookahead;
+        const lineTerm = (token.lineNumber !== next.lineNumber);
+
+        // check if the `return` is followed by a newline that's relevant for ASI, 
+        // i.e. sits *before* the lookahead token: `this.hasLineTerminator` does
+        // not deliver as the scanner will produce a lineNumber further down when
+        // the argument value has any newlines *embedded* in it, which can happen
+        // for string and template string values at least!  
+        const ws = this.scanner.source.slice(token.end, next.start);
+        const nl = (ws.indexOf('\n') >= 0);
+        const idxnl = this.scanner.source.indexOf('\n', token.end);
+        const nl2 = (idxnl >= 0 && idxnl < next.start);
 
         const hasArgument = (!this.match(';') && !this.match('}') &&
             !this.hasLineTerminator && this.lookahead.type !== Token.EOF);
@@ -2461,6 +2487,20 @@ export class Parser {
                 ha: hasArgument,
                 rv: rvc,
                 la: this.lookahead,
+                latype: this.lookahead.type,
+                eof: Token.EOF,
+                tmpl: Token.Template,
+                strlit: Token.StringLiteral,
+                lineterm: this.hasLineTerminator,
+                lineterm2: lineTerm,
+                nl: nl,
+                nl2: nl2,
+                idxnl: idxnl,
+                token: token,
+                next: next,
+                ws: ws,
+                semi: this.match(';'),
+                brace: this.match('}'),
             });
         }
 

@@ -2125,8 +2125,17 @@ var Parser = /** @class */ (function () {
             this.startMarker.column = this.scanner.index - this.scanner.lineStart;
         }
         var next = this.scanner.lex();
-        this.hasLineTerminator = (token.lineNumber !== next.lineNumber);
-        if (next && this.context.strict && next.type === 3 /* Identifier */) {
+        //this.hasLineTerminator = (token.lineNumber !== next.lineNumber);
+        // check if the token was followed by a newline that's relevant for ASI, 
+        // i.e. sits *before* the lookahead token: old `this.hasLineTerminator` did
+        // not deliver as the scanner will produce a lineNumber further down when
+        // the argument value has any newlines *embedded* in it, which can happen
+        // for string and template string values at least!  
+        //const ws = this.scanner.source.slice(token.end, next.start);
+        //const nl = (ws.indexOf('\n') >= 0);
+        var idxAsiNL = this.scanner.source.indexOf('\n', token.end);
+        this.hasLineTerminator = (idxAsiNL >= 0 && idxAsiNL < next.start);
+        if (this.context.strict && next.type === 3 /* Identifier */) {
             if (this.scanner.isStrictModeReservedWord(next.value)) {
                 next.type = 4 /* Keyword */;
             }
@@ -4002,8 +4011,20 @@ var Parser = /** @class */ (function () {
         if (!this.context.inFunctionBody) {
             this.tolerateError(messages_1.Messages.IllegalReturn);
         }
+        var token = this.lookahead;
         var node = this.createNode();
         this.expectKeyword('return');
+        var next = this.lookahead;
+        var lineTerm = (token.lineNumber !== next.lineNumber);
+        // check if the `return` is followed by a newline that's relevant for ASI, 
+        // i.e. sits *before* the lookahead token: `this.hasLineTerminator` does
+        // not deliver as the scanner will produce a lineNumber further down when
+        // the argument value has any newlines *embedded* in it, which can happen
+        // for string and template string values at least!  
+        var ws = this.scanner.source.slice(token.end, next.start);
+        var nl = (ws.indexOf('\n') >= 0);
+        var idxnl = this.scanner.source.indexOf('\n', token.end);
+        var nl2 = (idxnl >= 0 && idxnl < next.start);
         var hasArgument = (!this.match(';') && !this.match('}') &&
             !this.hasLineTerminator && this.lookahead.type !== 2 /* EOF */);
         // this.lookahead.type === Token.StringLiteral ||
@@ -4014,6 +4035,20 @@ var Parser = /** @class */ (function () {
                 ha: hasArgument,
                 rv: rvc,
                 la: this.lookahead,
+                latype: this.lookahead.type,
+                eof: 2 /* EOF */,
+                tmpl: 10 /* Template */,
+                strlit: 8 /* StringLiteral */,
+                lineterm: this.hasLineTerminator,
+                lineterm2: lineTerm,
+                nl: nl,
+                nl2: nl2,
+                idxnl: idxnl,
+                token: token,
+                next: next,
+                ws: ws,
+                semi: this.match(';'),
+                brace: this.match('}'),
             });
         }
         var argument = hasArgument ? this.parseExpression() : null;

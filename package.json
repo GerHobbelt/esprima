@@ -80,7 +80,7 @@
     "code-style": "bash -c 'node_modules/.bin/tsfmt --verify src/*.ts test/*.js'",
     "format-code": "bash -c 'node_modules/.bin/tsfmt -r src/*.ts test/*.js'",
     "complexity": "node test/check-complexity.js",
-    "static-analysis": "npm run check-version && npm run tslint && npm run code-style && npm run complexity",
+    "static-analysis": "npm run check-version && npm run code-style && npm run complexity",
     "hostile-env-tests": "node test/hostile-environment-tests.js",
     "unit-tests": "node test/unit-tests.js",
     "api-tests": "mocha -R dot test/api-tests.js",
