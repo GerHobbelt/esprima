@@ -641,6 +641,14 @@ export class Parser {
                 expr = this.finalize(node, new Node.Literal(null, raw));
                 break;
 
+            case Token.UndefinedLiteral:
+                this.context.isAssignmentTarget = false;
+                this.context.isBindingElement = false;
+                token = this.nextToken();
+                raw = this.getTokenRaw(token);
+                expr = this.finalize(node, new Node.Literal(undefined, raw));
+                break;
+
             case Token.Template:
                 expr = this.parseTemplateLiteral();
                 break;
@@ -807,6 +815,7 @@ export class Parser {
             case Token.Identifier:
             case Token.BooleanLiteral:
             case Token.NullLiteral:
+            case Token.UndefinedLiteral:
             case Token.Keyword:
                 key = this.finalize(node, new Node.Identifier(token.value));
                 break;
@@ -1172,7 +1181,8 @@ export class Parser {
         return token.type === Token.Identifier ||
             token.type === Token.Keyword ||
             token.type === Token.BooleanLiteral ||
-            token.type === Token.NullLiteral;
+            token.type === Token.NullLiteral ||
+            token.type === Token.UndefinedLiteral;
     }
 
     parseIdentifierName(): Node.Identifier {
@@ -2678,6 +2688,7 @@ export class Parser {
         switch (this.lookahead.type) {
             case Token.BooleanLiteral:
             case Token.NullLiteral:
+            case Token.UndefinedLiteral:
             case Token.NumericLiteral:
             case Token.StringLiteral:
             case Token.Template:
@@ -3094,6 +3105,7 @@ export class Parser {
             case Token.StringLiteral:
             case Token.BooleanLiteral:
             case Token.NullLiteral:
+            case Token.UndefinedLiteral:
             case Token.NumericLiteral:
             case Token.Keyword:
                 return true;
