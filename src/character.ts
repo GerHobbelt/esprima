@@ -37,6 +37,7 @@ export const Character = {
             (cp >= 0x41 && cp <= 0x5A) ||         // A..Z
             (cp >= 0x61 && cp <= 0x7A) ||         // a..z
             (cp === 0x5C) ||                      // \ (backslash)
+            (cp === 0x40) ||                      // @
             ((cp >= 0x80) && Regex.NonAsciiIdentifierStart.test(Character.fromCodePoint(cp)));
     },
 
