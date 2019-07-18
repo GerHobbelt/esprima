@@ -97,7 +97,7 @@
     "saucelabs-ie": "cd test && karma start saucelabs-ie.conf.js",
     "saucelabs": "npm run saucelabs-evergreen && npm run saucelabs-ie && npm run saucelabs-safari",
     "analyze-coverage": "istanbul cover test/unit-tests.js",
-    "check-coverage": "istanbul check-coverage --statement 96 --branch 96 --function 96",
+    "check-coverage": "istanbul check-coverage --statement 95 --branch 95 --function 95",
     "dynamic-analysis": "npm run analyze-coverage && npm run check-coverage",
     "compile": "node tools/__patch_version_in_js.js && tsc -p src/ && webpack && node tools/fixupbundle.js",
     "test": "npm run compile && npm run all-tests && npm run static-analysis && npm run dynamic-analysis",
