@@ -1,7 +1,7 @@
 {
     "range": [
-        65,
-        113
+        64,
+        109
     ],
     "loc": {
         "start": {
@@ -17,8 +17,8 @@
     "body": [
         {
             "range": [
-                65,
-                113
+                64,
+                109
             ],
             "loc": {
                 "start": {
@@ -33,8 +33,8 @@
             "type": "FunctionDeclaration",
             "id": {
                 "range": [
-                    74,
-                    75
+                    73,
+                    74
                 ],
                 "loc": {
                     "start": {
@@ -52,8 +52,8 @@
             "params": [],
             "body": {
                 "range": [
-                    78,
-                    113
+                    77,
+                    109
                 ],
                 "loc": {
                     "start": {
@@ -69,8 +69,8 @@
                 "body": [
                     {
                         "range": [
-                            83,
-                            110
+                            81,
+                            107
                         ],
                         "loc": {
                             "start": {
@@ -85,8 +85,8 @@
                         "type": "ReturnStatement",
                         "argument": {
                             "range": [
-                                90,
-                                110
+                                88,
+                                107
                             ],
                             "loc": {
                                 "start": {
@@ -100,7 +100,7 @@
                             },
                             "type": "Literal",
                             "value": "use      strict",
-                            "raw": "\"use \\\r\n     strict\""
+                            "raw": "\"use \\\n     strict\""
                         }
                     }
                 ]
@@ -134,8 +134,8 @@
     "tokens": [
         {
             "range": [
-                65,
-                73
+                64,
+                72
             ],
             "loc": {
                 "start": {
@@ -152,8 +152,8 @@
         },
         {
             "range": [
-                74,
-                75
+                73,
+                74
             ],
             "loc": {
                 "start": {
@@ -170,8 +170,8 @@
         },
         {
             "range": [
-                75,
-                76
+                74,
+                75
             ],
             "loc": {
                 "start": {
@@ -188,8 +188,8 @@
         },
         {
             "range": [
-                76,
-                77
+                75,
+                76
             ],
             "loc": {
                 "start": {
@@ -206,8 +206,8 @@
         },
         {
             "range": [
-                78,
-                79
+                77,
+                78
             ],
             "loc": {
                 "start": {
@@ -224,8 +224,8 @@
         },
         {
             "range": [
-                83,
-                89
+                81,
+                87
             ],
             "loc": {
                 "start": {
@@ -242,8 +242,8 @@
         },
         {
             "range": [
-                90,
-                110
+                88,
+                107
             ],
             "loc": {
                 "start": {
@@ -256,12 +256,12 @@
                 }
             },
             "type": "String",
-            "value": "\"use \\\r\n     strict\""
+            "value": "\"use \\\n     strict\""
         },
         {
             "range": [
-                112,
-                113
+                108,
+                109
             ],
             "loc": {
                 "start": {
