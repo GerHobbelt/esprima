@@ -140,7 +140,8 @@ fixture.forEach(function (name) {
         }
 
     } catch (e) {
-        console.log('FATAL', e.toString());
+        console.error('FATAL', e.toString());
+        console.info(e);
         process.exit(1);
     }
 });
