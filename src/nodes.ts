@@ -529,9 +529,9 @@ export class LabeledStatement {
 
 export class Literal {
     readonly type: string;
-    readonly value: boolean | number | string | null;
+    readonly value: boolean | number | string | null | undefined;
     readonly raw: string;
-    constructor(value: boolean | number | string | null, raw: string) {
+    constructor(value: boolean | number | string | null | undefined, raw: string) {
         this.type = Syntax.Literal;
         this.value = value;
         this.raw = raw;
