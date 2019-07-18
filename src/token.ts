@@ -4,6 +4,7 @@ export const enum Token {
     Identifier,
     Keyword,
     NullLiteral,
+    UndefinedLiteral,
     NumericLiteral,
     Punctuator,
     StringLiteral,
@@ -17,6 +18,7 @@ TokenName[Token.EOF] = '<end>';
 TokenName[Token.Identifier] = 'Identifier';
 TokenName[Token.Keyword] = 'Keyword';
 TokenName[Token.NullLiteral] = 'Null';
+TokenName[Token.UndefinedLiteral] = 'Undefined';
 TokenName[Token.NumericLiteral] = 'Numeric';
 TokenName[Token.Punctuator] = 'Punctuator';
 TokenName[Token.StringLiteral] = 'String';

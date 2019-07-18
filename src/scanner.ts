@@ -557,6 +557,8 @@ export class Scanner {
             type = Token.Keyword;
         } else if (id === 'null') {
             type = Token.NullLiteral;
+        } else if (id === 'undefined') {
+            type = Token.UndefinedLiteral;
         } else if (id === 'true' || id === 'false') {
             type = Token.BooleanLiteral;
         } else {
