@@ -133,6 +133,7 @@ var projects = {
     'rocambole': 'https://github.com/millermedeiros/rocambole.git',
     // 'documentjs': 'https://github.com/bitovi/documentjs.git',
     'assetgraph': 'https://github.com/assetgraph/assetgraph.git',
+    'istanbul': 'https://github.com/gotwarlost/istanbul.git',
 };
 
 // disabled, due to various/spurious failures
