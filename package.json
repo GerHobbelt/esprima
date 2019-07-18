@@ -62,7 +62,7 @@
     "tslint": "5.10.0",
     "typescript": "2.8.3",
     "typescript-formatter": "7.2.0",
-    "unicode-11.0.0": "0.7.7",
+    "unicode-12.1.0": "0.8.0",
     "webpack": "4.8.3",
     "webpack-cli": "2.1.3"
   },
