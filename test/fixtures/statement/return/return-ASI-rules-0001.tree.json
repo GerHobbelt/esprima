@@ -70,7 +70,7 @@
                     {
                         "range": [
                             126,
-                            132
+                            150
                         ],
                         "loc": {
                             "start": {
@@ -78,30 +78,12 @@
                                 "column": 1
                             },
                             "end": {
-                                "line": 4,
-                                "column": 7
-                            }
-                        },
-                        "type": "ReturnStatement",
-                        "argument": null
-                    },
-                    {
-                        "range": [
-                            138,
-                            150
-                        ],
-                        "loc": {
-                            "start": {
-                                "line": 5,
-                                "column": 4
-                            },
-                            "end": {
                                 "line": 5,
                                 "column": 16
                             }
                         },
-                        "type": "ExpressionStatement",
-                        "expression": {
+                        "type": "ReturnStatement",
+                        "argument": {
                             "range": [
                                 138,
                                 150

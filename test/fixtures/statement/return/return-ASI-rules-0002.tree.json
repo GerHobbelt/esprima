@@ -70,29 +70,11 @@
                     {
                         "range": [
                             93,
-                            99
-                        ],
-                        "loc": {
-                            "start": {
-                                "line": 3,
-                                "column": 2
-                            },
-                            "end": {
-                                "line": 3,
-                                "column": 8
-                            }
-                        },
-                        "type": "ReturnStatement",
-                        "argument": null
-                    },
-                    {
-                        "range": [
-                            103,
                             117
                         ],
                         "loc": {
                             "start": {
-                                "line": 4,
+                                "line": 3,
                                 "column": 2
                             },
                             "end": {
@@ -100,8 +82,8 @@
                                 "column": 4
                             }
                         },
-                        "type": "ExpressionStatement",
-                        "expression": {
+                        "type": "ReturnStatement",
+                        "argument": {
                             "range": [
                                 103,
                                 116

@@ -114,8 +114,8 @@
                                         "column": 18
                                     }
                                 },
-                                "type": "Identifier",
-                                "name": "undefined"
+                                "type": "Literal",
+                                "raw": "undefined"
                             }
                         },
                         {
@@ -249,7 +249,7 @@
                     "column": 18
                 }
             },
-            "type": "Identifier",
+            "type": "Undefined",
             "value": "undefined"
         },
         {

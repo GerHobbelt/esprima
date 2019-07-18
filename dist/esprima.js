@@ -783,8 +783,8 @@ var JSXParser = /** @class */ (function (_super) {
         if (this.matchJSX(':')) {
             var namespace = elementName;
             this.expectJSX(':');
-            var name_1 = this.parseJSXIdentifier();
-            elementName = this.finalize(node, new JSXNode.JSXNamespacedName(namespace, name_1));
+            var name = this.parseJSXIdentifier();
+            elementName = this.finalize(node, new JSXNode.JSXNamespacedName(namespace, name));
         }
         else if (this.matchJSX('.')) {
             while (this.matchJSX('.')) {
@@ -803,8 +803,8 @@ var JSXParser = /** @class */ (function (_super) {
         if (this.matchJSX(':')) {
             var namespace = identifier;
             this.expectJSX(':');
-            var name_2 = this.parseJSXIdentifier();
-            attributeName = this.finalize(node, new JSXNode.JSXNamespacedName(namespace, name_2));
+            var name = this.parseJSXIdentifier();
+            attributeName = this.finalize(node, new JSXNode.JSXNamespacedName(namespace, name));
         }
         else {
             attributeName = identifier;
@@ -955,10 +955,10 @@ var JSXParser = /** @class */ (function (_super) {
             }
             if (element.type === jsx_syntax_1.JSXSyntax.JSXClosingElement) {
                 el.closing = element;
-                var open_1 = getQualifiedElementName(el.opening.name);
-                var close_1 = getQualifiedElementName(el.closing.name);
-                if (open_1 !== close_1) {
-                    this.tolerateError('Expected corresponding JSX closing tag for %0', open_1);
+                var open = getQualifiedElementName(el.opening.name);
+                var close = getQualifiedElementName(el.closing.name);
+                if (open !== close) {
+                    this.tolerateError('Expected corresponding JSX closing tag for %0', open);
                 }
                 if (stack.length > 0) {
                     var child = this.finalize(el.node, new JSXNode.JSXElement(el.opening, el.children, el.closing));
@@ -4184,7 +4184,12 @@ var Parser = /** @class */ (function () {
     // https://tc39.github.io/ecma262/#sec-try-statement
     Parser.prototype.parseCatchClause = function () {
         var node = this.createNode();
+        var body;
         this.expectKeyword('catch');
+        if (!this.match('(')) {
+            body = this.parseBlock();
+            return this.finalize(node, new Node.CatchClause(null, body));
+        }
         this.expect('(');
         if (this.match(')')) {
             this.throwUnexpectedToken(this.lookahead);
@@ -4205,7 +4210,7 @@ var Parser = /** @class */ (function () {
             }
         }
         this.expect(')');
-        var body = this.parseBlock();
+        body = this.parseBlock();
         return this.finalize(node, new Node.CatchClause(param, body));
     };
     Parser.prototype.parseFinallyClause = function () {
