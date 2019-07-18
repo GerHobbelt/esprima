@@ -2109,6 +2109,8 @@ export class Parser {
         } else if (token.type !== Token.Identifier) {
             if (this.context.strict && token.type === Token.Keyword && this.scanner.isStrictModeReservedWord(token.value as string)) {
                 this.tolerateUnexpectedToken(token, Messages.StrictReservedWord);
+            } else if (token.type === Token.UndefinedLiteral) {
+                // nothing
             } else {
                 if (this.context.strict || token.value !== 'let' || kind !== 'var') {
                     this.throwUnexpectedToken(token);

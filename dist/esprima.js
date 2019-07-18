@@ -3725,6 +3725,9 @@ var Parser = /** @class */ (function () {
             if (this.context.strict && token.type === 4 /* Keyword */ && this.scanner.isStrictModeReservedWord(token.value)) {
                 this.tolerateUnexpectedToken(token, messages_1.Messages.StrictReservedWord);
             }
+            else if (token.type === 6 /* UndefinedLiteral */) {
+                // nothing
+            }
             else {
                 if (this.context.strict || token.value !== 'let' || kind !== 'var') {
                     this.throwUnexpectedToken(token);
