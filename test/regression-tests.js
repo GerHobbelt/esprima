@@ -77,12 +77,12 @@ function getBaselineSyntax(name) {
 }
 
 function createBaselineSyntax(name, syntax) {
-    var tree = JSON.stringify(syntax, null, 4);
+    var tree = JSON.stringify(syntax, null, 2);
     fs.writeFileSync('test/3rdparty/syntax/' + name + '.json', tree, 'utf-8');
 }
 
 function writeActualSyntax(name, syntax) {
-    var tree = JSON.stringify(syntax, null, 4);
+    var tree = JSON.stringify(syntax, null, 2);
     fs.writeFileSync('test/3rdparty/syntax/' + name + '.actual.json', tree, 'utf-8');
 }
 
@@ -97,13 +97,51 @@ function getBaselineTokens(name) {
 }
 
 function createBaselineTokens(name, tokens) {
-    var data = JSON.stringify(sortedObject(tokens), null, 4);
+    var data = JSON.stringify(sortedObject(tokens), null, 2);
     fs.writeFileSync('test/3rdparty/syntax/' + name + '.tokens', data, 'utf-8');
 }
 
 function writeActualTokens(name, tokens) {
-    var data = JSON.stringify(sortedObject(tokens), null, 4);
+    var data = JSON.stringify(sortedObject(tokens), null, 2);
     fs.writeFileSync('test/3rdparty/syntax/' + name + '.actual.tokens', data, 'utf-8');
+}
+
+function stripAST(node, depth) {
+    // skip non-nodes:
+    if (!node || !node.loc || !node.range) {
+        return node;
+    }
+
+    depth = depth || 0;
+    depth++;
+    var kill = false;
+    for (var key in node) {
+        // console.log("key:", {
+        //     key,
+        //     isArray: Array.isArray(node[key]),
+        //     isObject: typeof node[key]
+        // });
+        if (depth > 4 && key === 'loc') {
+            kill = true;
+        }
+        if (Array.isArray(node[key])) {
+            // e.g. body: [...node, node, node...]
+            var arr = node[key];
+            for (var i = 0, len = arr.length; i < len; i++) {
+                arr[i] = stripAST(arr[i], depth);
+            }
+        } else if (node[key] != null && typeof node[key] === 'object') {
+            // e.g. {node}
+            node[key] = stripAST(node[key], depth);
+        }
+    }
+
+    // console.log("depth:", depth, kill);
+    if (kill) {
+        delete node.loc;
+    }
+
+    return node;
 }
 
 console.log('Processing libraries...');
@@ -118,7 +156,11 @@ fixture.forEach(function (name) {
             syntax = sortedObject(esprima.parse(source, { range: true, loc: true, raw: true }));
             tokens = sortedObject(esprima.tokenize(source, { range: true }));
         }
+        // trim tree to reduce memory/storage size:
+        syntax = stripAST(syntax);
+
         expected = getBaselineSyntax(filename);
+        expected = stripAST(expected);
         if (expected) {
             if (JSON.stringify(expected) !== JSON.stringify(syntax)) {
                 console.log('    Mismatch syntax tree!');
