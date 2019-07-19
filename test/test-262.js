@@ -117,13 +117,15 @@ function report(summary) {
 
         var desc = tests.length + ' ' + label;
 
+        var maxReportedEntriesPerTest = 100;
+
         badnews.push(desc);
         badnewsDetails.push(desc + ':');
         badnewsDetails.push.apply(
             badnewsDetails,
             tests.map(function (test) {
                 return test.id || test;
-            })
+            }).slice(0, maxReportedEntriesPerTest)
         );
     });
 
